@@ -10,16 +10,26 @@
 
 #include <stdio.h>
 #include <map>
+#include <ostream>
+
 
 class OrderBook
 {
-    std::map<double, int> bids, asks;
+    std::map<int, int> bids, asks;
+    void add(int price, int amount, bool bid);
+
 
 public:
-    inline bool is_empty()
-    {
-        return bids.empty() && asks.empty();
-    }
+ 
+    bool is_empty() const;
+    void add_bid(int price, int ammount);
+    void add_ask(int price, int amount);
+
+
+
+    friend std::ostream& operator<<(std::ostream& os, const OrderBook& book);
+
+    
 };
 
 #endif /* OrderBook_hpp */
