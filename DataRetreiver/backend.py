@@ -23,7 +23,7 @@ SECRET_KEY = "j6GXlsFTCqHCo9QJ2JM2ezqVrll10Az8"
 URI = "wss://advanced-trade-ws.coinbase.com"
 
 timestamp = str(int(time.time()))
-conn = sqlite3.connect("prime_orderbook.db")
+conn = sqlite3.connect("../prime_orderbook.db")
 channel = "level2"
 
 product_id = "ETH-USD"
