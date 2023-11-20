@@ -1,21 +1,40 @@
 #include <iostream>
 #include <sqlite3.h>
 #include <filesystem>
+#include <thread>
+#include <chrono>
+#include <future>
 
 using namespace std;
 
-static int callback(void *data, int argc, char **argv, char **azColName)
-{
-    int i;
-    fprintf(stderr, "%s: ", (const char *)data);
-
-    for (i = 0; i < argc; i++)
-    {
-        printf("%s = %s\n", azColName[i], argv[i] ? argv[i] : "NULL");
-    }
-
-    printf("\n");
+int callback(void*, int argc, char **argv, char **azColName) {
+    for (int i = 0; i < argc; i++)
+        cout << azColName[i] << " = " << (argv[i] ? argv[i] : "NULL") << endl;
     return 0;
+}
+
+
+void asyncFunction(string SQLStatement, sqlite3* DB){
+    while(true){
+        sqlite3_exec(DB, SQLStatement.c_str(), callback, nullptr, NULL);
+        cout << endl;
+        this_thread::sleep_for(chrono::seconds(1));
+    }
+}
+
+
+void asyncSQLTest(string SQLStatement, sqlite3* DB){
+    thread(asyncFunction, SQLStatement, DB).detach();
+}
+
+sqlite3* connectToDB(string dbFilePath){
+    sqlite3* DB;
+    int exit = sqlite3_open(dbFilePath.c_str(), &DB);
+    if (exit != SQLITE_OK){
+        sqlite3_close(DB);
+        throw runtime_error("Failed to open database.");
+    }
+    return DB;
 }
 
 string getProjectSourceDirectory()
@@ -29,19 +48,19 @@ int main(int argc, const char *argv[])
 {
     string dbFilePath = getProjectSourceDirectory() + "/prime_orderbook.db";
 
-    sqlite3 *DB;
-    int exit = sqlite3_open(dbFilePath.c_str(), &DB);
-    string data("CALLBACK FUNCTION");
-
-    if (exit)
-    {
-        cerr << "Error open DB " << sqlite3_errmsg(DB) << endl;
+    sqlite3* DB;
+    try{
+        DB = connectToDB(dbFilePath);
+    }
+    catch (const exception& e){
+        cerr << "Exception: " << e.what() << endl;
         return -1;
     }
-
-    string sqlstatement = "SELECT * FROM book;";
-    int rc = sqlite3_exec(DB, sqlstatement.c_str(), callback, (void *)data.c_str(), NULL);
-
+    
+    asyncSQLTest("SELECT * FROM book", DB);
+    while(true){
+        
+    }
     sqlite3_close(DB);
     return 0;
 }
