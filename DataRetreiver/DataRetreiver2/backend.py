@@ -28,6 +28,7 @@ product_id = "ETH-USD"
 agg_level = "0.1"
 
 async def main_loop():
+    last_written_timestamp = None  # Variable to keep track of the last written timestamp
     while True:
         try:
             current_timestamp = str(int(time.time()))  # Define a new timestamp variable
@@ -36,9 +37,6 @@ async def main_loop():
                 await websocket.send(auth_message)
 
                 processor = None
-                snapshots = []
-                start_time = time.time()
-
                 while True:
                     response = await websocket.recv()
                     parsed = json.loads(response)
@@ -50,18 +48,14 @@ async def main_loop():
 
                     if processor is not None:
                         timestamp, snapshot = processor.get_snapshot_with_timestamp()
-                        snapshots.append((timestamp, snapshot))
+                        current_snapshot_second = timestamp[:19]  # 'YYYY-MM-DD HH:MM:SS'
 
-                        current_time = time.time()
-                        if current_time - start_time >= 60:
+                        if current_snapshot_second != last_written_timestamp:
                             with open('orderbook_snapshots.csv', 'a', newline='') as file:
                                 writer = csv.writer(file)
-                                for timestamp, snapshot in snapshots:
-                                    for index, row in snapshot.iterrows():
-                                        writer.writerow([timestamp] + list(row))
-
-                            snapshots = []
-                            start_time = current_time
+                                for index, row in snapshot.iterrows():
+                                    writer.writerow([timestamp] + list(row))
+                            last_written_timestamp = current_snapshot_second
         except websockets.ConnectionClosed:
             continue
 
