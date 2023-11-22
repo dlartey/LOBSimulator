@@ -28,36 +28,41 @@ product_id = "ETH-USD"
 agg_level = "0.1"
 
 async def main_loop():
-    last_written_timestamp = None  # Variable to keep track of the last written timestamp
-    while True:
-        try:
-            current_timestamp = str(int(time.time()))  # Define a new timestamp variable
-            async with websockets.connect(URI, ping_interval=None, max_size=None) as websocket:
-                auth_message = await create_auth_message(channel, product_id, current_timestamp)
-                await websocket.send(auth_message)
+    last_written_timestamp = None
+    start_time = time.time()  # Record the start time
 
-                processor = None
-                while True:
-                    response = await websocket.recv()
-                    parsed = json.loads(response)
+    try:
+        async with websockets.connect(URI, ping_interval=None, max_size=None) as websocket:
+            auth_message = await create_auth_message(channel, product_id, str(int(time.time())))
+            await websocket.send(auth_message)
 
-                    if parsed["channel"] == "l2_data" and parsed["events"][0]["type"] == "snapshot":
-                        processor = OrderBookProcessor(response)
-                    elif processor is not None:
-                        processor.apply_update(response)
+            processor = None
+            while True:
+                response = await websocket.recv()
+                parsed = json.loads(response)
 
-                    if processor is not None:
-                        timestamp, snapshot = processor.get_snapshot_with_timestamp()
-                        current_snapshot_second = timestamp[:19]  # 'YYYY-MM-DD HH:MM:SS'
+                if parsed["channel"] == "l2_data" and parsed["events"][0]["type"] == "snapshot":
+                    processor = OrderBookProcessor(response)
+                elif processor is not None:
+                    processor.apply_update(response)
 
-                        if current_snapshot_second != last_written_timestamp:
-                            with open('orderbook_snapshots.csv', 'a', newline='') as file:
-                                writer = csv.writer(file)
-                                for index, row in snapshot.iterrows():
-                                    writer.writerow([timestamp] + list(row))
-                            last_written_timestamp = current_snapshot_second
-        except websockets.ConnectionClosed:
-            continue
+                if processor is not None:
+                    timestamp, snapshot = processor.get_snapshot_with_timestamp()
+                    current_snapshot_second = timestamp[:19]
+
+                    if current_snapshot_second != last_written_timestamp:
+                        with open('orderbook_snapshots.csv', 'a', newline='') as file:
+                            writer = csv.writer(file)
+                            for index, row in snapshot.iterrows():
+                                writer.writerow([timestamp] + list(row))
+                        last_written_timestamp = current_snapshot_second
+
+                # Check if a minute has passed since the start time
+                if time.time() - start_time >= 60:
+                    break  # Exit the loop after a minute
+
+    except websockets.ConnectionClosed:
+        pass
 
 
 async def create_auth_message(channel, product_id, timestamp):
