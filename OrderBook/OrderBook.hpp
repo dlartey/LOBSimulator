@@ -7,29 +7,38 @@
 
 #ifndef OrderBook_hpp
 #define OrderBook_hpp
+#include <mutex>
 
-#include <stdio.h>
+extern std::mutex orderBookMutex;
+
+
+#include <iostream> // Correct header for std::ostream
 #include <map>
-#include <ostream>
+#include <list>
 
+struct Order {
+    int id;
+    double price;
+    double quantity;
 
-class OrderBook
-{
-    std::map<int, int> bids, asks;
-    void add(int price, int amount, bool bid);
+    Order(int id, double price, double quantity) : id(id), price(price), quantity(quantity) {}
+};
 
+using OrderList = std::list<Order>;
+
+class OrderBook {
+private: // Explicitly stating that bids and asks are private
+    std::map<double, OrderList> bids, asks;
 
 public:
- 
     bool is_empty() const;
-    void add_bid(int price, int ammount);
-    void add_ask(int price, int amount);
-
-
+    void add_order(int id, double price, double quantity, bool is_bid);
+    void remove_order(int id, double price, bool is_bid);
+    void modify_order(int id, double old_price, double new_price, double new_quantity, bool is_bid);
+    void print_order_book() const; 
 
     friend std::ostream& operator<<(std::ostream& os, const OrderBook& book);
-
-    
 };
 
 #endif /* OrderBook_hpp */
+
