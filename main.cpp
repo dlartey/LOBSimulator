@@ -13,9 +13,12 @@
 
 using namespace std;
 
-// Define your mutex and OrderBook instance globally
+// Define mutex and OrderBook instance globally
 OrderBook globalOrderBook;
 volatile std::sig_atomic_t gSignalStatus;
+static int lastID = 0;
+static std::mutex lastIdMutex;
+static int lastProcessedId = 0;
 
 using namespace std;
 
@@ -25,35 +28,53 @@ void signal_handler(int signal) {
 }
 
 
-int callback(void*, int argc, char** argv, char** azColName) {
-    std::lock_guard<std::mutex> guard(orderBookMutex); // Ensure thread safety
 
-    int id;
-    double price, quantity;
-    bool is_bid;
+int callback(void* notUsed, int argc, char** argv, char** azColName) {
+    std::lock_guard<std::mutex> guard(orderBookMutex);
 
-    // Parse the data. This assumes that your database columns are in the order of:
-    // id, price, quantity, is_bid (where is_bid is 0 for asks and 1 for bids)
     if (argc == 4) {
-        id = std::stoi(argv[0]);
-        price = std::stod(argv[1]);
-        quantity = std::stod(argv[2]);
-        is_bid = std::stoi(argv[3]) == 1; // Assuming 1 for bid and 0 for ask
+        int index = std::stoi(argv[0]);
+        // Check if this row has already been processed
+        std::lock_guard<std::mutex> lk(lastIdMutex);
+        if (index <= lastProcessedId) return 0;
 
-        // Add the order to the global order book
-        globalOrderBook.add_order(id, price, quantity, is_bid);
+        double price_level = std::stod(argv[1]);
+        double new_quantity = std::stod(argv[2]);
+        std::string id = argv[3];
+
+        // Add the order to the OrderBook
+        bool is_bid = id.find("_ask") == std::string::npos; // Assuming "_ask" is part of the ask IDs
+        globalOrderBook.add_order(index, price_level, new_quantity, is_bid);
+
+        // Update the last processed index
+        lastProcessedId = index;
     }
 
     return 0;
 }
 
 
-void asyncFunction(string SQLStatement, sqlite3* DB){
-    while(true){
-        sqlite3_exec(DB, SQLStatement.c_str(), callback, nullptr, NULL);
-        cout << endl;
-        this_thread::sleep_for(chrono::seconds(1));
+void asyncFunction(string baseSQLStatement, sqlite3* DB) {
+    static bool isRunning = false;
+    {
+        std::lock_guard<std::mutex> lk(lastIdMutex);
+        if (isRunning) return; // Ensures single execution
+        isRunning = true;
     }
+
+    // Loop to continuously fetch new entries
+    while (gSignalStatus != SIGINT) {
+        std::string modifiedSQLStatement;
+        {
+            std::lock_guard<std::mutex> lk(lastIdMutex);
+            modifiedSQLStatement = baseSQLStatement + " WHERE \"index\" > " + std::to_string(lastProcessedId) + " ORDER BY \"index\" ASC";
+        }
+
+        sqlite3_exec(DB, modifiedSQLStatement.c_str(), callback, nullptr, nullptr);
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+
+    isRunning = false;
 }
 
 

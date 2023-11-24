@@ -54,26 +54,33 @@ void OrderBook::remove_order(int id, double price, bool is_bid) {
 
 // print order_book
 void OrderBook::print_order_book() const {
-    std::lock_guard<std::mutex> guard(orderBookMutex); // Ensure thread safety
+    std::lock_guard<std::mutex> guard(orderBookMutex); // Ensure thread safety when accessing the order book.
 
     std::cout << "Current Order Book State:\n";
-    std::cout << "Asks:\n";
+
+    // Print asks
+    int index = 0; // Initialize index to keep track of the order number.
     for (const auto& ask : asks) {
         for (const auto& order : ask.second) {
-            std::cout << "Ask - Price: " << ask.first << ", Quantity: " << order.quantity << ", ID: " << order.id << "\n";
+            std::cout << "index = " << index++
+                << "\nprice_level = " << ask.first
+                << "\nnew_quantity = " << order.quantity
+                << "\nid = " << order.id << "_ask\n";
         }
     }
-    std::cout << "\nBids:\n";
+
+    // Print bids
     for (const auto& bid : bids) {
         for (const auto& order : bid.second) {
-            std::cout << "Bid - Price: " << bid.first << ", Quantity: " << order.quantity << ", ID: " << order.id << "\n";
+            std::cout << "index = " << index++
+                << "\nprice_level = " << bid.first
+                << "\nnew_quantity = " << order.quantity
+                << "\nid = " << order.id << "_bid\n";
         }
     }
+
     std::cout << "\n-----------------------------\n";
 }
-
-// If we reach this point, the order was not found; handle this case appropriately
-// For example, you might log an error or throw an exception
 
 
 void OrderBook::modify_order(int id, double old_price, double new_price, double new_quantity, bool is_bid) {
