@@ -3,12 +3,6 @@
 #include <iostream>
 #include <sqlite3.h>
 #include <filesystem>
-#include <thread>
-#include <chrono>
-#include <future>
-#include <filesystem>
-#include <csignal>
-#include <csignal>
 #include <mutex>
 #include <string>
 using namespace std;
@@ -149,6 +143,8 @@ namespace{
             }
         }
         ASSERT_EQ(result, 2075.01);
+        ASSERT_EQ(globalOrderBook.getAsks().size(), 205);
+
 
         std::map bids = globalOrderBook.getBids();
         result = 0.0;
@@ -158,6 +154,8 @@ namespace{
             }
         }
         ASSERT_EQ(result, 2040.45);
+        ASSERT_EQ(globalOrderBook.getBids().size(), 237);
+
     }
 
     // Test removal of bid and ask
@@ -189,24 +187,22 @@ namespace{
         globalOrderBook.remove_order(500, 2075.01,false);
 
         result = 0.0;
+        asks = globalOrderBook.getAsks();
         for (auto const& x: asks){
-            if (x.first > result){
+            if (x.first > result)
                 result = x.first;
-            }
         }
         ASSERT_EQ(result, 2072.4);
 
         result = 0.0;
+        bids = globalOrderBook.getBids();
         for (auto const& y: bids){
-            if (y.first > result){
+            if (y.first > result)
                 result = y.first;
-            }
         }
         ASSERT_EQ(result, 2038.1);
 
     }
-
-
     // Test modification of bid and ask
     TEST_F(OrderBookTests, ModifyBidAsk)
     {
@@ -217,9 +213,8 @@ namespace{
         std::map asks = globalOrderBook.getAsks();
         double result = 0.0;
         for (auto const& x: asks){
-            if (x.first > result){
+            if (x.first > result)
                 result = x.first;
-            }
         }
         ASSERT_EQ(result, 2075.01);
 
@@ -236,6 +231,7 @@ namespace{
         globalOrderBook.modify_order(501, 2075.01, 2080.01, 20, false);
 
         result = 0.0;
+        asks = globalOrderBook.getAsks();
         for (auto const& x: asks){
             if (x.first > result){
                 result = x.first;
@@ -244,13 +240,13 @@ namespace{
         ASSERT_EQ(result, 2080.01);
 
         result = 0.0;
+        bids = globalOrderBook.getBids();
         for (auto const& y: bids){
             if (y.first > result){
                 result = y.first;
             }
         }
         ASSERT_EQ(result, 2045.45);
-
     }
 }
 
