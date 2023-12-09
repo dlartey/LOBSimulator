@@ -135,3 +135,11 @@ std::ostream& operator<<(std::ostream& os, const OrderBook& book) {
     }
     return os;
 }
+
+std::map<double, OrderList> OrderBook::getBids() {
+    return bids;
+}
+
+std::map<double, OrderList> OrderBook::getAsks() {
+    return asks;
+}

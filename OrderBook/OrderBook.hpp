@@ -35,7 +35,10 @@ public:
     void add_order(int id, double price, double quantity, bool is_bid);
     void remove_order(int id, double price, bool is_bid);
     void modify_order(int id, double old_price, double new_price, double new_quantity, bool is_bid);
-    void print_order_book() const; 
+    void print_order_book() const;
+
+    std::map<double, OrderList> getBids();
+    std::map<double, OrderList> getAsks();
 
     friend std::ostream& operator<<(std::ostream& os, const OrderBook& book);
 };
