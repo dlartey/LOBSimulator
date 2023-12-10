@@ -135,6 +135,7 @@
 %% This command processes the author and affiliation and title
 %% information and builds the first part of the formatted document.
 \maketitle
+\textcolor{red}{Feel free to make any changes ---- Shruti}
 
 %%
 \section{Introduction}
@@ -181,6 +182,8 @@ Some key things that will most likely be here are:
 \textcolor{blue}{Talk shortly about how you came up with the plan that you are about to present. The schedule for completion of the project should relate the activities (or tasks) to objectives or deliverables. A few milestones should be identified for self monitoring of progress.
 }
 
+\textcolor{red}{!!Suggestion!! The group employs weekly sprints, with a set tasklist, biweekly meetings, pair programming and rotating scrum masters. Milestones include, }
+
 \subsection{Methodology}
 \textcolor{blue}{Outline the underpinning project approach that is appropriate for the chosen type of project. This should help to plan for the order of the activities/tasks}
 
@@ -197,8 +200,8 @@ Some key things that will most likely be here are:
 \textcolor{black}{The initial phase involves developing prototype solutions and devising a project specification with the final aims and objectives. During the implementation phase, the group will utilise both unit and integration testing to ensure code quality. Finally, the group aims to have a completed product by March to conduct an evaluation of the software using user reviews and automated performance tests. }
 
 \subsection{Risk assessment}
-\textcolor{red}{Prior to the development process, the group conducted a risk assessment to explore the various strengths and constraints of the project. 
-\newline\newline --- Still working on it, feel free to add --- }
+\textcolor{black}{Prior to the development process, the group conducted a risk assessment to explore the various strengths and constraints of the project. The following section discusses the risks in Table 1, in order of most certain and severe possibilities to unlikely and minor risks.}
+
 \textcolor{black}{
 \begin{table}[h]
   \centering
@@ -207,16 +210,24 @@ Some key things that will most likely be here are:
     No. & Risk or Issue & Strategies to resolve \\
     \midrule
         1 & Project Viability & Conduct a Project Viability Assessment to explore technical concerns. \\
-        2 & Project Completion & Use of weekly sprints and scrum methods.\\
-        3 & Data Abundance and Quality & Merging datasets from various sources and thorough data quality inspection. \\
-        4 & Implementing new technologies & Weekly group meetings to discuss any concerns and struggles. \\
-        5 & Model Over-fitting & Use of techniques such as data pruning, cross-validation and regularization. \\
-        6 & Evaluation Process & Conduct in-person user trials to discover potential user experience or technical constraints. \\
+        2 & Data Abundance and Quality & Merging datasets from various sources and thorough data quality inspection. \\
+        3 & Implementing new technologies & Weekly group meetings to discuss any concerns and struggles. \\
+        4 & Model Over-fitting & Use of techniques such as data pruning, cross-validation and regularization. \\
+        5 & Evaluation Process & Conduct in-person user trials to discover potential user experience or technical constraints. \\
+        6 & Project Completion & Use of weekly sprints and scrum methods.\\
     \bottomrule
   \end{tabular}
   \caption{Summary of Potential Project Risks}
 \end{table}
 }
+
+\textcolor{black}{The primary concern during the initial stages of the project was its viability, specifically as it was challenging to find a suitable dataset to train the machine learning model. The majority of datasets concerning trading insights require payment for access or do not match the project's prerequisites. After thorough research, the group decided to integrate the Coinbase Prime Order Book API to acquire real-time order book data.}
+
+\textcolor{black}{The implementation primarily utilises Generative Adversarial Network (GAN) models to simulate synthetic order book data. Despite previous knowledge in Python and machine learning, most team members need to self-learn the concept and its implementation through trial and error. This lack of experience and limited resources could cause issues with time management and the correctness of the final model.}
+
+\textcolor{black}{At the end of the implementation, the final software must be evaluated for its accuracy, precision, and overall user experience. These metrics are crucial to gauge whether the project has satisfied its functional and non-functional requirements. However, there are also numerous external factors to consider when dealing with trading software, particularly market volatility. These market fluctuations typically occur due to political news, natural disasters, or economic distress. Hence, it may be a problematic feature to predict and integrate as part of the project. }
+
+\textcolor{black}{An unlikely yet plausible risk is not completing the project by the deadline. To counteract this, the group will utilise the techniques discussed in Section 3. These agile methods will help support the development process to ensure the project is high quality and finished on time. }
 %%
 %% The next two lines define the bibliography style to be used, and
 %% the bibliography file.
