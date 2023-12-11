@@ -6,9 +6,6 @@
 //
 
 #include "OrderBook.hpp"
-#include <mutex>
-
-std::mutex orderBookMutex;
 
 // Check if the order book is empty
 bool OrderBook::is_empty() const {
@@ -16,6 +13,10 @@ bool OrderBook::is_empty() const {
 }
 
 
+void OrderBook::clear_order_book() {
+    bids.clear();
+    asks.clear();
+}
 
 
 // Add an order to the order book
@@ -54,8 +55,6 @@ void OrderBook::remove_order(int id, double price, bool is_bid) {
 
 // print order_book
 void OrderBook::print_order_book() const {
-    std::lock_guard<std::mutex> guard(orderBookMutex); // Ensure thread safety when accessing the order book.
-
     std::cout << "Current Order Book State:\n";
 
     // Print asks
@@ -122,15 +121,17 @@ void OrderBook::modify_order(int id, double old_price, double new_price, double 
 std::ostream& operator<<(std::ostream& os, const OrderBook& book) {
     os << "Asks:\n";
     for (const auto& ask : book.asks) {
+        os << "Price "<< ask.first << ": ";
         for (const auto& order : ask.second) {
-            os << "Price: " << ask.first << ", Quantity: " << order.quantity << ", ID: " << order.id << "\n";
+            os << "Quantity: " << order.quantity << ", ID: " << order.id << "\t||||";
         }
     }
 
     os << "\nBids:\n";
     for (const auto& bid : book.bids) {
+        os << "Price "<< bid.first << ": ";
         for (const auto& order : bid.second) {
-            os << "Price: " << bid.first << ", Quantity: " << order.quantity << ", ID: " << order.id << "\n";
+            os << "Quantity: " << order.quantity << ", ID: " << order.id << "\t||||";
         }
     }
     return os;
@@ -142,4 +143,8 @@ std::map<double, OrderList> OrderBook::getBids() {
 
 std::map<double, OrderList> OrderBook::getAsks() {
     return asks;
+}
+
+int OrderBook::getOrderCount() {
+    return asks.size() + bids.size();
 }

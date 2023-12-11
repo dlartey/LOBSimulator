@@ -1,4 +1,6 @@
 /build/
+/buildXCode/
 .DS_Store
 DataRetreiver/__pycache__/
 prime_orderbook.db
+*.swp
