@@ -8,21 +8,27 @@
 #include <csignal>
 #include <csignal>
 #include <mutex>
-#include <string> // For std::stoi and std::stod
+#include <string>        // For std::stoi and std::stod
 #include "OrderBook.hpp" // Include your OrderBook definition
 #include "DBHandler.hpp"
+#include <QApplication>
+#include <QPushButton>
+#include <QObject>
 
 OrderBook globalOrderBook;
 volatile std::sig_atomic_t gSignalStatus;
 
 // Signal handler function
-void signal_handler(int signal) {
+void signal_handler(int signal)
+{
     gSignalStatus = signal;
 }
 
-void asyncFunction(std::string baseSQLStatement, DBHandler* handler) {
+void asyncFunction(std::string baseSQLStatement, DBHandler *handler)
+{
     // Loop to continuously fetch new entries
-    while (gSignalStatus != SIGINT) {
+    while (gSignalStatus != SIGINT)
+    {
         globalOrderBook.OB_mutex.lock();
         globalOrderBook.clear_order_book();
         handler->updateOrderBookFromDB(globalOrderBook);
@@ -30,8 +36,8 @@ void asyncFunction(std::string baseSQLStatement, DBHandler* handler) {
     }
 }
 
-
-void asyncSQLTest(std::string SQLStatement, DBHandler* handler){
+void asyncSQLTest(std::string SQLStatement, DBHandler *handler)
+{
     std::thread(asyncFunction, SQLStatement, &(*handler)).detach();
 }
 
@@ -42,7 +48,8 @@ std::string getProjectSourceDirectory()
     return fullPath.parent_path().string();
 }
 
-int main(int argc, const char* argv[]) {
+int main(int argc, char *argv[])
+{
     // Register signal handler for graceful shutdown
     std::signal(SIGINT, signal_handler);
 
@@ -51,13 +58,24 @@ int main(int argc, const char* argv[]) {
     // Start the async SQL test in a separate thread
     asyncSQLTest("SELECT * FROM book", &handler);
 
-    while (gSignalStatus != SIGINT) {
-        globalOrderBook.OB_mutex.lock();
-        if (globalOrderBook.getOrderCount()) std::cout << globalOrderBook.getOrderCount() << std::endl;
-        globalOrderBook.OB_mutex.unlock();
-        //std::this_thread::sleep_for(std::chrono::seconds(1));
+    QApplication app(argc, argv);
+    QPushButton button("Say Hello");
+    button.show();
+    int result = app.exec();
+
+    // while (gSignalStatus != SIGINT) {
+    //     globalOrderBook.OB_mutex.lock();
+    //     if (globalOrderBook.getOrderCount()) std::cout << globalOrderBook.getOrderCount() << std::endl;
+    //     globalOrderBook.OB_mutex.unlock();
+    //     //std::this_thread::sleep_for(std::chrono::seconds(1));
+    // }
+    while (gSignalStatus != SIGINT)
+    {
+        //         globalOrderBook.OB_mutex.lock();
+        //         std::cout << globalOrderBook.getOrderCount() << " ";
+        //         globalOrderBook.OB_mutex.unlock();
     }
 
     std::cout << "Application exiting..." << std::endl;
-    return 0;
+    return result;
 }

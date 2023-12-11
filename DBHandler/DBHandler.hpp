@@ -13,20 +13,21 @@
 #include <string>
 #include "OrderBook.hpp"
 
-class DBHandler {
+class DBHandler
+{
 private:
-    sqlite3* DB;
+    sqlite3 *DB;
     std::string filePathDB;
-    
+
     void connectToDB();
-    
+
 public:
     DBHandler(std::string parentFilePath);
     ~DBHandler();
-    
-    void updateOrderBookFromDB(OrderBook& orderBook);
-    
-    sqlite3* getDB();
+
+    void updateOrderBookFromDB(OrderBook &orderBook);
+
+    sqlite3 *getDB();
     std::string getFilePathDB();
 };
 

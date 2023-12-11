@@ -8,15 +8,17 @@
 #ifndef OrderBook_hpp
 #define OrderBook_hpp
 #include <mutex>
+#include <sqlite3.h>
+#include <QObject>
 
 extern std::mutex orderBookMutex;
-
 
 #include <iostream> // Correct header for std::ostream
 #include <map>
 #include <list>
 
-struct Order {
+struct Order
+{
     int id;
     double price;
     double quantity;
@@ -26,13 +28,14 @@ struct Order {
 
 using OrderList = std::list<Order>;
 
-class OrderBook {
+class OrderBook : public QObject {
+    Q_OBJECT
 private: // Explicitly stating that bids and asks are private
     std::map<double, OrderList> bids, asks;
 
 public:
     std::mutex OB_mutex;
-    
+
     bool is_empty() const;
     void add_order(int id, double price, double quantity, bool is_bid);
     void remove_order(int id, double price, bool is_bid);
@@ -44,8 +47,10 @@ public:
     std::map<double, OrderList> getAsks();
     int getOrderCount();
 
-    friend std::ostream& operator<<(std::ostream& os, const OrderBook& book);
+    friend std::ostream &operator<<(std::ostream &os, const OrderBook &book);
+    
+signals:
+    void orderBookUpdated();
 };
 
 #endif /* OrderBook_hpp */
-
