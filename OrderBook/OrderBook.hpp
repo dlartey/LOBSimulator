@@ -31,11 +31,14 @@ private: // Explicitly stating that bids and asks are private
     std::map<double, OrderList> bids, asks;
 
 public:
+    std::mutex OB_mutex;
+    
     bool is_empty() const;
     void add_order(int id, double price, double quantity, bool is_bid);
     void remove_order(int id, double price, bool is_bid);
     void modify_order(int id, double old_price, double new_price, double new_quantity, bool is_bid);
     void print_order_book() const;
+    void clear_order_book();
 
     std::map<double, OrderList> getBids();
     std::map<double, OrderList> getAsks();
