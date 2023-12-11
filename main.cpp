@@ -10,8 +10,7 @@
 #include <mutex>
 #include <string> // For std::stoi and std::stod
 #include "OrderBook.hpp" // Include your OrderBook definition
-#include "DBHandler/DBHandler.hpp"
-#include "DBHandler/DBHandler.cpp"
+#include "DBHandler.hpp"
 
 OrderBook globalOrderBook;
 volatile std::sig_atomic_t gSignalStatus;
