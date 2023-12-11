@@ -10,6 +10,7 @@
 #include <mutex>
 #include <string> // For std::stoi and std::stod
 #include "OrderBook.hpp" // Include your OrderBook definition
+#include "DBHandler/DBHandler.hpp"
 
 using namespace std;
 
@@ -18,7 +19,6 @@ OrderBook globalOrderBook;
 volatile std::sig_atomic_t gSignalStatus;
 static int lastID = 0;
 static std::mutex lastIdMutex;
-static int lastProcessedId = 0;
 
 using namespace std;
 
@@ -30,24 +30,13 @@ void signal_handler(int signal) {
 
 
 int callback(void* notUsed, int argc, char** argv, char** azColName) {
-    std::lock_guard<std::mutex> guard(orderBookMutex);
-
     if (argc == 4) {
         int index = std::stoi(argv[0]);
-        // Check if this row has already been processed
-        std::lock_guard<std::mutex> lk(lastIdMutex);
-        if (index <= lastProcessedId) return 0;
-
         double price_level = std::stod(argv[1]);
         double new_quantity = std::stod(argv[2]);
         std::string id = argv[3];
-
-        // Add the order to the OrderBook
-        bool is_bid = id.find("_ask") == std::string::npos; // Assuming "_ask" is part of the ask IDs
+        bool is_bid = id.find("_ask") == std::string::npos;
         globalOrderBook.add_order(index, price_level, new_quantity, is_bid);
-
-        // Update the last processed index
-        lastProcessedId = index;
     }
 
     return 0;
@@ -55,26 +44,13 @@ int callback(void* notUsed, int argc, char** argv, char** azColName) {
 
 
 void asyncFunction(string baseSQLStatement, sqlite3* DB) {
-    static bool isRunning = false;
-    {
-        std::lock_guard<std::mutex> lk(lastIdMutex);
-        if (isRunning) return; // Ensures single execution
-        isRunning = true;
-    }
-
     // Loop to continuously fetch new entries
     while (gSignalStatus != SIGINT) {
-        std::string modifiedSQLStatement;
-        {
-            std::lock_guard<std::mutex> lk(lastIdMutex);
-            modifiedSQLStatement = baseSQLStatement + " WHERE \"index\" > " + std::to_string(lastProcessedId) + " ORDER BY \"index\" ASC";
-        }
-
-        sqlite3_exec(DB, modifiedSQLStatement.c_str(), callback, nullptr, nullptr);
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        globalOrderBook.OB_mutex.lock();
+        globalOrderBook.clear_order_book();
+        sqlite3_exec(DB, baseSQLStatement.c_str(), callback, nullptr, nullptr);
+        globalOrderBook.OB_mutex.unlock();
     }
-
-    isRunning = false;
 }
 
 
@@ -119,8 +95,10 @@ int main(int argc, const char* argv[]) {
 
     // Main loop to print the order book
     while (gSignalStatus != SIGINT) {
-        globalOrderBook.print_order_book(); // Print the state of the order book
-        std::this_thread::sleep_for(std::chrono::seconds(5)); // Pause for 5 seconds
+        globalOrderBook.OB_mutex.lock();
+        cout << globalOrderBook.getOrderCount() << endl;
+        globalOrderBook.OB_mutex.unlock();
+        std::this_thread::sleep_for(std::chrono::seconds(1)); // Pause for 5 seconds
     }
 
     // Cleanup and shutdown

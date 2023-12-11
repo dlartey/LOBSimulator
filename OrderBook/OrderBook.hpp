@@ -42,6 +42,7 @@ public:
 
     std::map<double, OrderList> getBids();
     std::map<double, OrderList> getAsks();
+    int getOrderCount();
 
     friend std::ostream& operator<<(std::ostream& os, const OrderBook& book);
 };

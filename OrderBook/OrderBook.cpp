@@ -6,9 +6,6 @@
 //
 
 #include "OrderBook.hpp"
-#include <mutex>
-
-std::mutex orderBookMutex;
 
 // Check if the order book is empty
 bool OrderBook::is_empty() const {
@@ -58,8 +55,6 @@ void OrderBook::remove_order(int id, double price, bool is_bid) {
 
 // print order_book
 void OrderBook::print_order_book() const {
-    std::lock_guard<std::mutex> guard(orderBookMutex); // Ensure thread safety when accessing the order book.
-
     std::cout << "Current Order Book State:\n";
 
     // Print asks
@@ -148,4 +143,8 @@ std::map<double, OrderList> OrderBook::getBids() {
 
 std::map<double, OrderList> OrderBook::getAsks() {
     return asks;
+}
+
+int OrderBook::getOrderCount() {
+    return asks.size() + bids.size();
 }
