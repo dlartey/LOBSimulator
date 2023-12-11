@@ -137,6 +137,10 @@ std::ostream& operator<<(std::ostream& os, const OrderBook& book) {
     return os;
 }
 
+bool OrderBook::empty() {
+    return bids.empty() && asks.empty();
+}
+
 std::map<double, OrderList> OrderBook::getBids() {
     return bids;
 }

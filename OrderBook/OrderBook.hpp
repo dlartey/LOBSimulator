@@ -9,7 +9,6 @@
 #define OrderBook_hpp
 #include <mutex>
 #include <sqlite3.h>
-#include <QObject>
 
 extern std::mutex orderBookMutex;
 
@@ -28,8 +27,7 @@ struct Order
 
 using OrderList = std::list<Order>;
 
-class OrderBook : public QObject {
-    Q_OBJECT
+class OrderBook {
 private: // Explicitly stating that bids and asks are private
     std::map<double, OrderList> bids, asks;
 
@@ -42,15 +40,13 @@ public:
     void modify_order(int id, double old_price, double new_price, double new_quantity, bool is_bid);
     void print_order_book() const;
     void clear_order_book();
+    bool empty();
 
     std::map<double, OrderList> getBids();
     std::map<double, OrderList> getAsks();
     int getOrderCount();
 
     friend std::ostream &operator<<(std::ostream &os, const OrderBook &book);
-    
-signals:
-    void orderBookUpdated();
 };
 
 #endif /* OrderBook_hpp */

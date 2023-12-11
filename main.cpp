@@ -11,6 +11,7 @@
 #include <string>        // For std::stoi and std::stod
 #include "OrderBook.hpp" // Include your OrderBook definition
 #include "DBHandler.hpp"
+#include "OrderBookWidget.hpp"
 #include <QApplication>
 #include <QPushButton>
 #include <QObject>
@@ -33,6 +34,8 @@ void asyncFunction(std::string baseSQLStatement, DBHandler *handler)
         globalOrderBook.clear_order_book();
         handler->updateOrderBookFromDB(globalOrderBook);
         globalOrderBook.OB_mutex.unlock();
+        handler->emitSuccessfulUpdate();
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
     }
 }
 
@@ -59,22 +62,9 @@ int main(int argc, char *argv[])
     asyncSQLTest("SELECT * FROM book", &handler);
 
     QApplication app(argc, argv);
-    QPushButton button("Say Hello");
-    button.show();
+    OrderBookWidget obw(&handler, &globalOrderBook);
+    obw.show();
     int result = app.exec();
-
-    // while (gSignalStatus != SIGINT) {
-    //     globalOrderBook.OB_mutex.lock();
-    //     if (globalOrderBook.getOrderCount()) std::cout << globalOrderBook.getOrderCount() << std::endl;
-    //     globalOrderBook.OB_mutex.unlock();
-    //     //std::this_thread::sleep_for(std::chrono::seconds(1));
-    // }
-    while (gSignalStatus != SIGINT)
-    {
-        //         globalOrderBook.OB_mutex.lock();
-        //         std::cout << globalOrderBook.getOrderCount() << " ";
-        //         globalOrderBook.OB_mutex.unlock();
-    }
 
     std::cout << "Application exiting..." << std::endl;
     return result;

@@ -59,6 +59,10 @@ void DBHandler::updateOrderBookFromDB(OrderBook &orderBook)
     sqlite3_exec(DB, SQLStatement.c_str(), updateOrderBook, &orderBook, nullptr);
 }
 
+void DBHandler::emitSuccessfulUpdate() {
+    emit orderBookUpdated();
+}
+
 sqlite3 *DBHandler::getDB()
 {
     return DB;

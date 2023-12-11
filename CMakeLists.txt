@@ -18,6 +18,7 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 include_directories(OrderBook)
 include_directories(DBHandler)
+include_directories(OrderBookWidget)
 
 
 message("Going into Orderbook subdirectory...")
@@ -26,8 +27,9 @@ message("Going into DBHandler subdirectory...")
 add_subdirectory(DBHandler)
 message("Going into OrderbookTests subdirectory...")
 add_subdirectory(OrderBookTests)
+add_subdirectory(OrderBookWidget)
 
 set(SOURCE_FILES main.cpp)
 add_executable(OrderBookDemo ${SOURCE_FILES})
 
-target_link_libraries(OrderBookDemo PRIVATE OrderBook DBHandler Qt${QT_VERSION_MAJOR}::Widgets SQLite::SQLite3 )
+target_link_libraries(OrderBookDemo PRIVATE OrderBook DBHandler OrderBookWidget Qt${QT_VERSION_MAJOR}::Widgets SQLite::SQLite3 )
