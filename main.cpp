@@ -60,10 +60,10 @@ int main(int argc, char *argv[])
 
     // Start the async SQL test in a separate thread
     asyncSQLTest("SELECT * FROM book", &handler);
-
     QApplication app(argc, argv);
     OrderBookWidget obw(&handler, &globalOrderBook);
     obw.show();
+//    std::this_thread::sleep_for(std::chrono::milliseconds(5000));
     int result = app.exec();
 
     std::cout << "Application exiting..." << std::endl;
