@@ -9,3 +9,4 @@ set(SOURCE_FILES DBHandler.cpp)
 
 message("adding DBHandler library...")
 add_library(DBHandler STATIC ${SOURCE_FILES} ${HEADER_FILES})
+target_link_libraries(DBHandler PUBLIC Qt${QT_VERSION_MAJOR}::Widgets)

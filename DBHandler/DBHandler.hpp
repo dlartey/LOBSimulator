@@ -12,22 +12,29 @@
 #include <sqlite3.h>
 #include <string>
 #include "OrderBook.hpp"
+#include <QObject>
 
-class DBHandler {
+class DBHandler : public QObject
+{
+    Q_OBJECT
 private:
-    sqlite3* DB;
+    sqlite3 *DB;
     std::string filePathDB;
-    
+
     void connectToDB();
-    
+
 public:
     DBHandler(std::string parentFilePath);
     ~DBHandler();
-    
-    void updateOrderBookFromDB(OrderBook& orderBook);
-    
-    sqlite3* getDB();
+
+    void updateOrderBookFromDB(OrderBook &orderBook);
+    void emitSuccessfulUpdate();
+    sqlite3 *getDB();
     std::string getFilePathDB();
+    
+signals:
+    void orderBookUpdated();
+    
 };
 
 #endif /* DBHandler_hpp */

@@ -8,15 +8,16 @@
 #ifndef OrderBook_hpp
 #define OrderBook_hpp
 #include <mutex>
+#include <sqlite3.h>
 
 extern std::mutex orderBookMutex;
-
 
 #include <iostream> // Correct header for std::ostream
 #include <map>
 #include <list>
 
-struct Order {
+struct Order
+{
     int id;
     double price;
     double quantity;
@@ -32,20 +33,20 @@ private: // Explicitly stating that bids and asks are private
 
 public:
     std::mutex OB_mutex;
-    
+
     bool is_empty() const;
     void add_order(int id, double price, double quantity, bool is_bid);
     void remove_order(int id, double price, bool is_bid);
     void modify_order(int id, double old_price, double new_price, double new_quantity, bool is_bid);
     void print_order_book() const;
     void clear_order_book();
+    bool empty();
 
     std::map<double, OrderList> getBids();
     std::map<double, OrderList> getAsks();
     int getOrderCount();
 
-    friend std::ostream& operator<<(std::ostream& os, const OrderBook& book);
+    friend std::ostream &operator<<(std::ostream &os, const OrderBook &book);
 };
 
 #endif /* OrderBook_hpp */
-

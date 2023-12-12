@@ -4,3 +4,4 @@
 DataRetreiver/__pycache__/
 prime_orderbook.db
 *.swp
+*.vscode
