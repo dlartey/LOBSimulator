@@ -3,6 +3,8 @@
 # Prerequisites
 
 1. CMake
+2. sqlite3
+3. Qt
 
 ## How to run
 
