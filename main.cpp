@@ -11,6 +11,7 @@
 #include <string>        // For std::stoi and std::stod
 #include "OrderBook.hpp" // Include your OrderBook definition
 #include "DBHandler.hpp"
+#include "API.hpp"
 #include "OrderBookWidget.hpp"
 #include <QApplication>
 #include <QPushButton>
@@ -55,6 +56,7 @@ int main(int argc, char *argv[])
 {
     // Register signal handler for graceful shutdown
     std::signal(SIGINT, signal_handler);
+    API::startServer(globalOrderBook);
 
     DBHandler handler(getProjectSourceDirectory());
 

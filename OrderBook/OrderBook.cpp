@@ -18,7 +18,6 @@ void OrderBook::clear_order_book() {
     asks.clear();
 }
 
-
 // Add an order to the order book
 void OrderBook::add_order(int id, double price, double quantity, bool is_bid) {
     Order order(id, price, quantity);

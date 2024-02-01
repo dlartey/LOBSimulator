@@ -8,7 +8,6 @@
 #ifndef OrderBook_hpp
 #define OrderBook_hpp
 #include <mutex>
-#include <sqlite3.h>
 
 extern std::mutex orderBookMutex;
 
