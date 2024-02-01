@@ -52,11 +52,15 @@ std::string getProjectSourceDirectory()
     return fullPath.parent_path().string();
 }
 
+void startServerWrapper() {
+    API::startServer(globalOrderBook);
+}
+
 int main(int argc, char *argv[])
 {
     // Register signal handler for graceful shutdown
     std::signal(SIGINT, signal_handler);
-    API::startServer(globalOrderBook);
+    std::thread serverThread(startServerWrapper);
 
     DBHandler handler(getProjectSourceDirectory());
 
@@ -67,6 +71,7 @@ int main(int argc, char *argv[])
     obw.show();
 //    std::this_thread::sleep_for(std::chrono::milliseconds(5000));
     int result = app.exec();
+    serverThread.join();
 
     std::cout << "Application exiting..." << std::endl;
     return result;

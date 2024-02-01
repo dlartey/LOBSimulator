@@ -27,38 +27,35 @@
 httplib::Client API::cli("localhost:8080");
 httplib::Server API::s;
 
-void API::getOrders(OrderBook &o){
-    if (auto res = cli.Get("/pos")){
-        if (res->status == 200){
-            int i  = 0;
+void API::getOrders(OrderBook &o) {
+    if (auto res = cli.Get("/pos")) {
+        if (res->status == 200) {
+            int i = 0;
         }
     }
 }
 
- void API::submitOrder(OrderBook &o){
-    s.Post("/submit", [&o](const httplib::Request& req, httplib::Response& res) {
+void API::submitOrder(OrderBook &o) {
+    s.Post("/submit", [&o](const httplib::Request &req, httplib::Response &res) {
         if (req.has_header("Content-Type") && req.get_header_value("Content-Type") == "application/json") {
             try {
                 auto json_data = nlohmann::json::parse(req.body);
                 if (json_data.contains("price") && json_data.contains("bidAsk") && json_data.contains("quantity")) {
-                    double p = json_data["price"].get<double>();
-                    double q = json_data["quantity"].get<double>();
-                    bool bA =json_data["bidAsk"].get<bool>();
-                    o.add_order(1000, p, q, bA);
+                    o.add_order(1000, json_data["price"].get<double>(), json_data["quantity"].get<double>(), json_data["bidAsk"].get<bool>());
                     res.set_content("Order Added to the OrderBook", "text/plain");
                     return;
                 }
-            } catch (const std::exception& e) {
+            } catch (const std::exception &e) {
                 std::cerr << "JSON parsing error: " << e.what() << std::endl;
             }
         }
 
-    res.status = 400;
-    res.set_content("Invalid JSON structure", "text/plain");
-});
+        res.status = 400;
+        res.set_content("Invalid JSON structure", "text/plain");
+    });
 }
 
-void API::startServer(OrderBook &o){
+void API::startServer(OrderBook &o) {
     submitOrder(o);
     s.listen("localhost", 8080);
 }
