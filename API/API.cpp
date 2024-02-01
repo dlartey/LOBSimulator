@@ -35,13 +35,24 @@ void API::getOrders(OrderBook &o) {
     }
 }
 
+void API::deleteOrder(OrderBook &o) {
+    s.Delete("/delete", [](const httplib::Request& req, httplib::Response& res) {
+        // If the order has already been fulfilled, maybe don't give the user the option to remove it?
+        // research more into this
+        res.set_content("Resource deleted successfully", "text/plain");
+    });
+
+
+}
+
 void API::submitOrder(OrderBook &o) {
     s.Post("/submit", [&o](const httplib::Request &req, httplib::Response &res) {
         if (req.has_header("Content-Type") && req.get_header_value("Content-Type") == "application/json") {
             try {
                 auto json_data = nlohmann::json::parse(req.body);
                 if (json_data.contains("price") && json_data.contains("bidAsk") && json_data.contains("quantity")) {
-                    o.add_order(1000, json_data["price"].get<double>(), json_data["quantity"].get<double>(), json_data["bidAsk"].get<bool>());
+                    o.add_order(1000, json_data["price"].get<double>(), json_data["quantity"].get<double>(),
+                                json_data["bidAsk"].get<bool>());
                     res.set_content("Order Added to the OrderBook", "text/plain");
                     return;
                 }

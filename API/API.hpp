@@ -15,6 +15,7 @@ private:
 
 public:
     static void getOrders(OrderBook &o);
+    static void deleteOrder(OrderBook &o);
     static void submitOrder(OrderBook &o);
     static void startServer(OrderBook &o);
 
