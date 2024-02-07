@@ -68,7 +68,6 @@ class TraderWindow(QMainWindow):
         # Read the CSV without assigning column names
         df = pd.read_csv(csv_path, header=None)
 
-        # Assuming the 'Type' is in the 5th column (index 4 since pandas uses 0-based indexing)
         bids = df[df.iloc[:, 4].str.contains('bid', na=False)]
         asks = df[df.iloc[:, 4].str.contains('ask', na=False)]
 
@@ -95,7 +94,7 @@ class TraderWindow(QMainWindow):
 
     def createCandlestickChart(self):
         try:
-            # Read the data from the CSV file, assuming that it has no header
+            # Read the data from the CSV file
             df = pd.read_csv('orderbook_snapshots.csv', header=None)
             df.columns = ['Timestamp', 'ID', 'Price', 'Quantity', 'Type']  # Assign column names
             df['Timestamp'] = pd.to_datetime(df['Timestamp'])
