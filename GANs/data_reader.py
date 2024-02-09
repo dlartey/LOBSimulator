@@ -10,9 +10,6 @@ data_reader_instance.read_csv()
 data_reader_instance.get_data().shape
 """
 
-threshold_datetime = datetime.strptime("2024-02-05 19:30:00", "%Y-%m-%d %H:%M:%S")
-
-
 class DataReader:
     def __init__(self, file_path, rows_per_orderbook=2):
         self.file_path = file_path
@@ -34,7 +31,6 @@ class DataReader:
                 rows = [
                     [row[2], row[3], row[4]]
                     for row in rows
-                    if row[0] <= threshold_datetime
                 ]
                 rows = np.array(
                     [
