@@ -7,3 +7,5 @@ prime_orderbook.db
 *.swp
 *.vscode
 *ubyte*
+orderbook_snapshots.csv
+.ipynb_checkpoints/
