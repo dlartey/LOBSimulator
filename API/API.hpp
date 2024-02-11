@@ -12,6 +12,7 @@ class API {
 private:
     static httplib::Server s;
     static httplib::Client cli;
+    static std::map< int, std::map<std::string, double> > orderHistory;
 
 public:
     static void getOrders(OrderBook &o);

@@ -29,8 +29,9 @@ void OrderBook::add_order(int id, double price, double quantity, bool is_bid) {
     }
 }
 
-// remove an order
-void OrderBook::remove_order(int id, double price, bool is_bid) {
+// return true if order removed, else false
+bool OrderBook::remove_order(int id, double price, bool is_bid) {
+    bool valid = false;
     auto& price_level_orders = is_bid ? bids : asks;
     auto it = price_level_orders.find(price);
     if (it != price_level_orders.end()) {
@@ -38,6 +39,7 @@ void OrderBook::remove_order(int id, double price, bool is_bid) {
         for (auto order_it = orders.begin(); order_it != orders.end(); ) {
             if (order_it->id == id) {
                 order_it = orders.erase(order_it); // Remove the order
+                valid = true;
                 break; // Assuming id is unique, we can break after finding it
             }
             else {
@@ -50,6 +52,7 @@ void OrderBook::remove_order(int id, double price, bool is_bid) {
             price_level_orders.erase(it);
         }
     }
+    return valid;
 }
 
 // print order_book
