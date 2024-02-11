@@ -16,6 +16,7 @@
 #include <QApplication>
 #include <QPushButton>
 #include <QObject>
+#include <torch/torch.h>
 
 OrderBook globalOrderBook;
 volatile std::sig_atomic_t gSignalStatus;
@@ -61,9 +62,7 @@ int main(int argc, char *argv[])
     // Register signal handler for graceful shutdown
     std::signal(SIGINT, signal_handler);
     std::thread serverThread(startServerWrapper);
-
     DBHandler handler(getProjectSourceDirectory());
-
     // Start the async SQL test in a separate thread
     asyncSQLTest("SELECT * FROM book", &handler);
     QApplication app(argc, argv);

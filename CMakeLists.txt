@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.14)
 project(OrderBookDemo)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -17,13 +17,26 @@ FetchContent_Declare(
         URL https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.15.0.zip
 )
 
+FetchContent_Declare(
+        libtorch
+        URL https://download.pytorch.org/libtorch/cpu/libtorch-cxx11-abi-shared-with-deps-2.2.0%2Bcpu.zip
+)
+
 FetchContent_MakeAvailable(httplib)
 
+FetchContent_GetProperties(libtorch)
+if(NOT libtorch_POPULATED)
+    FetchContent_Populate(libtorch)
+    set(Torch_DIR ${libtorch_SOURCE_DIR}/share/cmake/Torch)
+endif()
+
+find_package(Torch REQUIRED)
 find_package(SQLite3 REQUIRED)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 include_directories(${httplib_SOURCE_DIR})
+include_directories(${torch_SOURCE_DIR})
 include_directories(OrderBook)
 include_directories(API)
 include_directories(DBHandler)
@@ -42,4 +55,5 @@ add_subdirectory(API)
 set(SOURCE_FILES main.cpp)
 add_executable(OrderBookDemo ${SOURCE_FILES})
 
-target_link_libraries(OrderBookDemo PRIVATE OrderBook API DBHandler OrderBookWidget Qt${QT_VERSION_MAJOR}::Widgets SQLite::SQLite3 httplib::httplib)
+target_link_libraries(OrderBookDemo PRIVATE OrderBook API DBHandler OrderBookWidget Qt${QT_VERSION_MAJOR}::Widgets SQLite::SQLite3 httplib::httplib "${TORCH_LIBRARIES}")
+set_property(TARGET OrderBookDemo PROPERTY CXX_STANDARD 17)
