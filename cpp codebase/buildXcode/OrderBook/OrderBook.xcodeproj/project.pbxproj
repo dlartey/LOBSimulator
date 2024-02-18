@@ -1,0 +1,1125 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1C7F3812CE9A42DA8072B1D0 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 140F74124B7748DEA7932D0B /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				73AC04853B16D518FE805DF8 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		A4388912DF704ADE8E661A44 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = CC89700792364E7DBC124E94 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				E497E77297ED0A5EA8C4F9AF /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				06BC1D05BBDD453480D781A1 /* PBXTargetDependency */,
+				BDF2C3550244450AA0A933FA /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		D4B5F2B4ED0F4948A871B9B0 /* OrderBook_autogen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B342D05B0B4945B89EA0DEED /* Build configuration list for PBXAggregateTarget "OrderBook_autogen" */;
+			buildPhases = (
+				7238C2888CB54FA7043F78BC /* Generate CMakeFiles/OrderBook_autogen */,
+			);
+			dependencies = (
+				C50954EA48F94B32B895B34D /* PBXTargetDependency */,
+			);
+			name = OrderBook_autogen;
+			productName = OrderBook_autogen;
+		};
+		D7FA498E92F448BA9C24DDDF /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3C4399F4E09B4F37AB6AD40A /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				2D1EFEB757A64C009EF9BC9B /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		65740792BD4A45599411CD4E /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook/OrderBook.cpp */ = {isa = PBXBuildFile; fileRef = 8E056F0406DC43D0A8D93E16 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook/OrderBook.cpp */; };
+		8287F07AB1E241BCB0ABC20E /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/OrderBook_autogen/mocs_compilation.cpp */ = {isa = PBXBuildFile; fileRef = E5DF4A3F0EB24BFF8ED8B477 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/OrderBook_autogen/mocs_compilation.cpp */; };
+		AD361F067F9B4171BCCA075E /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = E637CBCDB33B4F7A98ED845D /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook/CMakeLists.txt */; };
+		B08F6A37DAE6476886F55181 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook/OrderBook.hpp */ = {isa = PBXBuildFile; fileRef = F3E3430AB2604EC9993E2DCD /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook/OrderBook.hpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		650D868100AC43969090E07C /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		6B2BE8984F1B4844ADE3B18E /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		7C3576A17ABB47EB97A5E9BC /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		835B58F217E548C6A8DC0156 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		43D93488653D4F8DAF6844E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0AEA43BE794BD7B49AC2D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C7F3812CE9A42DA8072B1D0;
+			remoteInfo = ZERO_CHECK;
+		};
+		46775CDC2E6544AAA96D2369 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0AEA43BE794BD7B49AC2D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4388912DF704ADE8E661A44;
+			remoteInfo = ALL_BUILD;
+		};
+		61BD219A01524D5BA4D8C9ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0AEA43BE794BD7B49AC2D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C7F3812CE9A42DA8072B1D0;
+			remoteInfo = ZERO_CHECK;
+		};
+		788972CD784C41128C53914A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0AEA43BE794BD7B49AC2D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE5E8D00B17E4B2C83DB510D;
+			remoteInfo = OrderBook;
+		};
+		8099EA0FD1DA4201A83170C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0AEA43BE794BD7B49AC2D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C7F3812CE9A42DA8072B1D0;
+			remoteInfo = ZERO_CHECK;
+		};
+		90161E84198947729D73D321 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C0AEA43BE794BD7B49AC2D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4B5F2B4ED0F4948A871B9B0;
+			remoteInfo = OrderBook_autogen;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2897EB337F864B1FB2D60631 /* OrderBook */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libOrderBook.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		42670944CD3647F9B6060613 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		84E18E59F2834A98A04D45D1 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		8E056F0406DC43D0A8D93E16 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook/OrderBook.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = OrderBook.cpp; path = OrderBook.cpp; sourceTree = SOURCE_ROOT; };
+		E5DF4A3F0EB24BFF8ED8B477 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/OrderBook_autogen/mocs_compilation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mocs_compilation.cpp; path = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/OrderBook_autogen/mocs_compilation.cpp"; sourceTree = "<absolute>"; };
+		E637CBCDB33B4F7A98ED845D /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		F3E3430AB2604EC9993E2DCD /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook/OrderBook.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = OrderBook.hpp; path = OrderBook.hpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD616AAD986741A69A3F7B77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D4471108E7345C19DC12B5A /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		0D5C3C3106E14381BD2A530C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1577A77300044F81A0BC347D /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				F3E3430AB2604EC9993E2DCD /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook/OrderBook.hpp */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		935EAEC1BEF841098057E495 /* OrderBook_autogen */ = {
+			isa = PBXGroup;
+			children = (
+				BE11183B9CAF4F7E9C80F09C /* CMake Rules */,
+				84E18E59F2834A98A04D45D1 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook/CMakeLists.txt */,
+			);
+			name = OrderBook_autogen;
+			sourceTree = "<group>";
+		};
+		9988B6566072468389B44756 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E056F0406DC43D0A8D93E16 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook/OrderBook.cpp */,
+				E5DF4A3F0EB24BFF8ED8B477 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/OrderBook_autogen/mocs_compilation.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		9CCE7A76B5E243E89A7E6E0B /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				0D4471108E7345C19DC12B5A /* CMake Rules */,
+				42670944CD3647F9B6060613 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		9D591B1F201B4E7D81E60C83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2897EB337F864B1FB2D60631 /* OrderBook */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7C14134D30F44D9B0AF643C = {
+			isa = PBXGroup;
+			children = (
+				DC345B1F64ED484FB2DF1D83 /* OrderBook */,
+				935EAEC1BEF841098057E495 /* OrderBook_autogen */,
+				9CCE7A76B5E243E89A7E6E0B /* ALL_BUILD */,
+				9D591B1F201B4E7D81E60C83 /* Products */,
+				0D5C3C3106E14381BD2A530C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BE11183B9CAF4F7E9C80F09C /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		DC345B1F64ED484FB2DF1D83 /* OrderBook */ = {
+			isa = PBXGroup;
+			children = (
+				9988B6566072468389B44756 /* Source Files */,
+				1577A77300044F81A0BC347D /* Header Files */,
+				E637CBCDB33B4F7A98ED845D /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook/CMakeLists.txt */,
+			);
+			name = OrderBook;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE5E8D00B17E4B2C83DB510D /* OrderBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61E4B8B2023448EE97F5FFB7 /* Build configuration list for PBXNativeTarget "OrderBook" */;
+			buildPhases = (
+				B0A7FE9B7C894832AF6985A3 /* Sources */,
+				AD616AAD986741A69A3F7B77 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9433E5EB684449798EF0B674 /* PBXTargetDependency */,
+				01450BBEAD0C4659B0C6DFA0 /* PBXTargetDependency */,
+			);
+			name = OrderBook;
+			productName = OrderBook;
+			productReference = 2897EB337F864B1FB2D60631 /* OrderBook */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C0AEA43BE794BD7B49AC2D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1520;
+			};
+			buildConfigurationList = 8B64252209BE480EB253B81B /* Build configuration list for PBXProject "OrderBook" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				6B2BE8984F1B4844ADE3B18E /* Debug */,
+				7C3576A17ABB47EB97A5E9BC /* Release */,
+				650D868100AC43969090E07C /* MinSizeRel */,
+				835B58F217E548C6A8DC0156 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = B7C14134D30F44D9B0AF643C;
+			projectDirPath = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook";
+			projectRoot = "";
+			targets = (
+				A4388912DF704ADE8E661A44 /* ALL_BUILD */,
+				CE5E8D00B17E4B2C83DB510D /* OrderBook */,
+				D4B5F2B4ED0F4948A871B9B0 /* OrderBook_autogen */,
+				1C7F3812CE9A42DA8072B1D0 /* ZERO_CHECK */,
+				D7FA498E92F448BA9C24DDDF /* install */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		7238C2888CB54FA7043F78BC /* Generate CMakeFiles/OrderBook_autogen */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/OrderBook_autogen";
+			outputPaths = (
+"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/CMakeFiles/OrderBook_autogen","/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/OrderBook_autogen/mocs_compilation.cpp"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/CMakeFiles/OrderBook_autogen.dir/AutogenInfo.json\" Debug
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/CMakeFiles/OrderBook_autogen.dir/AutogenInfo.json\" Release
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/CMakeFiles/OrderBook_autogen.dir/AutogenInfo.json\" MinSizeRel
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/CMakeFiles/OrderBook_autogen.dir/AutogenInfo.json\" RelWithDebInfo
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		73AC04853B16D518FE805DF8 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/CMakeFiles/ZERO_CHECK"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"
+  make -f /Users/shreyashonnalli/Desktop/Group\\ Project/GroupRepo/cpp\\ codebase/buildXcode/OrderBook/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"
+  make -f /Users/shreyashonnalli/Desktop/Group\\ Project/GroupRepo/cpp\\ codebase/buildXcode/OrderBook/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"
+  make -f /Users/shreyashonnalli/Desktop/Group\\ Project/GroupRepo/cpp\\ codebase/buildXcode/OrderBook/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"
+  make -f /Users/shreyashonnalli/Desktop/Group\\ Project/GroupRepo/cpp\\ codebase/buildXcode/OrderBook/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		87AF4882E018677E2624B544 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		E497E77297ED0A5EA8C4F9AF /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/CMakeFiles/ALL_BUILD"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		F24599E0DF4EE2563D771BD3 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0A7FE9B7C894832AF6985A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65740792BD4A45599411CD4E /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook/OrderBook.cpp */,
+				8287F07AB1E241BCB0ABC20E /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/OrderBook_autogen/mocs_compilation.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01450BBEAD0C4659B0C6DFA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C7F3812CE9A42DA8072B1D0 /* ZERO_CHECK */;
+			targetProxy = 43D93488653D4F8DAF6844E3 /* PBXContainerItemProxy */;
+		};
+		06BC1D05BBDD453480D781A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE5E8D00B17E4B2C83DB510D /* OrderBook */;
+			targetProxy = 788972CD784C41128C53914A /* PBXContainerItemProxy */;
+		};
+		2D1EFEB757A64C009EF9BC9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4388912DF704ADE8E661A44 /* ALL_BUILD */;
+			targetProxy = 46775CDC2E6544AAA96D2369 /* PBXContainerItemProxy */;
+		};
+		9433E5EB684449798EF0B674 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4B5F2B4ED0F4948A871B9B0 /* OrderBook_autogen */;
+			targetProxy = 90161E84198947729D73D321 /* PBXContainerItemProxy */;
+		};
+		BDF2C3550244450AA0A933FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C7F3812CE9A42DA8072B1D0 /* ZERO_CHECK */;
+			targetProxy = 8099EA0FD1DA4201A83170C3 /* PBXContainerItemProxy */;
+		};
+		C50954EA48F94B32B895B34D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C7F3812CE9A42DA8072B1D0 /* ZERO_CHECK */;
+			targetProxy = 61BD219A01524D5BA4D8C9ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0121B76771F84D9E943E66C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		0622226530264119A6ED40F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		323936152BE84681AA8BDD00 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_WIDGETS_LIB,QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/OrderBook_autogen/include_RelWithDebInfo\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++17' -fPIC   -std=c++14";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = OrderBook;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/shreyashonnalli/miniconda3/include/qt,/Users/shreyashonnalli/miniconda3/include/qt/QtWidgets,/Users/shreyashonnalli/miniconda3/include/qt/QtGui,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/Users/shreyashonnalli/miniconda3/include/qt/QtCore,"/Users/shreyashonnalli/miniconda3/./mkspecs/macx-clang","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/OrderBook.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		35401F0A2E344D0CA3EA6051 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build";
+			};
+			name = MinSizeRel;
+		};
+		3D52A046E12C4EBFA54378D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = OrderBook_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		46D87FF31D3E441B946957BB /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = OrderBook_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		4C3AE0EEEC944CDDAF62FD3D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build";
+			};
+			name = RelWithDebInfo;
+		};
+		51BC50A2341942158C8072CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		601A0DE95D7B43B38D0FEB25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_WIDGETS_LIB,QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/OrderBook_autogen/include_Release\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++17' -fPIC   -std=c++14";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = OrderBook;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/shreyashonnalli/miniconda3/include/qt,/Users/shreyashonnalli/miniconda3/include/qt/QtWidgets,/Users/shreyashonnalli/miniconda3/include/qt/QtGui,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/Users/shreyashonnalli/miniconda3/include/qt/QtCore,"/Users/shreyashonnalli/miniconda3/./mkspecs/macx-clang","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/OrderBook.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		60AA2EF1E8C242749A8AF958 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		66D1FBB8DA5643F2BF983D39 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		771B173C5E824551A061656F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		8C0D952341FF423D976F04D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_WIDGETS_LIB,QT_GUI_LIB,QT_CORE_LIB,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/OrderBook_autogen/include_Debug\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++17' -fPIC   -std=c++14";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = OrderBook;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/shreyashonnalli/miniconda3/include/qt,/Users/shreyashonnalli/miniconda3/include/qt/QtWidgets,/Users/shreyashonnalli/miniconda3/include/qt/QtGui,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/Users/shreyashonnalli/miniconda3/include/qt/QtCore,"/Users/shreyashonnalli/miniconda3/./mkspecs/macx-clang","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/OrderBook.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		8CD72AD7DFDB46F08B89BA6D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		92355583CCA54A05B814E8AD /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		B14431DCFC984381B8A0380D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = OrderBook_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		B81B2C98F3CA454BA1C5D9A1 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_WIDGETS_LIB,QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/OrderBook/OrderBook_autogen/include_MinSizeRel\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++17' -fPIC   -std=c++14";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = OrderBook;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/shreyashonnalli/miniconda3/include/qt,/Users/shreyashonnalli/miniconda3/include/qt/QtWidgets,/Users/shreyashonnalli/miniconda3/include/qt/QtGui,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/Users/shreyashonnalli/miniconda3/include/qt/QtCore,"/Users/shreyashonnalli/miniconda3/./mkspecs/macx-clang","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/OrderBook.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		BAD3BC6154644383B16CDA8A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		C2CF4B3C65D14D0D89BEEF86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		C7AF75B84C734171A6BABE09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk;
+				SYMROOT = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build";
+			};
+			name = Debug;
+		};
+		CA80D6C919444A9A85D9AF43 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		D255C368EC4F433AB42AB56D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = OrderBook_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		D9E4F782BA9B4603B1DC3CD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build";
+			};
+			name = Release;
+		};
+		DC39BC39084145C4B4860FF8 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		140F74124B7748DEA7932D0B /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2CF4B3C65D14D0D89BEEF86 /* Debug */,
+				0622226530264119A6ED40F3 /* Release */,
+				66D1FBB8DA5643F2BF983D39 /* MinSizeRel */,
+				92355583CCA54A05B814E8AD /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3C4399F4E09B4F37AB6AD40A /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60AA2EF1E8C242749A8AF958 /* Debug */,
+				0121B76771F84D9E943E66C6 /* Release */,
+				CA80D6C919444A9A85D9AF43 /* MinSizeRel */,
+				BAD3BC6154644383B16CDA8A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		61E4B8B2023448EE97F5FFB7 /* Build configuration list for PBXNativeTarget "OrderBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C0D952341FF423D976F04D7 /* Debug */,
+				601A0DE95D7B43B38D0FEB25 /* Release */,
+				B81B2C98F3CA454BA1C5D9A1 /* MinSizeRel */,
+				323936152BE84681AA8BDD00 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8B64252209BE480EB253B81B /* Build configuration list for PBXProject "OrderBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7AF75B84C734171A6BABE09 /* Debug */,
+				D9E4F782BA9B4603B1DC3CD7 /* Release */,
+				35401F0A2E344D0CA3EA6051 /* MinSizeRel */,
+				4C3AE0EEEC944CDDAF62FD3D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B342D05B0B4945B89EA0DEED /* Build configuration list for PBXAggregateTarget "OrderBook_autogen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B14431DCFC984381B8A0380D /* Debug */,
+				3D52A046E12C4EBFA54378D1 /* Release */,
+				D255C368EC4F433AB42AB56D /* MinSizeRel */,
+				46D87FF31D3E441B946957BB /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CC89700792364E7DBC124E94 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51BC50A2341942158C8072CC /* Debug */,
+				771B173C5E824551A061656F /* Release */,
+				8CD72AD7DFDB46F08B89BA6D /* MinSizeRel */,
+				DC39BC39084145C4B4860FF8 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C0AEA43BE794BD7B49AC2D2 /* Project object */;
+}

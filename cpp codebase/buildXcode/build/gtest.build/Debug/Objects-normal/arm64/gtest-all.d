@@ -1,0 +1,35 @@
+dependencies: \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/src/gtest-all.cc \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/gtest.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/gtest-message.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/internal/gtest-port.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/internal/gtest-port-arch.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/gtest-death-test.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/internal/gtest-death-test-internal.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/gtest-matchers.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/gtest-printers.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/internal/gtest-internal.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/internal/gtest-string.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/gtest-param-test.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/internal/gtest-param-util.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/gtest-test-part.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/gtest-typed-test.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/gtest_prod.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/src/gtest-assertion-result.cc \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/src/gtest-death-test.cc \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/src/gtest-internal-inl.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/include/gtest/gtest-spi.h \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/src/gtest-filepath.cc \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/src/gtest-matchers.cc \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/src/gtest-port.cc \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/src/gtest-printers.cc \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/src/gtest-test-part.cc \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/src/gtest-typed-test.cc \
+  /Users/shreyashonnalli/Desktop/Group\ Project/GroupRepo/cpp\ codebase/buildXcode/_deps/googletest-src/googletest/src/gtest.cc

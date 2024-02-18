@@ -1,0 +1,100 @@
+{
+	"BUILD_DIR" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen",
+	"CMAKE_BINARY_DIR" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode",
+	"CMAKE_CURRENT_BINARY_DIR" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock",
+	"CMAKE_EXECUTABLE" : "/opt/homebrew/Cellar/cmake/3.26.0/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/CMakeLists.txt",
+		"/opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/FindThreads.cmake",
+		"/opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CheckLibraryExists.cmake",
+		"/opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CheckIncludeFile.cmake",
+		"/opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CheckCSourceCompiles.cmake",
+		"/opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/FindPackageHandleStandardArgs.cmake",
+		"/opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/FindPackageMessage.cmake",
+		"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/cmake/gmock.pc.in",
+		"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/cmake/gmock_main.pc.in"
+	],
+	"CMAKE_SOURCE_DIR" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase",
+	"DEP_FILE" : "",
+	"DEP_FILE_RULE_NAME" : "",
+	"HEADERS" : [],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/include",
+	"INCLUDE_DIR_Debug" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/include_Debug",
+	"INCLUDE_DIR_MinSizeRel" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/include_MinSizeRel",
+	"INCLUDE_DIR_RelWithDebInfo" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/include_RelWithDebInfo",
+	"INCLUDE_DIR_Release" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/include_Release",
+	"MOC_COMPILATION_FILE" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock",
+		"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook",
+		"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler",
+		"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget",
+		"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock",
+		"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/include",
+		"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/include",
+		"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest",
+		"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/c++/v1",
+		"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/15.0.0/include",
+		"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include",
+		"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++",
+		"-dM",
+		"-E",
+		"-c",
+		"/opt/homebrew/Cellar/cmake/3.26.0/share/cmake/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE_Debug" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/moc_predefs_Debug.h",
+	"MOC_PREDEFS_FILE_MinSizeRel" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/moc_predefs_MinSizeRel.h",
+	"MOC_PREDEFS_FILE_RelWithDebInfo" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/moc_predefs_RelWithDebInfo.h",
+	"MOC_PREDEFS_FILE_Release" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/moc_predefs_Release.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : true,
+	"PARALLEL" : 8,
+	"PARSE_CACHE_FILE" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE_Debug" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/ParseCache_Debug.txt",
+	"PARSE_CACHE_FILE_MinSizeRel" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/ParseCache_MinSizeRel.txt",
+	"PARSE_CACHE_FILE_RelWithDebInfo" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/ParseCache_RelWithDebInfo.txt",
+	"PARSE_CACHE_FILE_Release" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/ParseCache_Release.txt",
+	"QT_MOC_EXECUTABLE" : "/Users/shreyashonnalli/miniconda3/bin/moc",
+	"QT_UIC_EXECUTABLE" : "/Users/shreyashonnalli/miniconda3/bin/uic",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 15,
+	"SETTINGS_FILE" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE_Debug" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/AutogenUsed_Debug.txt",
+	"SETTINGS_FILE_MinSizeRel" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/AutogenUsed_MinSizeRel.txt",
+	"SETTINGS_FILE_RelWithDebInfo" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/AutogenUsed_RelWithDebInfo.txt",
+	"SETTINGS_FILE_Release" : "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/AutogenUsed_Release.txt",
+	"SOURCES" : 
+	[
+		[
+			"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/src/gmock_main.cc",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}

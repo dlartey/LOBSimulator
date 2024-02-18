@@ -1,0 +1,2409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		0E26732BDCD04ED585C8783C /* gtest_autogen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1E41484EDADB4CC5B90C857D /* Build configuration list for PBXAggregateTarget "gtest_autogen" */;
+			buildPhases = (
+				214F84536B2DA25ECA5CCBB5 /* Generate ../googletest/CMakeFiles/gtest_autogen */,
+			);
+			dependencies = (
+			);
+			name = gtest_autogen;
+			productName = gtest_autogen;
+		};
+		1C7F3812CE9A42DA8072B1D0 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2397E698BF1D45F4A26E8B59 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				E374AD61AC8CE24C5A852662 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		A0B1CD3667004851A3A4B530 /* gmock_main_autogen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 980B6660BBFD49A18CD02675 /* Build configuration list for PBXAggregateTarget "gmock_main_autogen" */;
+			buildPhases = (
+				4918E77EA62A1BBA3D3DA60A /* Generate CMakeFiles/gmock_main_autogen */,
+			);
+			dependencies = (
+				2E35551A06A94D339B629C28 /* PBXTargetDependency */,
+				EE3ADE64CD524F0681B9E49A /* PBXTargetDependency */,
+			);
+			name = gmock_main_autogen;
+			productName = gmock_main_autogen;
+		};
+		A4388912DF704ADE8E661A44 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C2B4C18E356742FF8ACD2C5D /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				DF69188EF1FC729ADAE0A8E8 /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				6353276D40174B05BD663473 /* PBXTargetDependency */,
+				8A259C3966A0493DA28EA096 /* PBXTargetDependency */,
+				6C09EFE208134A64A209CCC3 /* PBXTargetDependency */,
+				5D1D652560A94E43A8D377BE /* PBXTargetDependency */,
+				2352DDDF406D47E3910C6455 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		C28B717A2C1640FEAFB26AF3 /* gmock_autogen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2B128DB5EAD64A93B2EE4708 /* Build configuration list for PBXAggregateTarget "gmock_autogen" */;
+			buildPhases = (
+				02B51056EEE4D9C75D1BF09B /* Generate CMakeFiles/gmock_autogen */,
+			);
+			dependencies = (
+				1F3B3236C9D5423180ECA45D /* PBXTargetDependency */,
+				98C6D27263C6473CAD04A1C1 /* PBXTargetDependency */,
+			);
+			name = gmock_autogen;
+			productName = gmock_autogen;
+		};
+		D4BE6F8B8D8C4373A3E1DF72 /* gtest_main_autogen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 61BFD0A5C79040919434C9F0 /* Build configuration list for PBXAggregateTarget "gtest_main_autogen" */;
+			buildPhases = (
+				AF115F657229BF9449736821 /* Generate ../googletest/CMakeFiles/gtest_main_autogen */,
+			);
+			dependencies = (
+				42CB3819FD1542BEB1375CC0 /* PBXTargetDependency */,
+			);
+			name = gtest_main_autogen;
+			productName = gtest_main_autogen;
+		};
+		D7FA498E92F448BA9C24DDDF /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A915F400CBDB477DAA363A20 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				9D6319234A4A43B9B45E94B9 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		084810A428F8461FAA7F6AF6 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/src/gtest-all.cc */ = {isa = PBXBuildFile; fileRef = 23C20B2DA0D4456799E8A766 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/src/gtest-all.cc */; };
+		15F2931C8E5D45159ABBE7B9 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_main_autogen/mocs_compilation.cpp */ = {isa = PBXBuildFile; fileRef = 47448BF557344293B9AC9E47 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_main_autogen/mocs_compilation.cpp */; };
+		2233CD3D74574E99925A1823 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_autogen/mocs_compilation.cpp */ = {isa = PBXBuildFile; fileRef = FA42C3EDFCD1457989A1B618 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_autogen/mocs_compilation.cpp */; };
+		2CE8A833AB1F485E8CCCC95C /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_autogen/mocs_compilation.cpp */ = {isa = PBXBuildFile; fileRef = 836F0FFA260341B0B20BC220 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_autogen/mocs_compilation.cpp */; };
+		411F93B2E6874650A21D5013 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 46E7BBCCF0AC4560B0DD8C2B /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/CMakeLists.txt */; };
+		41ECEE100D464D9EA0A8D8AD /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/src/gtest_main.cc */ = {isa = PBXBuildFile; fileRef = 5283BD1AA8964C5EA93AAD9C /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/src/gtest_main.cc */; };
+		95DCD3FF1C9B490AB61A262E /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/src/gmock_main.cc */ = {isa = PBXBuildFile; fileRef = 764DA0C9EABA42558E45870E /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/src/gmock_main.cc */; };
+		ABF8B7D33AFA4347A8AC3033 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 6D0D1A5A34E6458F98938A98 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/CMakeLists.txt */; };
+		AD61A506C9554E90B4BDD4E8 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 138964C357EF4E63B57B1BED /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/CMakeLists.txt */; };
+		B02F3372179B46BCAA4385D8 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 396F4CC27AE24F25BB12B631 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/CMakeLists.txt */; };
+		D2BB8F6DA90E4D0A99AE46D4 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/mocs_compilation.cpp */ = {isa = PBXBuildFile; fileRef = 0C621F2CF2E44A99BFC1D22F /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/mocs_compilation.cpp */; };
+		DB6EE07D71C746E68B5EE5BA /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/src/gmock-all.cc */ = {isa = PBXBuildFile; fileRef = F42722D6420D4055B9DEA8C3 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/src/gmock-all.cc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		598518B4643F440E871610CE /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		A63FC2C272684DC3BD2C04C7 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		B5528166C73D4D71B3967D76 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		F5547E620CB745E3AE4721C2 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		10F3DC4D6496438597D380D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47E02353DB2340E09942EF64;
+			remoteInfo = gtest;
+		};
+		125977388CC846B3B0A7C7E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74D27618FCD84C439395431F;
+			remoteInfo = gmock;
+		};
+		2D3BFE7972B244E0A4607C24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47E02353DB2340E09942EF64;
+			remoteInfo = gtest;
+		};
+		44C329DEFE004D628248A708 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47E02353DB2340E09942EF64;
+			remoteInfo = gtest;
+		};
+		4F7F133FCF9C4B928227D3CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4388912DF704ADE8E661A44;
+			remoteInfo = ALL_BUILD;
+		};
+		52C7B807FE4E4AF6B8D26EE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 612242761569434DAB7D4501;
+			remoteInfo = gmock_main;
+		};
+		5B89A6072D3C4DE8BCA522CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74D27618FCD84C439395431F;
+			remoteInfo = gmock;
+		};
+		64259B0F3F564CED803084C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C7F3812CE9A42DA8072B1D0;
+			remoteInfo = ZERO_CHECK;
+		};
+		662BFF3F20F44351B8E557EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C7F3812CE9A42DA8072B1D0;
+			remoteInfo = ZERO_CHECK;
+		};
+		8446930F868F4B5B94217256 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4BE6F8B8D8C4373A3E1DF72;
+			remoteInfo = gtest_main_autogen;
+		};
+		96FB114858AB496F80133F41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C7F3812CE9A42DA8072B1D0;
+			remoteInfo = ZERO_CHECK;
+		};
+		A5B2C507790047CFBC68CED1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E26732BDCD04ED585C8783C;
+			remoteInfo = gtest_autogen;
+		};
+		B77C2BBC803C490480B2FC8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0B1CD3667004851A3A4B530;
+			remoteInfo = gmock_main_autogen;
+		};
+		BC235F5730B946DB9D9C34FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74D27618FCD84C439395431F;
+			remoteInfo = gmock;
+		};
+		BD4448EE26EE4B49A3C973E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47E02353DB2340E09942EF64;
+			remoteInfo = gtest;
+		};
+		BFE9046AFF0F4E0F95B237AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47E02353DB2340E09942EF64;
+			remoteInfo = gtest;
+		};
+		D316256621124AB28E3A8585 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C7F3812CE9A42DA8072B1D0;
+			remoteInfo = ZERO_CHECK;
+		};
+		D7EB664FCEF749258F2D9AFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C28B717A2C1640FEAFB26AF3;
+			remoteInfo = gmock_autogen;
+		};
+		D9F6F6D8108A46A3947BD973 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05B00A9810D64D3E9B89F1BD;
+			remoteInfo = gtest_main;
+		};
+		DD1A67FC06944FC7B006099F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C7F3812CE9A42DA8072B1D0;
+			remoteInfo = ZERO_CHECK;
+		};
+		E6883AA211BA42409C1C3718 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F57C274AD4944871906A5592 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47E02353DB2340E09942EF64;
+			remoteInfo = gtest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C621F2CF2E44A99BFC1D22F /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/mocs_compilation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mocs_compilation.cpp; path = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/mocs_compilation.cpp"; sourceTree = "<absolute>"; };
+		138964C357EF4E63B57B1BED /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		23C20B2DA0D4456799E8A766 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/src/gtest-all.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = "gtest-all.cc"; path = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/src/gtest-all.cc"; sourceTree = "<absolute>"; };
+		396F4CC27AE24F25BB12B631 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/CMakeLists.txt"; sourceTree = "<absolute>"; };
+		46E7BBCCF0AC4560B0DD8C2B /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/CMakeLists.txt"; sourceTree = "<absolute>"; };
+		47448BF557344293B9AC9E47 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_main_autogen/mocs_compilation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mocs_compilation.cpp; path = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_main_autogen/mocs_compilation.cpp"; sourceTree = "<absolute>"; };
+		5283BD1AA8964C5EA93AAD9C /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/src/gtest_main.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = gtest_main.cc; path = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/src/gtest_main.cc"; sourceTree = "<absolute>"; };
+		541344D0547A44F3BD926F81 /* gmock_main */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgmock_main.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		59AEB12A063B4DE5BB6BE975 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/CMakeLists.txt"; sourceTree = "<absolute>"; };
+		6D0D1A5A34E6458F98938A98 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		764DA0C9EABA42558E45870E /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/src/gmock_main.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = gmock_main.cc; path = src/gmock_main.cc; sourceTree = SOURCE_ROOT; };
+		836F0FFA260341B0B20BC220 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_autogen/mocs_compilation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mocs_compilation.cpp; path = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_autogen/mocs_compilation.cpp"; sourceTree = "<absolute>"; };
+		87E2C395261C45F5AC6ABC2D /* gtest */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgtest.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C78231ECECA48F58D4B2DBB /* gtest_main */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgtest_main.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9310F2F6E7C34CAAB007B072 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		BE51BD38BB16415DB78030C3 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		C4E22296064A4DC0BD158984 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/CMakeLists.txt"; sourceTree = "<absolute>"; };
+		E3AAA72217144AAABED2ACD9 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		E7A4C4EF66504D7088629467 /* gmock */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libgmock.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F42722D6420D4055B9DEA8C3 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/src/gmock-all.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = "gmock-all.cc"; path = "src/gmock-all.cc"; sourceTree = SOURCE_ROOT; };
+		FA42C3EDFCD1457989A1B618 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_autogen/mocs_compilation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mocs_compilation.cpp; path = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_autogen/mocs_compilation.cpp"; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0ED211943F8C40DC8C7CCDE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40793BC296F64DA3ADEDF6EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AAD9937B04040E1934812B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC48C9E7AC6C4FA1AB6A099F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		174D13D8A8D441FAA834E001 /* gtest_main */ = {
+			isa = PBXGroup;
+			children = (
+				CEEAC83116AF408697ABCA8D /* Source Files */,
+				46E7BBCCF0AC4560B0DD8C2B /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/CMakeLists.txt */,
+			);
+			name = gtest_main;
+			sourceTree = "<group>";
+		};
+		379723B01A09479191696CB7 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		475E8BF88E494B3FAD5EB885 /* gtest_main_autogen */ = {
+			isa = PBXGroup;
+			children = (
+				F58F612EE7C343359DEB4AC5 /* CMake Rules */,
+				59AEB12A063B4DE5BB6BE975 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/CMakeLists.txt */,
+			);
+			name = gtest_main_autogen;
+			sourceTree = "<group>";
+		};
+		592466AD50534EFB9C6C1076 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7A4C4EF66504D7088629467 /* gmock */,
+				541344D0547A44F3BD926F81 /* gmock_main */,
+				87E2C395261C45F5AC6ABC2D /* gtest */,
+				8C78231ECECA48F58D4B2DBB /* gtest_main */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C8A1B5FA9B24AD895EE4159 /* gtest_autogen */ = {
+			isa = PBXGroup;
+			children = (
+				379723B01A09479191696CB7 /* CMake Rules */,
+				C4E22296064A4DC0BD158984 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/CMakeLists.txt */,
+			);
+			name = gtest_autogen;
+			sourceTree = "<group>";
+		};
+		7F37C3C7770F4E6CA13E43C7 /* gmock */ = {
+			isa = PBXGroup;
+			children = (
+				EF8876446CB74852A7AC42AE /* Source Files */,
+				6D0D1A5A34E6458F98938A98 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/CMakeLists.txt */,
+			);
+			name = gmock;
+			sourceTree = "<group>";
+		};
+		88FB8AFAA58E49DCBE604A73 /* gmock_autogen */ = {
+			isa = PBXGroup;
+			children = (
+				8B926958FA994B7FBED63412 /* CMake Rules */,
+				E3AAA72217144AAABED2ACD9 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/CMakeLists.txt */,
+			);
+			name = gmock_autogen;
+			sourceTree = "<group>";
+		};
+		898C6B6DAEE4425FAB11A123 = {
+			isa = PBXGroup;
+			children = (
+				7F37C3C7770F4E6CA13E43C7 /* gmock */,
+				9FFC0104906142E8AF80FA4A /* gmock_main */,
+				88FB8AFAA58E49DCBE604A73 /* gmock_autogen */,
+				8F332A82BB1A4D52AAB5E038 /* gmock_main_autogen */,
+				F3DDA25622BE4AC8A897A67F /* ALL_BUILD */,
+				C5F581DBA9AB4412814E5D08 /* gtest */,
+				174D13D8A8D441FAA834E001 /* gtest_main */,
+				5C8A1B5FA9B24AD895EE4159 /* gtest_autogen */,
+				475E8BF88E494B3FAD5EB885 /* gtest_main_autogen */,
+				592466AD50534EFB9C6C1076 /* Products */,
+				D21CE1B558DB404DB2BC5AA8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8B926958FA994B7FBED63412 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		8CC627A054DC446A896641C7 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C621F2CF2E44A99BFC1D22F /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/mocs_compilation.cpp */,
+				764DA0C9EABA42558E45870E /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/src/gmock_main.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		8F332A82BB1A4D52AAB5E038 /* gmock_main_autogen */ = {
+			isa = PBXGroup;
+			children = (
+				FCBCB3E902014C8BAA2C4060 /* CMake Rules */,
+				BE51BD38BB16415DB78030C3 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/CMakeLists.txt */,
+			);
+			name = gmock_main_autogen;
+			sourceTree = "<group>";
+		};
+		9FFC0104906142E8AF80FA4A /* gmock_main */ = {
+			isa = PBXGroup;
+			children = (
+				8CC627A054DC446A896641C7 /* Source Files */,
+				138964C357EF4E63B57B1BED /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/CMakeLists.txt */,
+			);
+			name = gmock_main;
+			sourceTree = "<group>";
+		};
+		A5A95214B9734CC5ACDEA068 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				836F0FFA260341B0B20BC220 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_autogen/mocs_compilation.cpp */,
+				23C20B2DA0D4456799E8A766 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/src/gtest-all.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		C5F581DBA9AB4412814E5D08 /* gtest */ = {
+			isa = PBXGroup;
+			children = (
+				A5A95214B9734CC5ACDEA068 /* Source Files */,
+				396F4CC27AE24F25BB12B631 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/CMakeLists.txt */,
+			);
+			name = gtest;
+			sourceTree = "<group>";
+		};
+		CD239115D2694E848707BD64 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		CEEAC83116AF408697ABCA8D /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				47448BF557344293B9AC9E47 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_main_autogen/mocs_compilation.cpp */,
+				5283BD1AA8964C5EA93AAD9C /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/src/gtest_main.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		D21CE1B558DB404DB2BC5AA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF8876446CB74852A7AC42AE /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA42C3EDFCD1457989A1B618 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_autogen/mocs_compilation.cpp */,
+				F42722D6420D4055B9DEA8C3 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/src/gmock-all.cc */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		F3DDA25622BE4AC8A897A67F /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				CD239115D2694E848707BD64 /* CMake Rules */,
+				9310F2F6E7C34CAAB007B072 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		F58F612EE7C343359DEB4AC5 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		FCBCB3E902014C8BAA2C4060 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05B00A9810D64D3E9B89F1BD /* gtest_main */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60348274932547808CC12C84 /* Build configuration list for PBXNativeTarget "gtest_main" */;
+			buildPhases = (
+				743D35D26A3646B7BECAA67E /* Sources */,
+				40793BC296F64DA3ADEDF6EA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8BF4CD133DD4BD0ABD004C1 /* PBXTargetDependency */,
+				1581F7693D2C45B6B7B2FE1D /* PBXTargetDependency */,
+			);
+			name = gtest_main;
+			productName = gtest_main;
+			productReference = 8C78231ECECA48F58D4B2DBB /* gtest_main */;
+			productType = "com.apple.product-type.library.static";
+		};
+		47E02353DB2340E09942EF64 /* gtest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7775CDFDB71A4B2C9F669D70 /* Build configuration list for PBXNativeTarget "gtest" */;
+			buildPhases = (
+				15E98CA38DD945E5A12E08A9 /* Sources */,
+				0ED211943F8C40DC8C7CCDE3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92CED0A78DE84695B8DFA8CD /* PBXTargetDependency */,
+			);
+			name = gtest;
+			productName = gtest;
+			productReference = 87E2C395261C45F5AC6ABC2D /* gtest */;
+			productType = "com.apple.product-type.library.static";
+		};
+		612242761569434DAB7D4501 /* gmock_main */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C39F256592C41C69241C919 /* Build configuration list for PBXNativeTarget "gmock_main" */;
+			buildPhases = (
+				8F0CED8455E942CAB6C61B3B /* Sources */,
+				BC48C9E7AC6C4FA1AB6A099F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3A9CC2F74BD446286D5BC52 /* PBXTargetDependency */,
+				C158F5FBC6CB40269DBA3EB5 /* PBXTargetDependency */,
+				BAA47CD9807B42F0A6DF4CAE /* PBXTargetDependency */,
+				ABF2C0BBE1ED4D089B7B15D4 /* PBXTargetDependency */,
+			);
+			name = gmock_main;
+			productName = gmock_main;
+			productReference = 541344D0547A44F3BD926F81 /* gmock_main */;
+			productType = "com.apple.product-type.library.static";
+		};
+		74D27618FCD84C439395431F /* gmock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7ED279BFE2C2494DA573B76A /* Build configuration list for PBXNativeTarget "gmock" */;
+			buildPhases = (
+				91E534FE9E8846369373F232 /* Sources */,
+				6AAD9937B04040E1934812B6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95FC81533567478F97BA913D /* PBXTargetDependency */,
+				96BD31055FA54D1E88BD547F /* PBXTargetDependency */,
+				4D23A86E5282401DB60AB802 /* PBXTargetDependency */,
+			);
+			name = gmock;
+			productName = gmock;
+			productReference = E7A4C4EF66504D7088629467 /* gmock */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F57C274AD4944871906A5592 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1520;
+			};
+			buildConfigurationList = 9D4F4AC533D6400F9DEF000E /* Build configuration list for PBXProject "gmock" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				598518B4643F440E871610CE /* Debug */,
+				B5528166C73D4D71B3967D76 /* Release */,
+				F5547E620CB745E3AE4721C2 /* MinSizeRel */,
+				A63FC2C272684DC3BD2C04C7 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 898C6B6DAEE4425FAB11A123;
+			projectDirPath = "../../googletest-src/googlemock";
+			projectRoot = "";
+			targets = (
+				A4388912DF704ADE8E661A44 /* ALL_BUILD */,
+				1C7F3812CE9A42DA8072B1D0 /* ZERO_CHECK */,
+				74D27618FCD84C439395431F /* gmock */,
+				C28B717A2C1640FEAFB26AF3 /* gmock_autogen */,
+				612242761569434DAB7D4501 /* gmock_main */,
+				A0B1CD3667004851A3A4B530 /* gmock_main_autogen */,
+				47E02353DB2340E09942EF64 /* gtest */,
+				0E26732BDCD04ED585C8783C /* gtest_autogen */,
+				05B00A9810D64D3E9B89F1BD /* gtest_main */,
+				D4BE6F8B8D8C4373A3E1DF72 /* gtest_main_autogen */,
+				D7FA498E92F448BA9C24DDDF /* install */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02B51056EEE4D9C75D1BF09B /* Generate CMakeFiles/gmock_autogen */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/gmock_autogen";
+			outputPaths = (
+"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_autogen","/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_autogen/mocs_compilation.cpp"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_autogen.dir/AutogenInfo.json\" Debug
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_autogen.dir/AutogenInfo.json\" Release
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_autogen.dir/AutogenInfo.json\" MinSizeRel
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_autogen.dir/AutogenInfo.json\" RelWithDebInfo
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		214F84536B2DA25ECA5CCBB5 /* Generate ../googletest/CMakeFiles/gtest_autogen */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate ../googletest/CMakeFiles/gtest_autogen";
+			outputPaths = (
+"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/CMakeFiles/gtest_autogen","/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_autogen/mocs_compilation.cpp"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/CMakeFiles/gtest_autogen.dir/AutogenInfo.json\" Debug
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/CMakeFiles/gtest_autogen.dir/AutogenInfo.json\" Release
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/CMakeFiles/gtest_autogen.dir/AutogenInfo.json\" MinSizeRel
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/CMakeFiles/gtest_autogen.dir/AutogenInfo.json\" RelWithDebInfo
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		4918E77EA62A1BBA3D3DA60A /* Generate CMakeFiles/gmock_main_autogen */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/gmock_main_autogen";
+			outputPaths = (
+"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen","/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/mocs_compilation.cpp"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/AutogenInfo.json\" Debug
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/AutogenInfo.json\" Release
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/AutogenInfo.json\" MinSizeRel
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/gmock_main_autogen.dir/AutogenInfo.json\" RelWithDebInfo
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		6F302DA43F7693E542BF9F61 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		87AF4882E018677E2624B544 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		9CC71F27727CDA85F3C291A8 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		AF115F657229BF9449736821 /* Generate ../googletest/CMakeFiles/gtest_main_autogen */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate ../googletest/CMakeFiles/gtest_main_autogen";
+			outputPaths = (
+"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/CMakeFiles/gtest_main_autogen","/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_main_autogen/mocs_compilation.cpp"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/CMakeFiles/gtest_main_autogen.dir/AutogenInfo.json\" Debug
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/CMakeFiles/gtest_main_autogen.dir/AutogenInfo.json\" Release
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/CMakeFiles/gtest_main_autogen.dir/AutogenInfo.json\" MinSizeRel
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/CMakeFiles/gtest_main_autogen.dir/AutogenInfo.json\" RelWithDebInfo
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		D7B097DE1FC15482B1CEBE23 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		DF69188EF1FC729ADAE0A8E8 /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/ALL_BUILD"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		E374AD61AC8CE24C5A852662 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/CMakeFiles/ZERO_CHECK"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  make -f /Users/shreyashonnalli/Desktop/Group\\ Project/GroupRepo/cpp\\ codebase/buildXcode/_deps/googletest-build/googlemock/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  make -f /Users/shreyashonnalli/Desktop/Group\\ Project/GroupRepo/cpp\\ codebase/buildXcode/_deps/googletest-build/googlemock/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  make -f /Users/shreyashonnalli/Desktop/Group\\ Project/GroupRepo/cpp\\ codebase/buildXcode/_deps/googletest-build/googlemock/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"
+  make -f /Users/shreyashonnalli/Desktop/Group\\ Project/GroupRepo/cpp\\ codebase/buildXcode/_deps/googletest-build/googlemock/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		F10F5D28D1CF2505DC79DCD3 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15E98CA38DD945E5A12E08A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CE8A833AB1F485E8CCCC95C /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_autogen/mocs_compilation.cpp */,
+				084810A428F8461FAA7F6AF6 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/src/gtest-all.cc */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		743D35D26A3646B7BECAA67E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15F2931C8E5D45159ABBE7B9 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_main_autogen/mocs_compilation.cpp */,
+				41ECEE100D464D9EA0A8D8AD /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/src/gtest_main.cc */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F0CED8455E942CAB6C61B3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2BB8F6DA90E4D0A99AE46D4 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/mocs_compilation.cpp */,
+				95DCD3FF1C9B490AB61A262E /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/src/gmock_main.cc */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91E534FE9E8846369373F232 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2233CD3D74574E99925A1823 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_autogen/mocs_compilation.cpp */,
+				DB6EE07D71C746E68B5EE5BA /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/src/gmock-all.cc */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1581F7693D2C45B6B7B2FE1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4BE6F8B8D8C4373A3E1DF72 /* gtest_main_autogen */;
+			targetProxy = 8446930F868F4B5B94217256 /* PBXContainerItemProxy */;
+		};
+		1F3B3236C9D5423180ECA45D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47E02353DB2340E09942EF64 /* gtest */;
+			targetProxy = 10F3DC4D6496438597D380D5 /* PBXContainerItemProxy */;
+		};
+		2352DDDF406D47E3910C6455 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C7F3812CE9A42DA8072B1D0 /* ZERO_CHECK */;
+			targetProxy = 64259B0F3F564CED803084C7 /* PBXContainerItemProxy */;
+		};
+		2E35551A06A94D339B629C28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74D27618FCD84C439395431F /* gmock */;
+			targetProxy = BC235F5730B946DB9D9C34FF /* PBXContainerItemProxy */;
+		};
+		42CB3819FD1542BEB1375CC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47E02353DB2340E09942EF64 /* gtest */;
+			targetProxy = 44C329DEFE004D628248A708 /* PBXContainerItemProxy */;
+		};
+		4D23A86E5282401DB60AB802 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C7F3812CE9A42DA8072B1D0 /* ZERO_CHECK */;
+			targetProxy = D316256621124AB28E3A8585 /* PBXContainerItemProxy */;
+		};
+		5D1D652560A94E43A8D377BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05B00A9810D64D3E9B89F1BD /* gtest_main */;
+			targetProxy = D9F6F6D8108A46A3947BD973 /* PBXContainerItemProxy */;
+		};
+		6353276D40174B05BD663473 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74D27618FCD84C439395431F /* gmock */;
+			targetProxy = 125977388CC846B3B0A7C7E0 /* PBXContainerItemProxy */;
+		};
+		6C09EFE208134A64A209CCC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47E02353DB2340E09942EF64 /* gtest */;
+			targetProxy = 2D3BFE7972B244E0A4607C24 /* PBXContainerItemProxy */;
+		};
+		8A259C3966A0493DA28EA096 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 612242761569434DAB7D4501 /* gmock_main */;
+			targetProxy = 52C7B807FE4E4AF6B8D26EE2 /* PBXContainerItemProxy */;
+		};
+		92CED0A78DE84695B8DFA8CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E26732BDCD04ED585C8783C /* gtest_autogen */;
+			targetProxy = A5B2C507790047CFBC68CED1 /* PBXContainerItemProxy */;
+		};
+		95FC81533567478F97BA913D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47E02353DB2340E09942EF64 /* gtest */;
+			targetProxy = E6883AA211BA42409C1C3718 /* PBXContainerItemProxy */;
+		};
+		96BD31055FA54D1E88BD547F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C28B717A2C1640FEAFB26AF3 /* gmock_autogen */;
+			targetProxy = D7EB664FCEF749258F2D9AFA /* PBXContainerItemProxy */;
+		};
+		98C6D27263C6473CAD04A1C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C7F3812CE9A42DA8072B1D0 /* ZERO_CHECK */;
+			targetProxy = DD1A67FC06944FC7B006099F /* PBXContainerItemProxy */;
+		};
+		9D6319234A4A43B9B45E94B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4388912DF704ADE8E661A44 /* ALL_BUILD */;
+			targetProxy = 4F7F133FCF9C4B928227D3CF /* PBXContainerItemProxy */;
+		};
+		ABF2C0BBE1ED4D089B7B15D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C7F3812CE9A42DA8072B1D0 /* ZERO_CHECK */;
+			targetProxy = 96FB114858AB496F80133F41 /* PBXContainerItemProxy */;
+		};
+		BAA47CD9807B42F0A6DF4CAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0B1CD3667004851A3A4B530 /* gmock_main_autogen */;
+			targetProxy = B77C2BBC803C490480B2FC8F /* PBXContainerItemProxy */;
+		};
+		C158F5FBC6CB40269DBA3EB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47E02353DB2340E09942EF64 /* gtest */;
+			targetProxy = BD4448EE26EE4B49A3C973E3 /* PBXContainerItemProxy */;
+		};
+		E8BF4CD133DD4BD0ABD004C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47E02353DB2340E09942EF64 /* gtest */;
+			targetProxy = BFE9046AFF0F4E0F95B237AE /* PBXContainerItemProxy */;
+		};
+		EE3ADE64CD524F0681B9E49A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C7F3812CE9A42DA8072B1D0 /* ZERO_CHECK */;
+			targetProxy = 662BFF3F20F44351B8E557EA /* PBXContainerItemProxy */;
+		};
+		F3A9CC2F74BD446286D5BC52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74D27618FCD84C439395431F /* gmock */;
+			targetProxy = 5B89A6072D3C4DE8BCA522CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		003B3A66E56D4D8A94332A4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		0E535522DE694A45AD461AF0 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_autogen/include_MinSizeRel\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/include\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++17'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		0EBB763FF25844CCA3AF493E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		1632B7D1B8FF44EBA1511347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		25AE8399687E42B0B4D1705F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_main_autogen/include_MinSizeRel\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++17'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/include\"","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/gtest_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		2E25E9A4C09E426AB74CEC8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_autogen/include_Release\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/include\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++17'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/include\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest\"","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/gmock.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		33A06F3A6DDF499E83A96291 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_main_autogen/include_Release\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++17'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/include\"","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/gtest_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		380A14CFE3A04D3A9C79142D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		42E2774E760A4742BB7D33C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_main_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		4C390AC5CD54486D87875168 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_main_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		58E20FC4BED847D18064D2D6 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_main_autogen/include_RelWithDebInfo\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++17'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/include\"","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/gtest_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		646790C7C24141AFBB5C0F8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/include_Debug\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++17'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/include\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/include\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest\"","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/gmock_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		66626944668F4214BBE71FA3 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		6A1C2D827BEE4E7FBCE7587E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build";
+			};
+			name = Release;
+		};
+		6D853006F43D40BC8D7F2CBA /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		7693E7B6B68C4B43811CBA35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		80723E46184F44FF8E1AC85B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		817FE7C758764B469F7189D0 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		874FD6D9E1534DB3B74B0471 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_main_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		8BB029F5DA34461BB2BFC537 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_main_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		8E4FD017483F4012B64B6498 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_autogen/include_MinSizeRel\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/include\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++17'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/include\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest\"","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/gmock.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		983401ED1A2C4415894F2BBA /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_autogen/include_RelWithDebInfo\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/include\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++17'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/include\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest\"","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/gmock.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		9D716ABB7EA94EC4AB472BD0 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		A0CFB1DB2F584A2289DE2D2C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build";
+			};
+			name = MinSizeRel;
+		};
+		A166FDB151C74BB5BF7FE651 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		A2F653C252164FDBB4E82C3D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		A4A2A39E98E04AF8B956DDF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		B00D16D08A804DB68A90DBF2 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		B2DB5F24C27C45439F08719C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_main_autogen/include_Debug\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++17'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/include\"","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/gtest_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		B3698412B4864D669BC3B613 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk;
+				SYMROOT = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build";
+			};
+			name = Debug;
+		};
+		BA1ADAF77FD5455E8ECF67E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_autogen/include_Debug\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/include\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++17'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		D573FEEE7DDC40A88D73DDCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		D73229A1D7CB4B5EAEE66AEE /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		D76AC5F5C951492AB4F97E19 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/include_RelWithDebInfo\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++17'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/include\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/include\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest\"","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/gmock_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		DA64BF1B8A7B47E280112C19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/lib/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_autogen/include_Debug\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/include\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=c++17'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/include\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest\"","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/gmock.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		DAD925F67EFF4C64BACDFAC0 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/lib/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/include_MinSizeRel\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++17'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/include\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/include\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest\"","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/gmock_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		DB27026D5AA54492BCA98368 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		DC6800793E314463A25B69BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		E44ADA682B8E4BD79EEDCFFE /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_main_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		E79D2EB8D16147E48C7652C5 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_main_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		EA054AE992AA491D91571592 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_main_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		EAE4FEE8830344799767F95C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		EB00E1D2A4E94DCE8C9C69F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googlemock/gmock_main_autogen/include_Release\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++17'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gmock_main;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googlemock/include\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/include\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest\"","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/gmock_main.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		EE567A1F9E2F43DEAC72F995 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/lib/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_autogen/include_RelWithDebInfo\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/include\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=c++17'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		F01C20009F5A40F188A860C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/lib/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-build/googletest/gtest_autogen/include_Release\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/_deps/googletest-src/googletest/include\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=c++17'  -DGTEST_HAS_PTHREAD=1   ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/gtest.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		F6C8338A963747849AAC8F50 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build";
+			};
+			name = RelWithDebInfo;
+		};
+		FAF5BB2524C147888909674E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_main_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		FB1CD81F20F24D1B9D12DB0B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = gtest_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E41484EDADB4CC5B90C857D /* Build configuration list for PBXAggregateTarget "gtest_autogen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7693E7B6B68C4B43811CBA35 /* Debug */,
+				DC6800793E314463A25B69BA /* Release */,
+				FB1CD81F20F24D1B9D12DB0B /* MinSizeRel */,
+				D73229A1D7CB4B5EAEE66AEE /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2397E698BF1D45F4A26E8B59 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4A2A39E98E04AF8B956DDF4 /* Debug */,
+				1632B7D1B8FF44EBA1511347 /* Release */,
+				A2F653C252164FDBB4E82C3D /* MinSizeRel */,
+				EAE4FEE8830344799767F95C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2B128DB5EAD64A93B2EE4708 /* Build configuration list for PBXAggregateTarget "gmock_autogen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				003B3A66E56D4D8A94332A4B /* Debug */,
+				0EBB763FF25844CCA3AF493E /* Release */,
+				B00D16D08A804DB68A90DBF2 /* MinSizeRel */,
+				6D853006F43D40BC8D7F2CBA /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		60348274932547808CC12C84 /* Build configuration list for PBXNativeTarget "gtest_main" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2DB5F24C27C45439F08719C /* Debug */,
+				33A06F3A6DDF499E83A96291 /* Release */,
+				25AE8399687E42B0B4D1705F /* MinSizeRel */,
+				58E20FC4BED847D18064D2D6 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		61BFD0A5C79040919434C9F0 /* Build configuration list for PBXAggregateTarget "gtest_main_autogen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF5BB2524C147888909674E /* Debug */,
+				8BB029F5DA34461BB2BFC537 /* Release */,
+				874FD6D9E1534DB3B74B0471 /* MinSizeRel */,
+				E79D2EB8D16147E48C7652C5 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7775CDFDB71A4B2C9F669D70 /* Build configuration list for PBXNativeTarget "gtest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA1ADAF77FD5455E8ECF67E8 /* Debug */,
+				F01C20009F5A40F188A860C0 /* Release */,
+				0E535522DE694A45AD461AF0 /* MinSizeRel */,
+				EE567A1F9E2F43DEAC72F995 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7C39F256592C41C69241C919 /* Build configuration list for PBXNativeTarget "gmock_main" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				646790C7C24141AFBB5C0F8D /* Debug */,
+				EB00E1D2A4E94DCE8C9C69F3 /* Release */,
+				DAD925F67EFF4C64BACDFAC0 /* MinSizeRel */,
+				D76AC5F5C951492AB4F97E19 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7ED279BFE2C2494DA573B76A /* Build configuration list for PBXNativeTarget "gmock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA64BF1B8A7B47E280112C19 /* Debug */,
+				2E25E9A4C09E426AB74CEC8D /* Release */,
+				8E4FD017483F4012B64B6498 /* MinSizeRel */,
+				983401ED1A2C4415894F2BBA /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		980B6660BBFD49A18CD02675 /* Build configuration list for PBXAggregateTarget "gmock_main_autogen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C390AC5CD54486D87875168 /* Debug */,
+				42E2774E760A4742BB7D33C7 /* Release */,
+				EA054AE992AA491D91571592 /* MinSizeRel */,
+				E44ADA682B8E4BD79EEDCFFE /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9D4F4AC533D6400F9DEF000E /* Build configuration list for PBXProject "gmock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3698412B4864D669BC3B613 /* Debug */,
+				6A1C2D827BEE4E7FBCE7587E /* Release */,
+				A0CFB1DB2F584A2289DE2D2C /* MinSizeRel */,
+				F6C8338A963747849AAC8F50 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A915F400CBDB477DAA363A20 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80723E46184F44FF8E1AC85B /* Debug */,
+				DB27026D5AA54492BCA98368 /* Release */,
+				817FE7C758764B469F7189D0 /* MinSizeRel */,
+				9D716ABB7EA94EC4AB472BD0 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C2B4C18E356742FF8ACD2C5D /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D573FEEE7DDC40A88D73DDCB /* Debug */,
+				A166FDB151C74BB5BF7FE651 /* Release */,
+				380A14CFE3A04D3A9C79142D /* MinSizeRel */,
+				66626944668F4214BBE71FA3 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F57C274AD4944871906A5592 /* Project object */;
+}

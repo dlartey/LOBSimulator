@@ -1,0 +1,1125 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1C7F3812CE9A42DA8072B1D0 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 87E14400281844D29C6D300F /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				937BDF0DA4CFE7017DEBCDB4 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		A4388912DF704ADE8E661A44 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C3FB5FE1A47848BAA730C5C8 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				A4A13F8240DD6FC7A97A2141 /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				D4B74C17BF0D447E8E3085FD /* PBXTargetDependency */,
+				994A085410784B9294EA8CE9 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		D7FA498E92F448BA9C24DDDF /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 7BF0C62F174D499DBD01E5DD /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				597084B59E5D4E07B0EB5275 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		FE5979632C284DD4861EB1AB /* DBHandler_autogen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EEDAB9FD5D604FFFA2B320F5 /* Build configuration list for PBXAggregateTarget "DBHandler_autogen" */;
+			buildPhases = (
+				B0D739F7D2A04CE15884967E /* Generate CMakeFiles/DBHandler_autogen */,
+			);
+			dependencies = (
+				669E178E77B440EE9C6D150B /* PBXTargetDependency */,
+			);
+			name = DBHandler_autogen;
+			productName = DBHandler_autogen;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		1B10F95807D74A12A4609ABE /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 2AEBF11437594DE8AC63AED3 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler/CMakeLists.txt */; };
+		6676ACDDAC7F4831A89B7E85 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler/DBHandler.hpp */ = {isa = PBXBuildFile; fileRef = 82751987386B4E69A842C73B /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler/DBHandler.hpp */; };
+		6B2C65F51487402DB8B85028 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler/DBHandler.cpp */ = {isa = PBXBuildFile; fileRef = 72C40CE6D307451BA3AB29A2 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler/DBHandler.cpp */; };
+		8CA37FFB444F460EBF2786B0 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/DBHandler_autogen/mocs_compilation.cpp */ = {isa = PBXBuildFile; fileRef = 01F2E0640B2A4AD1B048C3C1 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/DBHandler_autogen/mocs_compilation.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		0ECF7C157BFF4A7B94952C1A /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		8241F51C85064030BC664E18 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		9A53A3C8E9414F10A38A75F1 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		AB998B3A8F154D5FADA1C24E /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		00FB520E24304A5F8F3D5287 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE30EBE0EF6B4E12B9A15C45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C7F3812CE9A42DA8072B1D0;
+			remoteInfo = ZERO_CHECK;
+		};
+		02442B13494A4BE3BCCE9A5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE30EBE0EF6B4E12B9A15C45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BF784EBC88B497385E94003;
+			remoteInfo = DBHandler;
+		};
+		1408C796309C46B6AE31E034 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE30EBE0EF6B4E12B9A15C45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C7F3812CE9A42DA8072B1D0;
+			remoteInfo = ZERO_CHECK;
+		};
+		66CF854F940F4BCE8D010E3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE30EBE0EF6B4E12B9A15C45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C7F3812CE9A42DA8072B1D0;
+			remoteInfo = ZERO_CHECK;
+		};
+		943B358455F243D092C0CFC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE30EBE0EF6B4E12B9A15C45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE5979632C284DD4861EB1AB;
+			remoteInfo = DBHandler_autogen;
+		};
+		9EDB53756EA5410C90E8F04E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE30EBE0EF6B4E12B9A15C45 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4388912DF704ADE8E661A44;
+			remoteInfo = ALL_BUILD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01F2E0640B2A4AD1B048C3C1 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/DBHandler_autogen/mocs_compilation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mocs_compilation.cpp; path = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/DBHandler_autogen/mocs_compilation.cpp"; sourceTree = "<absolute>"; };
+		16C026250D494746A55B4C35 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		2AEBF11437594DE8AC63AED3 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		60D7084FF49341F8A1900DFD /* DBHandler */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libDBHandler.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		72C40CE6D307451BA3AB29A2 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler/DBHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = DBHandler.cpp; path = DBHandler.cpp; sourceTree = SOURCE_ROOT; };
+		82751987386B4E69A842C73B /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler/DBHandler.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = DBHandler.hpp; path = DBHandler.hpp; sourceTree = SOURCE_ROOT; };
+		99E900C31FEF46419C92B6B8 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4DF942AC50345E8A13BC4D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FBD1D26E4354116915E2DBF /* DBHandler_autogen */ = {
+			isa = PBXGroup;
+			children = (
+				6117D58C200C4C7E8925FB0F /* CMake Rules */,
+				16C026250D494746A55B4C35 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler/CMakeLists.txt */,
+			);
+			name = DBHandler_autogen;
+			sourceTree = "<group>";
+		};
+		259EE810CA5C4C5ABFD087BF /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				82751987386B4E69A842C73B /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler/DBHandler.hpp */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		2A124FDEF4544AE2A93E166F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60D7084FF49341F8A1900DFD /* DBHandler */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33CA89D76FB941F6A0DB6B2D /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				45A3566556184E1AB75524A0 /* CMake Rules */,
+				99E900C31FEF46419C92B6B8 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		45A3566556184E1AB75524A0 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		6117D58C200C4C7E8925FB0F /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		614F566637534CE490C0CD19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F07FC5D4A824D31878C1F4F /* DBHandler */ = {
+			isa = PBXGroup;
+			children = (
+				8D3089409D734F7CAE75C724 /* Source Files */,
+				259EE810CA5C4C5ABFD087BF /* Header Files */,
+				2AEBF11437594DE8AC63AED3 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler/CMakeLists.txt */,
+			);
+			name = DBHandler;
+			sourceTree = "<group>";
+		};
+		8D3089409D734F7CAE75C724 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				72C40CE6D307451BA3AB29A2 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler/DBHandler.cpp */,
+				01F2E0640B2A4AD1B048C3C1 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/DBHandler_autogen/mocs_compilation.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		CEE74D44CFD24083A3E74982 = {
+			isa = PBXGroup;
+			children = (
+				7F07FC5D4A824D31878C1F4F /* DBHandler */,
+				0FBD1D26E4354116915E2DBF /* DBHandler_autogen */,
+				33CA89D76FB941F6A0DB6B2D /* ALL_BUILD */,
+				2A124FDEF4544AE2A93E166F /* Products */,
+				614F566637534CE490C0CD19 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BF784EBC88B497385E94003 /* DBHandler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FC64B953B1E4F22BEBD3732 /* Build configuration list for PBXNativeTarget "DBHandler" */;
+			buildPhases = (
+				56D7D8249CE14E2A91DFDBCC /* Sources */,
+				E4DF942AC50345E8A13BC4D7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				315E995E0930411C80D4EAB2 /* PBXTargetDependency */,
+				78011EF1A29D4FBFB09CEC23 /* PBXTargetDependency */,
+			);
+			name = DBHandler;
+			productName = DBHandler;
+			productReference = 60D7084FF49341F8A1900DFD /* DBHandler */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE30EBE0EF6B4E12B9A15C45 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1520;
+			};
+			buildConfigurationList = F82F86B454F641028D2AADBE /* Build configuration list for PBXProject "DBHandler" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				9A53A3C8E9414F10A38A75F1 /* Debug */,
+				8241F51C85064030BC664E18 /* Release */,
+				0ECF7C157BFF4A7B94952C1A /* MinSizeRel */,
+				AB998B3A8F154D5FADA1C24E /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = CEE74D44CFD24083A3E74982;
+			projectDirPath = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler";
+			projectRoot = "";
+			targets = (
+				A4388912DF704ADE8E661A44 /* ALL_BUILD */,
+				9BF784EBC88B497385E94003 /* DBHandler */,
+				FE5979632C284DD4861EB1AB /* DBHandler_autogen */,
+				1C7F3812CE9A42DA8072B1D0 /* ZERO_CHECK */,
+				D7FA498E92F448BA9C24DDDF /* install */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		87AF4882E018677E2624B544 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		937BDF0DA4CFE7017DEBCDB4 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/CMakeFiles/ZERO_CHECK"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"
+  make -f /Users/shreyashonnalli/Desktop/Group\\ Project/GroupRepo/cpp\\ codebase/buildXcode/DBHandler/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"
+  make -f /Users/shreyashonnalli/Desktop/Group\\ Project/GroupRepo/cpp\\ codebase/buildXcode/DBHandler/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"
+  make -f /Users/shreyashonnalli/Desktop/Group\\ Project/GroupRepo/cpp\\ codebase/buildXcode/DBHandler/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"
+  make -f /Users/shreyashonnalli/Desktop/Group\\ Project/GroupRepo/cpp\\ codebase/buildXcode/DBHandler/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		A4A13F8240DD6FC7A97A2141 /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/CMakeFiles/ALL_BUILD"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		B0D739F7D2A04CE15884967E /* Generate CMakeFiles/DBHandler_autogen */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/DBHandler_autogen";
+			outputPaths = (
+"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/CMakeFiles/DBHandler_autogen","/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/DBHandler_autogen/mocs_compilation.cpp"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/CMakeFiles/DBHandler_autogen.dir/AutogenInfo.json\" Debug
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/CMakeFiles/DBHandler_autogen.dir/AutogenInfo.json\" Release
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/CMakeFiles/DBHandler_autogen.dir/AutogenInfo.json\" MinSizeRel
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"
+  /opt/homebrew/Cellar/cmake/3.26.0/bin/cmake -E cmake_autogen \"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/CMakeFiles/DBHandler_autogen.dir/AutogenInfo.json\" RelWithDebInfo
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		D0F185C906FA367EC477A0A8 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		56D7D8249CE14E2A91DFDBCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B2C65F51487402DB8B85028 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler/DBHandler.cpp */,
+				8CA37FFB444F460EBF2786B0 /* /Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/DBHandler_autogen/mocs_compilation.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		315E995E0930411C80D4EAB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE5979632C284DD4861EB1AB /* DBHandler_autogen */;
+			targetProxy = 943B358455F243D092C0CFC2 /* PBXContainerItemProxy */;
+		};
+		597084B59E5D4E07B0EB5275 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4388912DF704ADE8E661A44 /* ALL_BUILD */;
+			targetProxy = 9EDB53756EA5410C90E8F04E /* PBXContainerItemProxy */;
+		};
+		669E178E77B440EE9C6D150B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C7F3812CE9A42DA8072B1D0 /* ZERO_CHECK */;
+			targetProxy = 1408C796309C46B6AE31E034 /* PBXContainerItemProxy */;
+		};
+		78011EF1A29D4FBFB09CEC23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C7F3812CE9A42DA8072B1D0 /* ZERO_CHECK */;
+			targetProxy = 66CF854F940F4BCE8D010E3B /* PBXContainerItemProxy */;
+		};
+		994A085410784B9294EA8CE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C7F3812CE9A42DA8072B1D0 /* ZERO_CHECK */;
+			targetProxy = 00FB520E24304A5F8F3D5287 /* PBXContainerItemProxy */;
+		};
+		D4B74C17BF0D447E8E3085FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BF784EBC88B497385E94003 /* DBHandler */;
+			targetProxy = 02442B13494A4BE3BCCE9A5B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		058E3D22E18B471189CA7DA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_WIDGETS_LIB,QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/DBHandler_autogen/include_Release\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++17' -fPIC   -std=c++14";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DBHandler;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/shreyashonnalli/miniconda3/include/qt,/Users/shreyashonnalli/miniconda3/include/qt/QtWidgets,/Users/shreyashonnalli/miniconda3/include/qt/QtGui,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/Users/shreyashonnalli/miniconda3/include/qt/QtCore,"/Users/shreyashonnalli/miniconda3/./mkspecs/macx-clang","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/DBHandler.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		098689E2056B44F09EDF7617 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		1FA5B1930A38435CA8FE7658 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build";
+			};
+			name = Release;
+		};
+		30B6EAA5AB16492EA8212F0D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		33BCF189BF3942449A15BF2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		3A215C8246604B16BFFC0930 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DBHandler_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		4086D753D4554B908A456378 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		424665F95F6D4997B81E6DAD /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		5D354DB2200B4024A60BE33B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		61175AE116B64D02BED759BB /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		8C4F5E59E79A468EADE261E1 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_WIDGETS_LIB,QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/DBHandler_autogen/include_MinSizeRel\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++17' -fPIC   -std=c++14";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DBHandler;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/shreyashonnalli/miniconda3/include/qt,/Users/shreyashonnalli/miniconda3/include/qt/QtWidgets,/Users/shreyashonnalli/miniconda3/include/qt/QtGui,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/Users/shreyashonnalli/miniconda3/include/qt/QtCore,"/Users/shreyashonnalli/miniconda3/./mkspecs/macx-clang","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/DBHandler.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		9A2ED2AFCD72490DBDD1A714 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		A2AD6987EBC34FF888BB0480 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		AAB1571745EB41D68CB47506 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build";
+			};
+			name = RelWithDebInfo;
+		};
+		AC4AAA2F79BD4441B70ED18C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		B700BFC724AA4EE69F77D5FD /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build";
+			};
+			name = MinSizeRel;
+		};
+		C0A7712CFA8C4E0D9597460A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		C152FBA62ABE4580BD829416 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DBHandler_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		C56340802F774418B177FC48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk;
+				SYMROOT = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build";
+			};
+			name = Debug;
+		};
+		D135E0E7C37A4948A58A8C63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		E14EFE3C0B7C4795870D7D0F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_WIDGETS_LIB,QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/DBHandler_autogen/include_RelWithDebInfo\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++17' -fPIC   -std=c++14";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DBHandler;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/shreyashonnalli/miniconda3/include/qt,/Users/shreyashonnalli/miniconda3/include/qt/QtWidgets,/Users/shreyashonnalli/miniconda3/include/qt/QtGui,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/Users/shreyashonnalli/miniconda3/include/qt/QtCore,"/Users/shreyashonnalli/miniconda3/./mkspecs/macx-clang","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/DBHandler.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		E3C4C5F62BA8455EBFF071CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DBHandler_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		E7DA04557BAF47888337F719 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_WIDGETS_LIB,QT_GUI_LIB,QT_CORE_LIB,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/DBHandler\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/DBHandler/DBHandler_autogen/include_Debug\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBook\"","\"/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/OrderBookWidget\"","$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++17' -fPIC   -std=c++14";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DBHandler;
+				SECTORDER_FLAGS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Users/shreyashonnalli/miniconda3/include/qt,/Users/shreyashonnalli/miniconda3/include/qt/QtWidgets,/Users/shreyashonnalli/miniconda3/include/qt/QtGui,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/Users/shreyashonnalli/miniconda3/include/qt/QtCore,"/Users/shreyashonnalli/miniconda3/./mkspecs/macx-clang","$(inherited)");
+				TARGET_TEMP_DIR = "/Users/shreyashonnalli/Desktop/Group Project/GroupRepo/cpp codebase/buildXcode/build/DBHandler.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		EDA6EAE8C5AE422FAF9E1CCB /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = DBHandler_autogen;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BF0C62F174D499DBD01E5DD /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				098689E2056B44F09EDF7617 /* Debug */,
+				4086D753D4554B908A456378 /* Release */,
+				424665F95F6D4997B81E6DAD /* MinSizeRel */,
+				A2AD6987EBC34FF888BB0480 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7FC64B953B1E4F22BEBD3732 /* Build configuration list for PBXNativeTarget "DBHandler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7DA04557BAF47888337F719 /* Debug */,
+				058E3D22E18B471189CA7DA5 /* Release */,
+				8C4F5E59E79A468EADE261E1 /* MinSizeRel */,
+				E14EFE3C0B7C4795870D7D0F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		87E14400281844D29C6D300F /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33BCF189BF3942449A15BF2D /* Debug */,
+				5D354DB2200B4024A60BE33B /* Release */,
+				61175AE116B64D02BED759BB /* MinSizeRel */,
+				9A2ED2AFCD72490DBDD1A714 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C3FB5FE1A47848BAA730C5C8 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D135E0E7C37A4948A58A8C63 /* Debug */,
+				AC4AAA2F79BD4441B70ED18C /* Release */,
+				C0A7712CFA8C4E0D9597460A /* MinSizeRel */,
+				30B6EAA5AB16492EA8212F0D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EEDAB9FD5D604FFFA2B320F5 /* Build configuration list for PBXAggregateTarget "DBHandler_autogen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3C4C5F62BA8455EBFF071CF /* Debug */,
+				3A215C8246604B16BFFC0930 /* Release */,
+				C152FBA62ABE4580BD829416 /* MinSizeRel */,
+				EDA6EAE8C5AE422FAF9E1CCB /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F82F86B454F641028D2AADBE /* Build configuration list for PBXProject "DBHandler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C56340802F774418B177FC48 /* Debug */,
+				1FA5B1930A38435CA8FE7658 /* Release */,
+				B700BFC724AA4EE69F77D5FD /* MinSizeRel */,
+				AAB1571745EB41D68CB47506 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE30EBE0EF6B4E12B9A15C45 /* Project object */;
+}
