@@ -10,22 +10,23 @@
 OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam)
 {
     orderBook = orderBookParam;
-    QWidget *centralWidget = new QWidget(this);
-    QHBoxLayout *mainLayout = new QHBoxLayout(centralWidget);
+    QWidget *orderBookWidget = new QWidget(this);
+    orderBookWidget->resize(350, 700);
+    QVBoxLayout *mainLayout = new QVBoxLayout(orderBookWidget);
 
-    bidsLabel = new QLabel("Bids", centralWidget);
-    mainLayout->addWidget(bidsLabel);
-
-    bidsTableWidget = new QTableWidget(centralWidget);
-    initializeTable(bidsTableWidget, {"ID", "Price", "Quantity"});
-    mainLayout->addWidget(bidsTableWidget);
-
-    asksLabel = new QLabel("Asks", centralWidget);
+    asksLabel = new QLabel("Asks", orderBookWidget);
     mainLayout->addWidget(asksLabel);
 
-    asksTableWidget = new QTableWidget(centralWidget);
+    asksTableWidget = new QTableWidget(orderBookWidget);
     initializeTable(asksTableWidget, {"ID", "Price", "Quantity"});
     mainLayout->addWidget(asksTableWidget);
+
+    bidsLabel = new QLabel("Bids", orderBookWidget);
+    mainLayout->addWidget(bidsLabel);
+
+    bidsTableWidget = new QTableWidget(orderBookWidget);
+    initializeTable(bidsTableWidget, {"ID", "Price", "Quantity"});
+    mainLayout->addWidget(bidsTableWidget);
 
     // Connect to the orderBookUpdated signal
     connect(handler, &DBHandler::orderBookUpdated, this, &OrderBookWidget::updateBothTables);
@@ -57,6 +58,8 @@ void OrderBookWidget::updateTable(std::vector<Order> &newOrders, QTableWidget *t
         tableWidget->setItem(i, 1, priceItem);
         tableWidget->setItem(i, 2, quantityItem);
     }
+
+    addColoursToTables();
 }
 
 std::vector<Order> OrderBookWidget::getNewOrdersFromOrderbook(bool is_bid)
@@ -85,7 +88,38 @@ void OrderBookWidget::updateBothTables()
 
     std::vector<Order> bids = getNewOrdersFromOrderbook(true);
     std::vector<Order> asks = getNewOrdersFromOrderbook(false);
-
+    reverse(bids.begin(), bids.end());
     updateTable(bids, bidsTableWidget);
     updateTable(asks, asksTableWidget);
+}
+
+void OrderBookWidget::addColoursToTables()
+{
+    QBrush redBrush(Qt::red);
+
+    for (int row = 0; row < asksTableWidget->rowCount(); ++row)
+    {
+        for (int col = 0; col < asksTableWidget->columnCount(); ++col)
+        {
+            QTableWidgetItem *item = asksTableWidget->item(row, col);
+            if (item)
+            {
+                item->setForeground(redBrush);
+            }
+        }
+    }
+
+    QBrush greenBrush(Qt::green);
+
+    for (int row = 0; row < bidsTableWidget->rowCount(); ++row)
+    {
+        for (int col = 0; col < bidsTableWidget->columnCount(); ++col)
+        {
+            QTableWidgetItem *item = bidsTableWidget->item(row, col);
+            if (item)
+            {
+                item->setForeground(greenBrush);
+            }
+        }
+    }
 }

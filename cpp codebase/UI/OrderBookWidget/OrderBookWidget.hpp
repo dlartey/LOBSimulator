@@ -21,6 +21,9 @@
 #include <thread>
 #include <chrono>
 
+#include <QBrush>
+#include <algorithm>
+
 class OrderBookWidget : public QWidget
 {
     Q_OBJECT
@@ -31,15 +34,15 @@ private:
     QTableWidget *bidsTableWidget;
     QLabel *asksLabel; // Label for Asks table
     QTableWidget *asksTableWidget;
-    
-    
-    void updateTable(std::vector<Order>& newOrders, QTableWidget* tableWidget);
+
+    void updateTable(std::vector<Order> &newOrders, QTableWidget *tableWidget);
+    void initializeTable(QTableWidget *tableWidget, const QStringList &headers);
+    void addColoursToTables();
     std::vector<Order> getNewOrdersFromOrderbook(bool is_bid);
 
 public:
     OrderBookWidget(DBHandler *handler, OrderBook *orderBook);
     ~OrderBookWidget();
-    void initializeTable(QTableWidget *tableWidget, const QStringList &headers);
 
 public slots:
     // Slot to update the table when the order book is updated

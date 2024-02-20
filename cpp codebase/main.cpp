@@ -15,10 +15,9 @@
 #include <string>        // For std::stoi and std::stod
 #include "OrderBook.hpp" // Include your OrderBook definition
 #include "DBHandler.hpp"
-#include "OrderBookWidget.hpp"
+#include "CentralWidget.hpp"
 #include <QApplication>
-#include <QPushButton>
-#include <QObject>
+#include <QtCharts>
 
 OrderBook globalOrderBook;
 volatile std::sig_atomic_t gSignalStatus;
@@ -64,11 +63,11 @@ int main(int argc, char *argv[])
 
     // Start the async SQL test in a separate thread
     asyncSQLTest("SELECT * FROM book", &handler);
-    QApplication app(argc, argv);
-    OrderBookWidget obw(&handler, &globalOrderBook);
-    obw.show();
-    int result = app.exec();
 
-    std::cout << "Application exiting..." << std::endl;
+    QApplication app(argc, argv);
+
+    CentralWidget centralWidget(&handler, &globalOrderBook);
+    centralWidget.show();
+    int result = app.exec();
     return result;
 }
