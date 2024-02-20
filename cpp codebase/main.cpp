@@ -1,3 +1,7 @@
+// IMPORTANT NOTE: PYTORCH HAS TO BE IN THE BEGINNING BEFORE ANY QT IMPORTS FOR THIS TO WORK
+#include <torch/script.h>
+#include <torch/torch.h>
+
 #include <iostream>
 #include <sqlite3.h>
 #include <filesystem>
@@ -63,7 +67,6 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
     OrderBookWidget obw(&handler, &globalOrderBook);
     obw.show();
-//    std::this_thread::sleep_for(std::chrono::milliseconds(5000));
     int result = app.exec();
 
     std::cout << "Application exiting..." << std::endl;
