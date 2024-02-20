@@ -18,19 +18,18 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 
-
-include_directories(OrderBook)
-include_directories(DBHandler)
-include_directories(OrderBookWidget)
+include_directories("${CMAKE_SOURCE_DIR}/Logic/OrderBook")
+include_directories("${CMAKE_SOURCE_DIR}/DummyInput/DBHandler")
+include_directories("${CMAKE_SOURCE_DIR}/UI/OrderBookWidget")
 include_directories(${torch_INCLUDE_DIRS})
 
 message("Going into Orderbook subdirectory...")
-add_subdirectory(OrderBook)
+add_subdirectory(Logic/OrderBook)
 message("Going into DBHandler subdirectory...")
-add_subdirectory(DBHandler)
+add_subdirectory(DummyInput/DBHandler)
 message("Going into OrderbookTests subdirectory...")
-add_subdirectory(OrderBookTests)
-add_subdirectory(OrderBookWidget)
+add_subdirectory(Logic/OrderBookTests)
+add_subdirectory(UI/OrderBookWidget)
 
 set(SOURCE_FILES main.cpp)
 add_executable(OrderBookDemo ${SOURCE_FILES})
