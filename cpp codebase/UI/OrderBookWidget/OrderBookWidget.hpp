@@ -1,6 +1,5 @@
 //
 //  OrderBookWidget.hpp
-//  DBHandler
 //
 //  Created by Shreyas Honnalli on 11/12/2023.
 //
@@ -23,6 +22,8 @@
 
 #include <QBrush>
 #include <algorithm>
+
+#include <QHeaderView>
 
 class OrderBookWidget : public QWidget
 {

@@ -21,20 +21,23 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Charts)
 include_directories("${CMAKE_SOURCE_DIR}/Logic/OrderBook")
 include_directories("${CMAKE_SOURCE_DIR}/DummyInput/DBHandler")
 include_directories("${CMAKE_SOURCE_DIR}/UI/OrderBookWidget")
+include_directories("${CMAKE_SOURCE_DIR}/UI/CandlestickWidget")
 include_directories("${CMAKE_SOURCE_DIR}/UI/CentralWidget")
 include_directories(${torch_INCLUDE_DIRS})
 
-message("Going into Orderbook subdirectory...")
+message("Going into subdirectories...")
 add_subdirectory(Logic/OrderBook)
-message("Going into DBHandler subdirectory...")
 add_subdirectory(DummyInput/DBHandler)
-message("Going into OrderbookTests subdirectory...")
 add_subdirectory(Logic/OrderBookTests)
+
 add_subdirectory(UI/OrderBookWidget)
+add_subdirectory(UI/CandlestickWidget)
+
 add_subdirectory(UI/CentralWidget)
+message("added subdirectories")
 
 set(SOURCE_FILES main.cpp)
 add_executable(OrderBookDemo ${SOURCE_FILES})
 
-target_link_libraries(OrderBookDemo PRIVATE OrderBook DBHandler OrderBookWidget CentralWidget Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Charts SQLite::SQLite3 "${TORCH_LIBRARIES}")
+target_link_libraries(OrderBookDemo PRIVATE OrderBook DBHandler OrderBookWidget CandlestickWidget CentralWidget Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Charts SQLite::SQLite3 "${TORCH_LIBRARIES}")
 set_property(TARGET OrderBookDemo PROPERTY CXX_STANDARD 17)

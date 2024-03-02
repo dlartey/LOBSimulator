@@ -13,12 +13,23 @@
 #include <thread>
 #include <chrono>
 #include "OrderBookWidget.hpp"
+#include "CandlestickWidget.hpp"
+
+#include <QScrollArea>
+#include <QDesktopWidget>
 
 class CentralWidget : public QWidget
 {
     Q_OBJECT
 private:
+    QScrollArea scrollArea;
     OrderBookWidget orderBookWidget;
+    CandlestickWidget candlestickWidget;
+    
+    void setWidgetProperties();
+    void addOBAndCandleStickToMainWidget(QWidget *mainWidget);
+    void addMainWidgetToScrollArea(QWidget *mainWidget);
+    void addScrollAreaToThisWidget();
 
 public:
     explicit CentralWidget(DBHandler *handler, OrderBook *orderBook, QWidget *parent = nullptr);

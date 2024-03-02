@@ -1,32 +1,25 @@
 //
 //  OrderBookWidget.cpp
-//  DBHandler
 //
 //  Created by Shreyas Honnalli on 11/12/2023.
 //
 
 #include "OrderBookWidget.hpp"
 
-OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam)
+OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam) : orderBook(orderBookParam)
 {
-    orderBook = orderBookParam;
-    QWidget *orderBookWidget = new QWidget(this);
-    orderBookWidget->resize(350, 700);
-    QVBoxLayout *mainLayout = new QVBoxLayout(orderBookWidget);
+    QVBoxLayout *mainLayout = new QVBoxLayout;
 
-    asksLabel = new QLabel("Asks", orderBookWidget);
-    mainLayout->addWidget(asksLabel);
-
-    asksTableWidget = new QTableWidget(orderBookWidget);
+    asksTableWidget = new QTableWidget;
+    bidsTableWidget = new QTableWidget;
+    
     initializeTable(asksTableWidget, {"ID", "Price", "Quantity"});
-    mainLayout->addWidget(asksTableWidget);
-
-    bidsLabel = new QLabel("Bids", orderBookWidget);
-    mainLayout->addWidget(bidsLabel);
-
-    bidsTableWidget = new QTableWidget(orderBookWidget);
     initializeTable(bidsTableWidget, {"ID", "Price", "Quantity"});
+    
+    mainLayout->addWidget(asksTableWidget);
     mainLayout->addWidget(bidsTableWidget);
+    
+    this->setLayout(mainLayout);
 
     // Connect to the orderBookUpdated signal
     connect(handler, &DBHandler::orderBookUpdated, this, &OrderBookWidget::updateBothTables);
@@ -34,10 +27,12 @@ OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam)
 
 void OrderBookWidget::initializeTable(QTableWidget *tableWidget, const QStringList &headers)
 {
+    tableWidget->verticalHeader()->setVisible(false);
     tableWidget->setRowCount(0);
     tableWidget->setColumnCount(headers.size());
     tableWidget->setHorizontalHeaderLabels(headers);
     tableWidget->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    tableWidget->setFixedWidth(300);
 }
 
 OrderBookWidget::~OrderBookWidget()
@@ -58,7 +53,6 @@ void OrderBookWidget::updateTable(std::vector<Order> &newOrders, QTableWidget *t
         tableWidget->setItem(i, 1, priceItem);
         tableWidget->setItem(i, 2, quantityItem);
     }
-
     addColoursToTables();
 }
 
@@ -85,7 +79,6 @@ void OrderBookWidget::updateBothTables()
     std::lock_guard<std::mutex> lock(orderBook->OB_mutex);
     if (orderBook->empty())
         return;
-
     std::vector<Order> bids = getNewOrdersFromOrderbook(true);
     std::vector<Order> asks = getNewOrdersFromOrderbook(false);
     reverse(bids.begin(), bids.end());
