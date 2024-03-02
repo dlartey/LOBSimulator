@@ -36,6 +36,7 @@ void CentralWidget::addMainWidgetToScrollArea(QWidget *mainWidget)
 void CentralWidget::addScrollAreaToThisWidget()
 {
     QLayout* layout = new QVBoxLayout;
+    layout->addWidget(&headerWidget);
     layout->addWidget(&scrollArea);
     this->setLayout(layout);
 }

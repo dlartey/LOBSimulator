@@ -14,6 +14,7 @@
 #include <chrono>
 #include "OrderBookWidget.hpp"
 #include "CandlestickWidget.hpp"
+#include "HeaderWidget.hpp"
 
 #include <QScrollArea>
 #include <QDesktopWidget>
@@ -25,6 +26,7 @@ private:
     QScrollArea scrollArea;
     OrderBookWidget orderBookWidget;
     CandlestickWidget candlestickWidget;
+    HeaderWidget headerWidget;
     
     void setWidgetProperties();
     void addOBAndCandleStickToMainWidget(QWidget *mainWidget);

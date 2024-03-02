@@ -1,6 +1,6 @@
 // IMPORTANT NOTE: PYTORCH HAS TO BE IN THE BEGINNING BEFORE ANY QT IMPORTS FOR THIS TO WORK
-#include <torch/script.h>
-#include <torch/torch.h>
+// #include <torch/script.h>
+// #include <torch/torch.h>
 
 #include <iostream>
 #include <sqlite3.h>
