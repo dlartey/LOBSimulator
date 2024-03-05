@@ -1,6 +1,6 @@
-/build/
-/buildXCode/
-__pycache__/
+cpp codebase/build/
+cpp codebase/buildXCode/
+cpp codebase/buildXcode/
 .DS_Store
 DataRetreiver/__pycache__/
 prime_orderbook.db
