@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
+set(CMAKE_CUDA_COMPILER /usr/local/cuda/bin/nvcc)
 project(OrderBookDemo)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -19,7 +20,7 @@ FetchContent_Declare(
 
 FetchContent_Declare(
         libtorch
-        URL https://download.pytorch.org/libtorch/cpu/libtorch-cxx11-abi-shared-with-deps-2.2.0%2Bcpu.zip
+        URL https://download.pytorch.org/libtorch/cu118/libtorch-cxx11-abi-shared-with-deps-2.2.1%2Bcu118.zip
 )
 
 FetchContent_MakeAvailable(httplib)
