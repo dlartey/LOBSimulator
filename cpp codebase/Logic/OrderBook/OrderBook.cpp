@@ -12,7 +12,6 @@ bool OrderBook::is_empty() const {
     return bids.empty() && asks.empty();
 }
 
-
 void OrderBook::clear_order_book() {
     bids.clear();
     asks.clear();
@@ -83,7 +82,6 @@ void OrderBook::print_order_book() const {
     std::cout << "\n-----------------------------\n";
 }
 
-
 void OrderBook::modify_order(int id, double old_price, double new_price, double new_quantity, bool is_bid) {
     // Find the list of orders at the old price level
     auto& price_level_orders = is_bid ? bids : asks;
@@ -116,8 +114,6 @@ void OrderBook::modify_order(int id, double old_price, double new_price, double 
         }
     }
 }
-
-
 
 // Overload the << operator to print the order book
 std::ostream& operator<<(std::ostream& os, const OrderBook& book) {

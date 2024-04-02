@@ -42,8 +42,18 @@ void asyncFunction(std::string baseSQLStatement, DBHandler *handler)
         handler->updateOrderBookFromDB(globalOrderBook);
         globalOrderBook.OB_mutex.unlock();
         handler->emitSuccessfulUpdate();
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     }
+}
+
+int updateOrderBook(float *values)
+{
+    for (int i = 6; i > 0; i--){
+        double price_level = API::getPrice()+i-3;
+        double new_quantity = abs(values[i-1]);
+        globalOrderBook.add_order(i, price_level, new_quantity, i <= 3);
+    }
+    return 0;
 }
 
 void getNextCentre(float *values, torch::Tensor &output)
@@ -52,17 +62,26 @@ void getNextCentre(float *values, torch::Tensor &output)
         std::cerr << "Output tensor is not valid or does not have the expected number of elements." << std::endl;
         return;
     }
+    // result of how many bids we have (denoted by negative values)
+    int balance = 0;
 
     float temp[12];
     if (output.dim() == 2) {
         for (int64_t j = 0; j < output.size(1); ++j) {
             temp[j] = output[0][j].item<float>();
+
+            if (temp[j] < 0)
+                balance++;
         }
-        std::cout << std::endl; // New line after each row
+        std::cout << std::endl;
     } else {
         std::cout << "Tensor is not 2D. It has " << output.dim() << " dimensions." << std::endl;
     }
 
+    // do balance - 6 to calculate the next best bid for the centre of the OB
+    API::setPrice(API::getPrice() + balance - 6);
+
+    // Store the new centre in vals
     for (int i = 2; i <= 6; ++i) {
         if (temp[i] < 0 && temp[i + 1] > 0) {
             for (int j = 0; j < 6; ++j) {
@@ -85,12 +104,11 @@ std::string getProjectSourceDirectory()
     return fullPath.parent_path().string();
 }
 
-void startServerWrapper() {
-    API::startServer(globalOrderBook);
+void startServerWrapper(DBHandler &handler) {
+    API::startServer(globalOrderBook, handler);
 }
 
-// TODO: Be able to pass the filename of the .pt file
-void generateQuantity() {
+void generateQuantity(DBHandler *handler) {
     try {
         std::string model_path = getProjectSourceDirectory() + "/Test1.pt";
         std::cout << model_path << std::endl;
@@ -115,9 +133,14 @@ void generateQuantity() {
                     std::cout << output[0][j].item<float>() << " ";
                 }
                 std::cout << std::endl; // New line after each row
+                std::cout << "Best bid = " << API::getPrice() << std::endl;
             } else {
                 std::cout << "Tensor is not 2D. It has " << output.dim() << " dimensions." << std::endl;
             }
+            globalOrderBook.clear_order_book();
+            updateOrderBook(values);
+            globalOrderBook.print_order_book();
+            handler->emitSuccessfulUpdate();
             std::this_thread::sleep_for(std::chrono::milliseconds(1000));
         }
     }
@@ -131,12 +154,13 @@ int main(int argc, char *argv[])
 {
     // Register signal handler for graceful shutdown
     std::signal(SIGINT, signal_handler);
-    std::thread serverThread(startServerWrapper);
-    std::thread startGenerate(generateQuantity);
+
     DBHandler handler(getProjectSourceDirectory());
 
     // Start the async SQL test in a separate thread
-    asyncSQLTest("SELECT * FROM book", &handler);
+    //asyncSQLTest("SELECT * FROM book", &handler);
+    std::thread serverThread(startServerWrapper, std::ref(handler));
+    std::thread startGenerate(generateQuantity, &handler);
 
     QApplication app(argc, argv);
 

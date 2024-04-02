@@ -82,6 +82,7 @@ void OrderBookWidget::updateBothTables()
     std::vector<Order> bids = getNewOrdersFromOrderbook(true);
     std::vector<Order> asks = getNewOrdersFromOrderbook(false);
     reverse(bids.begin(), bids.end());
+    reverse(asks.begin(), asks.end());
     updateTable(bids, bidsTableWidget);
     updateTable(asks, asksTableWidget);
 }
