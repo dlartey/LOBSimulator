@@ -27,115 +27,117 @@ float API::balance = 100000.00;
 float API::quantity = 0.00;
 float API::pnl = 0.00;
 
-void API::setPrice(int p) {
-  price = p;
-}
+void API::setPrice(int p) { price = p; }
 
-int API::getPrice() {
-  return price;
-}
+int API::getPrice() { return price; }
 
 void API::updatePnL() { pnl = balance + (float) (quantity * price); }
 
-// Handles IOC bid orders
 // Since it's a bid, we subtract from balance
 void API::IOC_bid(float targetPrice, float targetQuantity, OrderBook &o) {
+  o.OB_mutex.lock();
   std::map<double, OrderList> asks = o.getAsks();
+  bool flag = false;
 
   for (const auto &ob : asks) {
+    if (flag) { break; }
     std::list<Order> ordersForPL = ob.second;
     for (Order ob2 : ordersForPL) {
-      if (targetPrice >= ob2.price) {
-        float q = std::min((float) ob2.quantity, targetQuantity);
-
-        // Check that we have enough balance to buy for the user
-        if (q * ob2.price > balance) {
-          // then only buy enough for the quantity
-          quantity -= (float) (balance / ob2.price);
-          balance = 0;
-          return;
-        } else {
-          quantity += q;
-          balance -= (float) (q * ob2.price);
-        }
-        targetQuantity -= q;
-      } else {
-        return;
+      if (targetPrice < ob2.price or balance == 0) {
+        flag = true;
+        break;
       }
+      float q = std::min((float) ob2.quantity, targetQuantity);
+
+      // Check that we have enough balance to buy for the user
+      if (q * ob2.price > balance) {
+        // then only buy enough for the quantity
+        q = (float) (balance / ob2.price);
+      }
+      quantity += q;
+      balance -= (float) (q * ob2.price);
+      targetQuantity -= q;
     }
   }
+  o.OB_mutex.unlock();
 }
 
-// Handles FOK bid orders
 // Since it's a bid, we subtract from balance
 void API::FOK_bid(float targetPrice, float targetQuantity, OrderBook &o) {
+  o.OB_mutex.lock();
+  std::map<double, OrderList> asks = o.getAsks();
+  bool flag = false;
 
-  for (Order ob : o.getAsks().cbegin()->second) {
-    if (targetPrice >= ob.price) {
+  for (const auto &ob : asks) {
+    if (flag) { break; }
 
-      // Check that we have enough balance to buy
-      // check this again
-      if (ob.quantity * ob.price > balance or ob.quantity > targetQuantity) {
-        return;
+    std::list<Order> ordersForPL = ob.second;
+    for (Order ob2 : ordersForPL) {
+      // 1. Check that we can match the current bid with this price
+      // 2. we have enough balance to buy since it's FOK
+      // 3. We have enough quantity remaining since it's FOK
+      if (targetPrice < ob2.price or ob2.quantity * ob2.price > balance or ob2.quantity > targetQuantity) {
+        flag = true;
+        break;
       }
-      quantity += (float) ob.quantity;
-      balance -= (float) (ob.quantity * ob.price);
-      targetQuantity -= (float) ob.quantity;
-    } else {
-      return;
+
+      quantity += (float) ob2.quantity;
+      balance -= (float) (ob2.quantity * ob2.price);
+      targetQuantity -= (float) ob2.quantity;
     }
   }
+  o.OB_mutex.unlock();
 }
 
-// Handles IOC bid orders
 // Since it's an ask, we add to balance
 void API::IOC_ask(float targetPrice, float targetQuantity, OrderBook &o) {
+  o.OB_mutex.lock();
+  bool flag = false;
 
   std::map<double, OrderList> bids = o.getBids();
   for (auto iter = bids.rbegin(); iter != bids.rend(); ++iter) {
+    if (flag) { break; }
     for (auto const &i : iter->second) {
-
-      if (i.price >= targetPrice) {
-        float q = std::min((float) i.quantity, targetQuantity);
-
-        // Check that we have enough balance to buy for the user
-        if (q > quantity) {
-          // then only sell enough for the quantity
-          balance += (float) (quantity * i.price);
-          quantity = 0;
-          return;
-        } else {
-          balance += (float) (q * i.price);
-          quantity -= q;
-        }
-        targetQuantity -= q;
-      } else {
-        return;
+      if (i.price < targetPrice or quantity == 0) {
+        flag = true;
+        break;
       }
-    }
 
+      float q = std::min((float) i.quantity, targetQuantity);
+
+      // Check that we have enough balance to buy for the user
+      if (q > quantity) { q = quantity; }
+
+      balance += (float) (q * i.price);
+      quantity -= q;
+      targetQuantity -= q;
+    }
   }
+  o.OB_mutex.unlock();
 }
 
 // Since it's an ask, we add to balance
 void API::FOK_ask(float targetPrice, float targetQuantity, OrderBook &o) {
+  o.OB_mutex.lock();
+  bool flag = false;
+  std::map<double, OrderList> bids = o.getBids();
+  for (auto iter = bids.rbegin(); iter != bids.rend(); ++iter) {
+    if (flag){ break; }
 
-  // check that we have the quantity to sell first
-  for (Order ob : o.getBids().cend()->second) {
-    if (ob.price >= targetPrice) {
+    for (auto const &i : iter->second) {
 
       // Check that we have enough balance to buy for the user
-      if (ob.quantity > quantity or ob.quantity > targetQuantity) {
-        return;
+      if (i.price < targetPrice or quantity == 0 or i.quantity > quantity or i.quantity > targetQuantity) {
+        flag=true;
+        break;
       }
 
-      balance += (float) (ob.quantity * ob.price);
-      quantity -= (float) ob.quantity;
-      targetQuantity -= (float) ob.quantity;
-    } else {
-      return;
+      balance += (float) (i.quantity * i.price);
+      quantity -= (float) i.quantity;
+      targetQuantity -= (float) i.quantity;
     }
   }
+  o.OB_mutex.unlock();
 }
 
 // Gets the orders that the user has submitted
@@ -281,7 +283,7 @@ void API::submitOrder(OrderBook &o, DBHandler &handler) {
 
 void API::startServer(OrderBook &o, DBHandler &handler) {
   submitOrder(o, handler);
-  deleteOrder(o, handler);
+  //deleteOrder(o, handler);
   getOrders(o, handler);
   getPnL(o, handler);
   s.listen("localhost", 8080);
