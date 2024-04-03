@@ -8,8 +8,9 @@
  * Endpoints
  * GET: /pos -> returns the users current positions -> returns a list of positions
  *
- * POST: /submit -> attempts to add the user's order to the orderbook
- * returns a orderID
+ * GET: /pnl -> return the current balance, positions, price and PnL to the user
+ *
+ * POST: /submit -> attempts to fulfill the users order in the orderbook
  *
  * DELETE: /cancel -> this removes a user's order if it hasn't been fulfilled
  * returns corresponding status code if successful or not
@@ -50,10 +51,8 @@ void API::IOC_bid(float targetPrice, float targetQuantity, OrderBook &o) {
       float q = std::min((float) ob2.quantity, targetQuantity);
 
       // Check that we have enough balance to buy for the user
-      if (q * ob2.price > balance) {
-        // then only buy enough for the quantity
-        q = (float) (balance / ob2.price);
-      }
+      // then only buy enough for the quantity
+      if (q * ob2.price > balance) { q = (float) (balance / ob2.price); }
       quantity += q;
       balance -= (float) (q * ob2.price);
       targetQuantity -= q;
@@ -237,6 +236,7 @@ void API::submitOrder(OrderBook &o, DBHandler &handler) {
     if (!req.has_header("Content-Type") || req.get_header_value("Content-Type") != "application/json") {
       res.status = 400;
       res.set_content("Invalid request structure", "text/plain");
+      return;
     }
 
     try {
@@ -245,6 +245,7 @@ void API::submitOrder(OrderBook &o, DBHandler &handler) {
           || !json_data.contains("orderType")) {
         res.status = 400;
         res.set_content("Invalid parameters in request body", "text/plain");
+        return;
       }
 
       int random = e();

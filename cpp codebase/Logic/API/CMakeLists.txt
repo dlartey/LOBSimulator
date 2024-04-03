@@ -7,16 +7,10 @@ set(CMAKE_CXX_STANDARD 11)
 include(FetchContent)
 
 FetchContent_Declare(
-        httplib
-        URL https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.15.0.zip
-)
-
-FetchContent_Declare(
         json
         URL https://github.com/nlohmann/json/archive/refs/tags/v3.11.3.zip
 )
 
-FetchContent_MakeAvailable(httplib)
 FetchContent_MakeAvailable(json)
 
 include_directories(${httplib_SOURCE_DIR})

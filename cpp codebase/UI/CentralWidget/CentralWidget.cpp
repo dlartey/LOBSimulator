@@ -16,7 +16,7 @@ void CentralWidget::setWidgetProperties()
 {
     QRect screenGeometry = QApplication::desktop()->screenGeometry();
     this->setGeometry(screenGeometry);
-    this->setStyleSheet("background-color: #000000;");
+    this->setStyleSheet("background-color: #ffffff;");
 }
 
 void CentralWidget::addOBAndCandleStickToMainWidget(QWidget *mainWidget)

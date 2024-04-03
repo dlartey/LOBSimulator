@@ -1,7 +1,5 @@
 #include <torch/script.h>
 // IMPORTANT NOTE: PYTORCH HAS TO BE IN THE BEGINNING BEFORE ANY QT IMPORTS FOR THIS TO WORK
-// #include <torch/script.h>
-// #include <torch/torch.h>
 
 #include <iostream>
 #include <sqlite3.h>
@@ -143,7 +141,6 @@ void generateQuantity(DBHandler *handler) {
 }
 
 int main(int argc, char *argv[]) {
-  // Register signal handler for graceful shutdown
   std::signal(SIGINT, signal_handler);
 
   DBHandler handler(getProjectSourceDirectory());

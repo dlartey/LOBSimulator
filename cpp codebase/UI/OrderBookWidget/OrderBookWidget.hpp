@@ -11,18 +11,20 @@
 #include <QApplication>
 #include <QWidget>
 #include <QTableWidget>
+#include <QPushButton>
 #include <QVBoxLayout>
+#include <QComboBox>
+#include <QLineEdit>
 #include <QLabel>
 #include "OrderBook.hpp"
 #include "DBHandler.hpp"
+#include "API.hpp"
 #include <mutex>
 #include <list>
 #include <thread>
 #include <chrono>
-
 #include <QBrush>
 #include <algorithm>
-
 #include <QHeaderView>
 
 class OrderBookWidget : public QWidget
@@ -35,6 +37,11 @@ private:
     QTableWidget *bidsTableWidget;
     QLabel *asksLabel; // Label for Asks table
     QTableWidget *asksTableWidget;
+    QComboBox* orderType;
+    QComboBox* bidAsk;
+    QPushButton *apiButton;
+    QLineEdit* price;
+    QLineEdit* quantity;
 
     void updateTable(std::vector<Order> &newOrders, QTableWidget *tableWidget);
     void initializeTable(QTableWidget *tableWidget, const QStringList &headers);
@@ -48,6 +55,8 @@ public:
 public slots:
     // Slot to update the table when the order book is updated
     void updateBothTables();
+    void invokeAPI();
+
 };
 
 #endif /* OrderBookWidget_hpp */
