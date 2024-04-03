@@ -36,6 +36,9 @@ private:
     QLabel *bidsLabel; // Label for Bids table
     QTableWidget *bidsTableWidget;
     QLabel *asksLabel; // Label for Asks table
+    QLabel* currentQuantity;
+    QLabel* currentBalance;
+    QLabel* pnl;
     QTableWidget *asksTableWidget;
     QComboBox* orderType;
     QComboBox* bidAsk;
@@ -56,6 +59,10 @@ public slots:
     // Slot to update the table when the order book is updated
     void updateBothTables();
     void invokeAPI();
+    void updateBalance();
+    void updateQuantity();
+    void updatePnl();
+
 
 };
 

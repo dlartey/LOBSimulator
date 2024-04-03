@@ -32,7 +32,14 @@ void API::setPrice(int p) { price = p; }
 
 int API::getPrice() { return price; }
 
+float API::getPnl()  {
+  updatePnL();
+  return pnl;
+}
+
 void API::updatePnL() { pnl = balance + (float) (quantity * price); }
+
+float API::getQuantity(){ return quantity; }
 
 // Since it's a bid, we subtract from balance
 void API::IOC_bid(float targetPrice, float targetQuantity, OrderBook &o) {
@@ -289,5 +296,7 @@ void API::startServer(OrderBook &o, DBHandler &handler) {
   getPnL(o, handler);
   s.listen("localhost", 8080);
 }
+
+float API::getBalance() { return balance; }
 
 

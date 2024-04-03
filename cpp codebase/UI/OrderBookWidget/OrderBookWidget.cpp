@@ -13,6 +13,18 @@ OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam) 
   apiButton = new QPushButton("Submit Order", this);
   apiButton->setGeometry(QRect(QPoint(100, 100), QSize(200, 50)));
 
+  currentBalance = new QLabel(this);
+  currentBalance->setText("Current Balance = 100000");
+  currentBalance->setGeometry(QRect(10, 10, 200, 20));
+
+  currentQuantity = new QLabel(this);
+  currentQuantity->setText("Current Quantity = 0");
+  currentQuantity->setGeometry(QRect(50, 50, 200, 20));
+
+  pnl = new QLabel(this);
+  pnl->setText("Overall Position = 0");
+  pnl->setGeometry(QRect(100, 100, 200, 20));
+
   orderType = new QComboBox(this);
   orderType->setPlaceholderText("Order Type");
   orderType->addItem("IOC");
@@ -48,12 +60,18 @@ OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam) 
   mainLayout->addWidget(bidAsk);
   mainLayout->addWidget(price);
   mainLayout->addWidget(quantity);
+  mainLayout->addWidget(currentQuantity);
+  mainLayout->addWidget(currentBalance);
+  mainLayout->addWidget(pnl);
 
   this->setLayout(mainLayout);
 
   // Connect to the orderBookUpdated signal
   connect(apiButton, &QPushButton::clicked, this, &OrderBookWidget::invokeAPI);
   connect(handler, &DBHandler::orderBookUpdated, this, &OrderBookWidget::updateBothTables);
+  connect(handler, &DBHandler::orderBookUpdated, this, &OrderBookWidget::updateBalance);
+  connect(handler, &DBHandler::orderBookUpdated, this, &OrderBookWidget::updateQuantity);
+  connect(handler, &DBHandler::orderBookUpdated, this, &OrderBookWidget::updatePnl);
 }
 
 void OrderBookWidget::initializeTable(QTableWidget *tableWidget, const QStringList &headers) {
@@ -67,23 +85,15 @@ void OrderBookWidget::initializeTable(QTableWidget *tableWidget, const QStringLi
 
 void OrderBookWidget::invokeAPI() {
   httplib::Client cli("localhost:8080");
-  // Get the Order Type, Quantity, BidAsk, Price
-  std::string currOrder = orderType->currentText().toStdString();
-  std::string currBidAsk = bidAsk->currentText().toStdString();
-  float currQuantity = quantity->text().toFloat();
-  float currPrice = price->text().toFloat();
 
   nlohmann::json body;
-  body["price"] = currPrice;
-  if (currBidAsk == "Bid"){ body["bidAsk"] = true; } else {body["bidAsk"] = false; }
+  body["price"] = price->text().toFloat();
+  body["quantity"] = quantity->text().toFloat();
+  body["orderType"] = orderType->currentText().toStdString();
 
-  body["quantity"] = currQuantity;
+  if (bidAsk->currentText().toStdString() == "Bid"){ body["bidAsk"] = true; } else {body["bidAsk"] = false; }
 
-  body["orderType"] = currOrder;
-
-  std::string bodyPayload = body.dump();
-
-  auto res = cli.Post("/submit", bodyPayload, "application/json");
+  auto res = cli.Post("/submit", body.dump(), "application/json");
 
   if (res && res->status == 200) {
     std::cout << "Response from API: " << res->body.c_str() << std::endl;
@@ -161,3 +171,9 @@ void OrderBookWidget::addColoursToTables() {
     }
   }
 }
+
+void OrderBookWidget::updateBalance() { currentBalance->setText("Current Balance = " + QString::number(API::getBalance(), 'f')); }
+
+void OrderBookWidget::updateQuantity() { currentQuantity->setText("Current Quantity = " + QString::number(API::getQuantity(), 'f')); }
+
+void OrderBookWidget::updatePnl() { pnl->setText("Overall Balance = " + QString::number(API::getPnl(), 'f')); }

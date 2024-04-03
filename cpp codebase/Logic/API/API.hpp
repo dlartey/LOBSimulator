@@ -28,6 +28,9 @@ public:
     static void updatePnL();
     static void setPrice(int p);
     static int getPrice();
+    static float getBalance();
+    static float getQuantity();
+    static float getPnl();
     static void IOC_bid(float targetPrice, float targetQuantity, OrderBook &o);
     static void IOC_ask(float targetPrice, float targetQuantity, OrderBook &o);
     static void FOK_ask(float targetPrice, float targetQuantity, OrderBook &o);

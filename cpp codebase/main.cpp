@@ -131,6 +131,7 @@ void generateQuantity(DBHandler *handler) {
       globalOrderBook.clear_order_book();
       updateOrderBook(values);
       globalOrderBook.print_order_book();
+      API::updatePnL();
       handler->emitSuccessfulUpdate();
       std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     }
