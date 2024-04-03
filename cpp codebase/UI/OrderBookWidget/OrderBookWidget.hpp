@@ -38,6 +38,7 @@ private:
     QLabel *asksLabel; // Label for Asks table
     QLabel* currentQuantity;
     QLabel* currentBalance;
+    QLabel* apiResponse;
     QLabel* pnl;
     QTableWidget *asksTableWidget;
     QComboBox* orderType;

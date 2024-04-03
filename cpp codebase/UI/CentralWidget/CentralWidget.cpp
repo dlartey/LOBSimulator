@@ -11,7 +11,7 @@ CentralWidget::CentralWidget(DBHandler *handler, OrderBook *orderBook, QWidget *
 }
 
 void CentralWidget::setWidgetProperties() {
-  this->setGeometry(0, 0, 1420, 1160);
+  this->setGeometry(0, 0, 1400, 1140);
   this->setStyleSheet("background-color: #ffffff;");
 }
 

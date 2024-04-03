@@ -23,6 +23,7 @@
 #include <QChartView>
 #include <QChart>
 #include <QDateTime>
+#include <QDateTimeAxis>
 #include <cmath>
 
 using bestAskBidPair = std::pair<double,double>;

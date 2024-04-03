@@ -29,20 +29,21 @@ OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam) 
   currentQuantity->setText("Current Quantity = 0");
   currentQuantity->setGeometry(QRect(50, 50, 200, 20));
 
+  apiResponse = new QLabel(this);
+  apiResponse->setGeometry(QRect(10, 10, 200, 20));
+
   pnl = new QLabel(this);
   pnl->setText("Overall Position = 0");
   pnl->setGeometry(QRect(100, 100, 200, 20));
 
   orderType = new QComboBox(this);
-  //orderType->lineEdit()->setPlaceholderText("Bid or Ask");
-  orderType->addItem("IOC");
-  orderType->addItem("FOK");
+  orderType->addItem("Immediate or Cancel (IOC)");
+  orderType->addItem("Fill or Kill (FOK)");
   orderType->setGeometry(QRect(QPoint(200, 50), QSize(200, 40)));
 
   bidAsk = new QComboBox(this);
-  //bidAsk->lineEdit()->setPlaceholderText("Bid or Ask");
-  bidAsk->addItem("Bid");
-  bidAsk->addItem("Ask");
+  bidAsk->addItem("Buy");
+  bidAsk->addItem("Sell");
   bidAsk->setGeometry(QRect(QPoint(200, 50), QSize(200, 40)));
 
   price = new QLineEdit(this);
@@ -79,6 +80,7 @@ OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam) 
   mainLayout->addWidget(orderType);
   mainLayout->addWidget(bidAsk);
   mainLayout->addWidget(apiButton);
+  mainLayout->addWidget(apiResponse);
 
   this->setLayout(mainLayout);
 
@@ -109,16 +111,23 @@ void OrderBookWidget::invokeAPI() {
   nlohmann::json body;
   body["price"] = price->text().toFloat();
   body["quantity"] = quantity->text().toFloat();
-  body["orderType"] = orderType->currentText().toStdString();
 
-  if (bidAsk->currentText().toStdString() == "Bid"){ body["bidAsk"] = true; } else {body["bidAsk"] = false; }
+  if (orderType->currentText().toStdString() == "Immediate or Cancel (IOC)"){ body["orderType"] = "IOC"; } else {body["bidAsk"] = "FOK"; }
+  if (bidAsk->currentText().toStdString() == "Buy"){ body["bidAsk"] = true; } else {body["bidAsk"] = false; }
 
   auto res = cli.Post("/submit", body.dump(), "application/json");
 
+  apiResponse->setText(res->body.c_str());
+  QPalette sample_palette;
+
   if (res && res->status == 200) {
+    sample_palette.setColor(QPalette::WindowText, Qt::darkGreen);
+    apiResponse->setPalette(sample_palette);
     std::cout << "Response from API: " << res->body.c_str() << std::endl;
   } else {
     std::cout << "Failed to call API" << std::endl;
+    sample_palette.setColor(QPalette::WindowText, Qt::darkRed);
+    apiResponse->setPalette(sample_palette);
   }
 }
 

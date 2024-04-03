@@ -189,7 +189,7 @@ void API::getPnL(OrderBook &o, DBHandler &handler) {
       std::cerr << "Unable to get PnL: " << e.what() << std::endl;
     }
     res.status = 400;
-    res.set_content("Unable to get PnL", "text/plain");
+    res.set_content("Unable to calculate PnL", "text/plain");
   });
 }
 
@@ -278,13 +278,11 @@ void API::submitOrder(OrderBook &o, DBHandler &handler) {
       new_entry["bidAsk"] = bidAsk;
       orderHistory[random] = new_entry;
       handler.emitSuccessfulUpdate();
-      res.set_content("Attempted Order", "text/plain");
-
+      res.set_content("Order Submitted", "text/plain");
     } catch (const std::exception &e) {
+      res.status = 400;
       res.set_content("Error parsing JSON", "text/plain");
     }
-    res.status = 400;
-    res.set_content("Invalid JSON structure", "text/plain");
   });
   o.OB_mutex.unlock();
 }

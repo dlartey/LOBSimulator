@@ -39,7 +39,9 @@ void CandlestickWidget::setupChartView()
 
 void CandlestickWidget::setupAxes()
 {
-    xAxesList = QStringList{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+    xAxesList = QStringList{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+                            "11", "12", "13", "14", "15", "16", "17", "18", "19", "20" ,
+                            "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"};
     QtCharts::QBarCategoryAxis *newX = new QtCharts::QBarCategoryAxis();
     QtCharts::QValueAxis *newY = new QtCharts::QValueAxis();
     newX->setCategories(xAxesList);
@@ -114,7 +116,7 @@ void CandlestickWidget::appendCurrentStickToGraph()
     set->setOpen(static_cast<qreal>(currentStick.open));
     set->setClose(static_cast<qreal>(currentStick.close));
 
-    if (candlestickSeries->count() == 10)
+    if (candlestickSeries->count() == 30)
         candlestickSeries->remove(candlestickSeries->sets().at(0));
     candlestickSeries->append(set);
     resizeYAxis();
