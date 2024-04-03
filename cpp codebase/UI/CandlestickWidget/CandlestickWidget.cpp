@@ -54,7 +54,7 @@ void CandlestickWidget::setupAxes()
 void CandlestickWidget::setupSeries()
 {
     candlestickSeries = new QtCharts::QCandlestickSeries();
-    candlestickSeries->setName("BTC");
+    candlestickSeries->setName("ETH");
     candlestickSeries->setIncreasingColor(QColor(Qt::green));
     candlestickSeries->setDecreasingColor(QColor(Qt::red));
 }
@@ -62,7 +62,7 @@ void CandlestickWidget::setupSeries()
 void CandlestickWidget::setupChart()
 {
     chart = new QtCharts::QChart();
-    chart->setTitle("Bitcoin Data");
+    chart->setTitle("Ethereum Price");
     chart->addSeries(candlestickSeries);
     chart->setTheme(QtCharts::QChart::ChartThemeDark);
 }

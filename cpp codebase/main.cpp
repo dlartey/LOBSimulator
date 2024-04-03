@@ -101,7 +101,7 @@ void startServerWrapper(DBHandler &handler) {
 
 void generateQuantity(DBHandler *handler) {
   try {
-    std::string model_path = getProjectSourceDirectory() + "/Test1.pt";
+    std::string model_path = getProjectSourceDirectory() + "/RecreatingBestModelCPU.pt";
     std::cout << model_path << std::endl;
     torch::jit::script::Module model = torch::jit::load(model_path);
     model.eval();

@@ -9,9 +9,17 @@
 
 OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam) : orderBook(orderBookParam) {
   QVBoxLayout *mainLayout = new QVBoxLayout;
+  QHBoxLayout *quantityLayout = new QHBoxLayout;
+  QHBoxLayout *priceLayout = new QHBoxLayout;
 
   apiButton = new QPushButton("Submit Order", this);
   apiButton->setGeometry(QRect(QPoint(100, 100), QSize(200, 50)));
+
+  selectPrice = new QPushButton("Current Price", this);
+  selectPrice->setGeometry(QRect(QPoint(100, 100), QSize(200, 50)));
+
+  selectAllQuantity = new QPushButton("Max Quantity", this);
+  selectAllQuantity->setGeometry(QRect(QPoint(100, 100), QSize(200, 50)));
 
   currentBalance = new QLabel(this);
   currentBalance->setText("Current Balance = 100000");
@@ -26,13 +34,13 @@ OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam) 
   pnl->setGeometry(QRect(100, 100, 200, 20));
 
   orderType = new QComboBox(this);
-  orderType->setPlaceholderText("Order Type");
+  //orderType->lineEdit()->setPlaceholderText("Bid or Ask");
   orderType->addItem("IOC");
   orderType->addItem("FOK");
   orderType->setGeometry(QRect(QPoint(200, 50), QSize(200, 40)));
 
   bidAsk = new QComboBox(this);
-  bidAsk->setPlaceholderText("Bid or Ask");
+  //bidAsk->lineEdit()->setPlaceholderText("Bid or Ask");
   bidAsk->addItem("Bid");
   bidAsk->addItem("Ask");
   bidAsk->setGeometry(QRect(QPoint(200, 50), QSize(200, 40)));
@@ -55,14 +63,22 @@ OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam) 
 
   mainLayout->addWidget(asksTableWidget);
   mainLayout->addWidget(bidsTableWidget);
-  mainLayout->addWidget(apiButton);
-  mainLayout->addWidget(orderType);
-  mainLayout->addWidget(bidAsk);
-  mainLayout->addWidget(price);
-  mainLayout->addWidget(quantity);
   mainLayout->addWidget(currentQuantity);
   mainLayout->addWidget(currentBalance);
   mainLayout->addWidget(pnl);
+
+  priceLayout->addWidget(price);
+  priceLayout->addWidget(selectPrice);
+
+  quantityLayout->addWidget(quantity);
+  quantityLayout->addWidget(selectAllQuantity);
+
+  mainLayout->addLayout(priceLayout);
+  mainLayout->addLayout(quantityLayout);
+
+  mainLayout->addWidget(orderType);
+  mainLayout->addWidget(bidAsk);
+  mainLayout->addWidget(apiButton);
 
   this->setLayout(mainLayout);
 
@@ -72,6 +88,10 @@ OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam) 
   connect(handler, &DBHandler::orderBookUpdated, this, &OrderBookWidget::updateBalance);
   connect(handler, &DBHandler::orderBookUpdated, this, &OrderBookWidget::updateQuantity);
   connect(handler, &DBHandler::orderBookUpdated, this, &OrderBookWidget::updatePnl);
+
+  connect(selectAllQuantity, &QPushButton::clicked, this, &OrderBookWidget::setQuantity);
+  connect(selectPrice, &QPushButton::clicked, this, &OrderBookWidget::setPrice);
+
 }
 
 void OrderBookWidget::initializeTable(QTableWidget *tableWidget, const QStringList &headers) {
@@ -172,8 +192,12 @@ void OrderBookWidget::addColoursToTables() {
   }
 }
 
-void OrderBookWidget::updateBalance() { currentBalance->setText("Current Balance = " + QString::number(API::getBalance(), 'f')); }
+void OrderBookWidget::updateBalance() { currentBalance->setText("Current Balance = £" + QString::number(API::getBalance(), 'f', 2)); }
 
-void OrderBookWidget::updateQuantity() { currentQuantity->setText("Current Quantity = " + QString::number(API::getQuantity(), 'f')); }
+void OrderBookWidget::updateQuantity() { currentQuantity->setText("Current Quantity = " + QString::number(API::getQuantity(), 'f') + " BTC"); }
 
-void OrderBookWidget::updatePnl() { pnl->setText("Overall Balance = " + QString::number(API::getPnl(), 'f')); }
+void OrderBookWidget::updatePnl() { pnl->setText("Position Total = £" + QString::number(API::getPnl(), 'f', 2)); }
+
+void OrderBookWidget::setQuantity() { quantity->setText(QString::number(API::getBalance()/API::getPrice(), 'f')); }
+
+void OrderBookWidget::setPrice() { price->setText(QString::number(API::getPrice())); }

@@ -43,6 +43,8 @@ private:
     QComboBox* orderType;
     QComboBox* bidAsk;
     QPushButton *apiButton;
+    QPushButton *selectAllQuantity;
+    QPushButton *selectPrice;
     QLineEdit* price;
     QLineEdit* quantity;
 
@@ -62,7 +64,8 @@ public slots:
     void updateBalance();
     void updateQuantity();
     void updatePnl();
-
+    void setQuantity();
+    void setPrice();
 
 };
 
