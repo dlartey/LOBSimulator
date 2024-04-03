@@ -23,8 +23,8 @@ httplib::Server API::s;
 std::random_device rd;
 std::default_random_engine e(rd());
 std::map<int, std::map<std::string, double> > API::orderHistory;
-int API::price = 200;
-float API::balance = 100000.00;
+int API::price = 2500;
+float API::balance = 1000000.00;
 float API::quantity = 0.00;
 float API::pnl = 0.00;
 

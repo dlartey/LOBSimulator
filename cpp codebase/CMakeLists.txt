@@ -20,7 +20,8 @@ FetchContent_Declare(
 
 FetchContent_Declare(
         libtorch
-        URL https://download.pytorch.org/libtorch/cu118/libtorch-cxx11-abi-shared-with-deps-2.2.1%2Bcu118.zip
+        # URL https://download.pytorch.org/libtorch/cu118/libtorch-cxx11-abi-shared-with-deps-2.2.1%2Bcu118.zip
+        URL https://download.pytorch.org/libtorch/cpu/libtorch-cxx11-abi-shared-with-deps-2.2.1%2Bcpu.zip
 )
 
 FetchContent_MakeAvailable(httplib)
