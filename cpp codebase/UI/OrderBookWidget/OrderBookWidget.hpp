@@ -18,7 +18,6 @@
 #include <QLabel>
 #include "OrderBook.hpp"
 #include "DBHandler.hpp"
-#include "API.hpp"
 #include <mutex>
 #include <list>
 #include <thread>
@@ -26,6 +25,7 @@
 #include <QBrush>
 #include <algorithm>
 #include <QHeaderView>
+#include "API.hpp"
 
 class OrderBookWidget : public QWidget
 {

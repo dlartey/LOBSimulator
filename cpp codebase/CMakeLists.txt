@@ -19,11 +19,17 @@ FetchContent_Declare(
 )
 
 FetchContent_Declare(
+        json
+        URL https://github.com/nlohmann/json/archive/refs/tags/v3.11.3.zip
+)
+
+FetchContent_Declare(
         libtorch
         # URL https://download.pytorch.org/libtorch/cu118/libtorch-cxx11-abi-shared-with-deps-2.2.1%2Bcu118.zip
         URL https://download.pytorch.org/libtorch/cpu/libtorch-cxx11-abi-shared-with-deps-2.2.1%2Bcpu.zip
 )
 
+FetchContent_MakeAvailable(json)
 FetchContent_MakeAvailable(httplib)
 FetchContent_GetProperties(libtorch)
 

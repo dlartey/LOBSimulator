@@ -63,8 +63,7 @@ void getNextCentre(float *values, torch::Tensor &output) {
     for (int64_t j = 0; j < output.size(1); ++j) {
       temp[j] = output[0][j].item<float>();
 
-      if (temp[j] < 0)
-        balance++;
+      if (temp[j] < 0) balance++;
     }
     std::cout << std::endl;
   } else {
@@ -85,9 +84,7 @@ void getNextCentre(float *values, torch::Tensor &output) {
   }
 }
 
-void asyncSQLTest(std::string SQLStatement, DBHandler *handler) {
-  std::thread(asyncFunction, SQLStatement, &(*handler)).detach();
-}
+void asyncSQLTest(std::string SQLStatement, DBHandler *handler) { std::thread(asyncFunction, SQLStatement, &(*handler)).detach(); }
 
 std::string getProjectSourceDirectory() {
   std::string currFilePath = __FILE__;
@@ -95,9 +92,7 @@ std::string getProjectSourceDirectory() {
   return fullPath.parent_path().string();
 }
 
-void startServerWrapper(DBHandler &handler) {
-  API::startServer(globalOrderBook, handler);
-}
+void startServerWrapper(DBHandler &handler) { API::startServer(globalOrderBook, handler); }
 
 void generateQuantity(DBHandler *handler) {
   try {
@@ -143,10 +138,8 @@ void generateQuantity(DBHandler *handler) {
 
 int main(int argc, char *argv[]) {
   std::signal(SIGINT, signal_handler);
-
   DBHandler handler(getProjectSourceDirectory());
 
-  // Start the async SQL test in a separate thread
   //asyncSQLTest("SELECT * FROM book", &handler);
   std::thread serverThread(startServerWrapper, std::ref(handler));
   std::thread startGenerate(generateQuantity, &handler);
