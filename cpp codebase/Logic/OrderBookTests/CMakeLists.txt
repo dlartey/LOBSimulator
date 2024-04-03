@@ -18,5 +18,4 @@ add_executable(RunTests SomeTests.cpp)
 message("Linking libraries")
 target_link_libraries(RunTests gtest gtest_main OrderBook DBHandler SQLite::SQLite3)
 
-
 gtest_discover_tests(RunTests DISCOVERY_MODE PRE_TEST)

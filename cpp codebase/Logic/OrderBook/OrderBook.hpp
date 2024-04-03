@@ -8,7 +8,6 @@
 #ifndef OrderBook_hpp
 #define OrderBook_hpp
 #include <mutex>
-#include <sqlite3.h>
 
 extern std::mutex orderBookMutex;
 
@@ -36,7 +35,7 @@ public:
 
     bool is_empty() const;
     void add_order(int id, double price, double quantity, bool is_bid);
-    void remove_order(int id, double price, bool is_bid);
+    bool remove_order(int id, double price, bool is_bid);
     void modify_order(int id, double old_price, double new_price, double new_quantity, bool is_bid);
     void print_order_book() const;
     void clear_order_book();

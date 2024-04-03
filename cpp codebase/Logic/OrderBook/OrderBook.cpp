@@ -12,12 +12,10 @@ bool OrderBook::is_empty() const {
     return bids.empty() && asks.empty();
 }
 
-
 void OrderBook::clear_order_book() {
     bids.clear();
     asks.clear();
 }
-
 
 // Add an order to the order book
 void OrderBook::add_order(int id, double price, double quantity, bool is_bid) {
@@ -30,8 +28,9 @@ void OrderBook::add_order(int id, double price, double quantity, bool is_bid) {
     }
 }
 
-// remove an order
-void OrderBook::remove_order(int id, double price, bool is_bid) {
+// return true if order removed, else false
+bool OrderBook::remove_order(int id, double price, bool is_bid) {
+    bool valid = false;
     auto& price_level_orders = is_bid ? bids : asks;
     auto it = price_level_orders.find(price);
     if (it != price_level_orders.end()) {
@@ -39,6 +38,7 @@ void OrderBook::remove_order(int id, double price, bool is_bid) {
         for (auto order_it = orders.begin(); order_it != orders.end(); ) {
             if (order_it->id == id) {
                 order_it = orders.erase(order_it); // Remove the order
+                valid = true;
                 break; // Assuming id is unique, we can break after finding it
             }
             else {
@@ -51,6 +51,7 @@ void OrderBook::remove_order(int id, double price, bool is_bid) {
             price_level_orders.erase(it);
         }
     }
+    return valid;
 }
 
 // print order_book
@@ -80,7 +81,6 @@ void OrderBook::print_order_book() const {
 
     std::cout << "\n-----------------------------\n";
 }
-
 
 void OrderBook::modify_order(int id, double old_price, double new_price, double new_quantity, bool is_bid) {
     // Find the list of orders at the old price level
@@ -114,8 +114,6 @@ void OrderBook::modify_order(int id, double old_price, double new_price, double 
         }
     }
 }
-
-
 
 // Overload the << operator to print the order book
 std::ostream& operator<<(std::ostream& os, const OrderBook& book) {
