@@ -44,6 +44,7 @@ OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam) 
   bidAsk = new QComboBox(this);
   bidAsk->addItem("Buy");
   bidAsk->addItem("Sell");
+
   bidAsk->setGeometry(QRect(QPoint(200, 50), QSize(200, 40)));
 
   price = new QLineEdit(this);
@@ -81,6 +82,7 @@ OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam) 
   mainLayout->addWidget(bidAsk);
   mainLayout->addWidget(apiButton);
   mainLayout->addWidget(apiResponse);
+
 
   this->setLayout(mainLayout);
 
@@ -206,6 +208,7 @@ void OrderBookWidget::updateBalance() { currentBalance->setText("Current Balance
 void OrderBookWidget::updateQuantity() { currentQuantity->setText("Current Quantity = " + QString::number(API::getQuantity(), 'f') + " ETH"); }
 
 void OrderBookWidget::updatePnl() { pnl->setText("Position Total = £" + QString::number(APIWH::getPnl(), 'f', 2)); }
+
 
 void OrderBookWidget::setQuantity() { quantity->setText(QString::number(API::getBalance()/API::getPrice(), 'f')); }
 
