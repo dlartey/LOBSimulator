@@ -7,30 +7,25 @@
 #include <thread>
 #include <chrono>
 #include <future>
-#include <filesystem>
 #include <csignal>
-#include <csignal>
-#include <mutex>
 #include <string>
 #include "OrderBook.hpp"
 #include "DBHandler.hpp"
 #include "API.hpp"
-#include "OrderBookWidget.hpp"
 #include "CentralWidget.hpp"
 #include <QApplication>
 #include <QtCharts>
+#include <nlohmann/json.hpp>
+#include <httplib.h>
 
 OrderBook globalOrderBook;
 volatile std::sig_atomic_t gSignalStatus;
 bool flag = false;
 
 // Signal handler function
-void signal_handler(int signal) {
-  gSignalStatus = signal;
-}
+void signal_handler(int signal) { gSignalStatus = signal; }
 
 void asyncFunction(std::string baseSQLStatement, DBHandler *handler) {
-  // Loop to continuously fetch new entries
   while (gSignalStatus != SIGINT) {
     globalOrderBook.OB_mutex.lock();
     globalOrderBook.clear_order_book();
@@ -41,13 +36,12 @@ void asyncFunction(std::string baseSQLStatement, DBHandler *handler) {
   }
 }
 
-int updateOrderBook(float *values) {
+void updateOrderBook(float *values) {
   for (int i = 6; i > 0; i--) {
     double price_level = API::getPrice() + i - 3;
     double new_quantity = abs(values[i - 1]);
     globalOrderBook.add_order(i, price_level, new_quantity, i <= 3);
   }
-  return 0;
 }
 
 void getNextCentre(float *values, torch::Tensor &output) {
@@ -63,10 +57,9 @@ void getNextCentre(float *values, torch::Tensor &output) {
     for (int64_t j = 0; j < output.size(1); ++j) {
       temp[j] = output[0][j].item<float>();
 
-      if (temp[j] < 0)
-        balance++;
+      if (temp[j] < 0) balance++;
     }
-    std::cout << std::endl;
+    // std::cout << std::endl;
   } else {
     std::cout << "Tensor is not 2D. It has " << output.dim() << " dimensions." << std::endl;
   }
@@ -85,9 +78,7 @@ void getNextCentre(float *values, torch::Tensor &output) {
   }
 }
 
-void asyncSQLTest(std::string SQLStatement, DBHandler *handler) {
-  std::thread(asyncFunction, SQLStatement, &(*handler)).detach();
-}
+void asyncSQLTest(std::string SQLStatement, DBHandler *handler) { std::thread(asyncFunction, SQLStatement, &(*handler)).detach(); }
 
 std::string getProjectSourceDirectory() {
   std::string currFilePath = __FILE__;
@@ -95,14 +86,13 @@ std::string getProjectSourceDirectory() {
   return fullPath.parent_path().string();
 }
 
-void startServerWrapper(DBHandler &handler) {
-  API::startServer(globalOrderBook, handler);
-}
+void startServerWrapper(DBHandler &handler) { API::startServer(globalOrderBook, handler); }
 
 void generateQuantity(DBHandler *handler) {
   try {
     std::string model_path = getProjectSourceDirectory() + "/RecreatingBestModelCPU.pt";
-    std::cout << model_path << std::endl;
+    // std::cout << model_path << std::endl;
+
     torch::jit::script::Module model = torch::jit::load(model_path);
     model.eval();
 
@@ -121,16 +111,16 @@ void generateQuantity(DBHandler *handler) {
 
       if (output.dim() == 2) {
         for (int64_t j = 0; j < output.size(1); ++j) {
-          std::cout << output[0][j].item<float>() << " ";
+          // std::cout << output[0][j].item<float>() << " ";
         }
-        std::cout << std::endl; // New line after each row
-        std::cout << "Best bid = " << API::getPrice() << std::endl;
+        // std::cout << std::endl;
+        // std::cout << "Best bid = " << API::getPrice() << std::endl;
       } else {
         std::cout << "Tensor is not 2D. It has " << output.dim() << " dimensions." << std::endl;
       }
       globalOrderBook.clear_order_book();
       updateOrderBook(values);
-      globalOrderBook.print_order_book();
+      // globalOrderBook.print_order_book();
       API::updatePnL();
       handler->emitSuccessfulUpdate();
       std::this_thread::sleep_for(std::chrono::milliseconds(1000));
@@ -143,13 +133,14 @@ void generateQuantity(DBHandler *handler) {
 
 int main(int argc, char *argv[]) {
   std::signal(SIGINT, signal_handler);
-
   DBHandler handler(getProjectSourceDirectory());
 
-  // Start the async SQL test in a separate thread
-  //asyncSQLTest("SELECT * FROM book", &handler);
   std::thread serverThread(startServerWrapper, std::ref(handler));
   std::thread startGenerate(generateQuantity, &handler);
+
+  httplib::Client cli("localhost:8080");
+  nlohmann::json body;
+  auto res = cli.Post("/submit", body.dump(), "application/json");
 
   QApplication app(argc, argv);
 
