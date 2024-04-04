@@ -112,7 +112,7 @@ void OrderBookWidget::invokeAPI() {
   body["price"] = price->text().toFloat();
   body["quantity"] = quantity->text().toFloat();
 
-  if (orderType->currentText().toStdString() == "Immediate or Cancel (IOC)"){ body["orderType"] = "IOC"; } else {body["bidAsk"] = "FOK"; }
+  if (orderType->currentText().toStdString() == "Immediate or Cancel (IOC)"){ body["orderType"] = "IOC"; } else {body["orderType"] = "FOK"; }
   if (bidAsk->currentText().toStdString() == "Buy"){ body["bidAsk"] = true; } else {body["bidAsk"] = false; }
 
   auto res = cli.Post("/submit", body.dump(), "application/json");
@@ -203,9 +203,9 @@ void OrderBookWidget::addColoursToTables() {
 
 void OrderBookWidget::updateBalance() { currentBalance->setText("Current Balance = £" + QString::number(API::getBalance(), 'f', 2)); }
 
-void OrderBookWidget::updateQuantity() { currentQuantity->setText("Current Quantity = " + QString::number(API::getQuantity(), 'f') + " BTC"); }
+void OrderBookWidget::updateQuantity() { currentQuantity->setText("Current Quantity = " + QString::number(API::getQuantity(), 'f') + " ETH"); }
 
-void OrderBookWidget::updatePnl() { pnl->setText("Position Total = £" + QString::number(API::getPnl(), 'f', 2)); }
+void OrderBookWidget::updatePnl() { pnl->setText("Position Total = £" + QString::number(APIWH::getPnl(), 'f', 2)); }
 
 void OrderBookWidget::setQuantity() { quantity->setText(QString::number(API::getBalance()/API::getPrice(), 'f')); }
 

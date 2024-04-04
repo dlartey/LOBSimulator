@@ -18,7 +18,6 @@
  */
 
 // Variables
-httplib::Client API::cli("localhost:8080");
 httplib::Server API::s;
 std::random_device rd;
 std::default_random_engine e(rd());
@@ -197,42 +196,53 @@ void API::getPnL(OrderBook &o, DBHandler &handler) {
 // if it's no longer in the order book, then assume it's been fulfilled
 void API::deleteOrder(OrderBook &o, DBHandler &handler) {
   s.Delete("/delete", [&o](const httplib::Request &req, httplib::Response &res) {
-    if (req.has_header("Content-Type") && req.get_header_value("Content-Type") == "application/json") {
-      try {
-        auto json_data = nlohmann::json::parse(req.body);
-        if (json_data.contains("id") && json_data.contains("price") && json_data.contains("bidAsk")) {
-          int id = json_data["id"].get<int>();
-          bool bidAsk = json_data["bidAsk"].get<bool>();
-          double price = json_data["price"].get<double>();
 
-          // Check whether the ID is in the orderHistory
-          if (orderHistory.find(id) == orderHistory.end()) {
-            res.status = 400;
-            res.set_content("Order ID doesn't exist!", "text/plain");
-          }
-
-          // If order removed, then give SUCCESS message
-          orderHistory.erase(id);
-          if (o.remove_order(id, price, bidAsk)) {
-            res.set_content("Order removed from the OrderBook", "text/plain");
-          } else {
-            // Order was fulfilled, so reflect this within the OrderbookHistory
-            // will change this once we start working on integrating with trading algorithm
-            // essentially, get the price the user submitted, and based on the quantity, bidAsk and price
-            // either add/remove from their balance
-
-            // will also need to check the users current positions every second & check whether the limit
-            // order can be executed. future feature.
-            res.set_content("Order has already been fulfilled!", "text/plain");
-          }
-          return;
-        }
-      } catch (const std::exception &e) {
-        std::cerr << "JSON parsing error: " << e.what() << std::endl;
-      }
+    if (!req.has_header("Content-Type") || req.get_header_value("Content-Type") != "application/json") {
+      res.status = 400;
+      res.set_content("Invalid request structure", "text/plain");
+      return;
     }
-    res.status = 400;
-    res.set_content("Invalid JSON structure", "text/plain");
+
+    try {
+      auto json_data = nlohmann::json::parse(req.body);
+      if (!json_data.contains("price") || !json_data.contains("bidAsk") || !json_data.contains("id")) {
+        res.status = 400;
+        res.set_content("Invalid parameters in request body", "text/plain");
+        return;
+      }
+
+      int id = json_data["id"].get<int>();
+      bool bidAsk = json_data["bidAsk"].get<bool>();
+      double price = json_data["price"].get<double>();
+
+      // Check whether the ID is in the orderHistory
+      if (orderHistory.find(id) == orderHistory.end()) {
+        res.status = 400;
+        res.set_content("Order ID doesn't exist!", "text/plain");
+        return;
+      }
+
+      // If order removed, then give SUCCESS message
+      orderHistory.erase(id);
+
+      if (o.remove_order(id, price, bidAsk)) {
+        res.set_content("Order removed from the OrderBook", "text/plain");
+      } else {
+        // Order was fulfilled, so reflect this within the OrderbookHistory
+        // will change this once we start working on integrating with trading algorithm
+        // essentially, get the price the user submitted, and based on the quantity, bidAsk and price
+        // either add/remove from their balance
+
+        // will also need to check the users current positions every second & check whether the limit
+        // order can be executed. future feature.
+        res.set_content("Order has already been fulfilled!", "text/plain");
+      }
+
+    } catch (const std::exception &e) {
+      res.status = 400;
+      std::cerr << "JSON parsing error: " << e.what() << std::endl;
+      res.set_content("Invalid JSON structure", "text/plain");
+    }
   });
 }
 
@@ -284,7 +294,6 @@ void API::submitOrder(OrderBook &o, DBHandler &handler) {
       res.set_content("Error parsing JSON", "text/plain");
     }
   });
-  o.OB_mutex.unlock();
 }
 
 void API::startServer(OrderBook &o, DBHandler &handler) {

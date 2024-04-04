@@ -73,5 +73,5 @@ set(SOURCE_FILES main.cpp)
 add_executable(OrderBookDemo ${SOURCE_FILES})
 
 #target_link_libraries(OrderBookDemo PRIVATE OrderBook API DBHandler Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Charts OrderBookWidget CandlestickWidget CentralWidget HeaderWidget SQLite::SQLite3 "${TORCH_LIBRARIES}")
-target_link_libraries(OrderBookDemo PRIVATE OrderBook API DBHandler OrderBookWidget CandlestickWidget CentralWidget HeaderWidget Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Charts SQLite::SQLite3 "${TORCH_LIBRARIES}")
+target_link_libraries(OrderBookDemo PRIVATE nlohmann_json::nlohmann_json httplib::httplib OrderBook API DBHandler OrderBookWidget CandlestickWidget CentralWidget HeaderWidget Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Charts SQLite::SQLite3 "${TORCH_LIBRARIES}")
 set_property(TARGET OrderBookDemo PROPERTY CXX_STANDARD 17)
