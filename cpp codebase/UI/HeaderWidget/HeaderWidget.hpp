@@ -19,6 +19,7 @@ class HeaderWidget : public QWidget
     Q_OBJECT
 private:
     QLabel* titleLabel;
+    QLabel* imageLabel;
     QComboBox* modelType;
     QPushButton* startSimulation;
     QPushButton* cancelSimulation;
@@ -31,6 +32,9 @@ private:
 
     void startSim();
     void cancelSim();
+    
+    // QHBoxLayout* logoAndCompanyContainer; // Add this line
+
     
 public:
     HeaderWidget();

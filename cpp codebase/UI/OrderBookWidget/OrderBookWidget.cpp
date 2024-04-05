@@ -15,6 +15,8 @@ OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam) 
 
   this->setLayout(mainLayout);
   setupSignalsSlots(handler);
+    // Apply a metallic silver background to the entire widget
+    this->setStyleSheet("background-color: rgba(48, 58, 46, 30);"); // Adjust the RGBA values for desired transparency and shade
 }
 
 
@@ -48,10 +50,19 @@ void OrderBookWidget::setupObjects(){
   mainLayout = new QVBoxLayout;
   quantityLayout = new QHBoxLayout;
   priceLayout = new QHBoxLayout;
+    QString whiteTextStyle = "color: white;";
+
+    
   bidsLabel = new QLabel;
   asksLabel = new QLabel;
   asksTableWidget = new QTableWidget;
   bidsTableWidget = new QTableWidget;
+    
+    // Applying white text style to labels
+    bidsLabel->setText("Bid Prices");
+    asksLabel->setText("Ask Prices");
+    bidsLabel->setStyleSheet(whiteTextStyle);
+    asksLabel->setStyleSheet(whiteTextStyle);
 
   asksLabel->setText("Ask Prices");
   bidsLabel->setText("Bid Prices");
@@ -65,6 +76,13 @@ void OrderBookWidget::setupObjects(){
   selectAllQuantity = new QPushButton("Max Quantity", this);
   selectAllQuantity->setGeometry(QRect(QPoint(100, 100), QSize(200, 50)));
 
+    
+    // Applying white text style to buttons
+    apiButton->setStyleSheet(whiteTextStyle);
+    selectPrice->setStyleSheet(whiteTextStyle);
+    selectAllQuantity->setStyleSheet(whiteTextStyle);
+    
+    
   currentBalance = new QLabel(this);
   currentBalance->setText("Current Balance = 100000");
   currentBalance->setGeometry(QRect(10, 10, 200, 20));
@@ -79,6 +97,12 @@ void OrderBookWidget::setupObjects(){
   pnl = new QLabel(this);
   pnl->setText("Overall Position = 0");
   pnl->setGeometry(QRect(100, 100, 200, 20));
+    
+    // Applying white text style to labels
+    currentBalance->setStyleSheet(whiteTextStyle);
+    currentQuantity->setStyleSheet(whiteTextStyle);
+    pnl->setStyleSheet(whiteTextStyle);
+    apiResponse->setStyleSheet(whiteTextStyle);
 
   orderType = new QComboBox(this);
   orderType->addItem("Immediate or Cancel (IOC)");
@@ -89,6 +113,10 @@ void OrderBookWidget::setupObjects(){
   bidAsk->addItem("Buy");
   bidAsk->addItem("Sell");
   bidAsk->setGeometry(QRect(QPoint(200, 50), QSize(200, 40)));
+    
+    // Applying white text style to Combo Boxes
+    orderType->setStyleSheet("QComboBox { color: white; }");
+    bidAsk->setStyleSheet("QComboBox { color: white; }");
 
   price = new QLineEdit(this);
   price->setPlaceholderText("Price");
@@ -99,6 +127,10 @@ void OrderBookWidget::setupObjects(){
   quantity->setPlaceholderText("Quantity");
   quantity->setGeometry(QRect(QPoint(200, 50), QSize(200, 40)));
   quantity->setValidator(new QDoubleValidator(quantity));
+    
+    // Applying white text style to Line Edits
+    price->setStyleSheet("QLineEdit { color: white; }");
+    quantity->setStyleSheet("QLineEdit { color: white; }");
 }
 
 void OrderBookWidget::setupSignalsSlots(DBHandler *handler){
@@ -118,6 +150,10 @@ void OrderBookWidget::initializeTable(QTableWidget *tableWidget, const QStringLi
   tableWidget->setHorizontalHeaderLabels(headers);
   tableWidget->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
   tableWidget->setFixedWidth(300);
+    
+    // Applying white text style
+    tableWidget->setStyleSheet("QHeaderView::section { color: white; } QTableWidget { color: white; }");
+
 }
 
 void OrderBookWidget::invokeAPI() {
