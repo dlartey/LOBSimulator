@@ -5,6 +5,16 @@ authors:
     given-names: Shreyas
   - family-names: Saheli
     given-names: Sina Ghanbari
+  - family-names: Benimoussa
+    given-names: Chemseddine-Wassim
+  - family-names: Naik
+    given-names: Shruti Rajesh
+  - family-names: Magfakas
+    given-names: Panagiotis
+  - family-names: Lartey
+    given-names: Daniel
+  
 title: "The University of Leeds Stock Exchange"
 version: 2.0.4
 date-released: 2024-05-04
+url: "https://github.com/Massssssi/COMP5530M"
