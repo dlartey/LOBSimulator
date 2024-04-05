@@ -5,7 +5,7 @@
 
 HeaderWidget::HeaderWidget() {
     initialiseLayoutAndAddButtons();
-    this->setStyleSheet("background-color: rgba(12, 83, 45, 180);"); // Metallic green background
+    this->setStyleSheet("background-color: rgba(12, 83, 45, 90); border-radius: 20px;"); // Metallic green background with rounded corners
 }
 
 void HeaderWidget::setupButtons() {

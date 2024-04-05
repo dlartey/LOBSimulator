@@ -18,6 +18,13 @@
 #include <nlohmann/json.hpp>
 #include <httplib.h>
 
+#include <QApplication>
+#include <QSplashScreen>
+#include <QProgressBar>
+#include <QTimer>
+
+
+
 OrderBook globalOrderBook;
 volatile std::sig_atomic_t gSignalStatus;
 bool flag = false;
@@ -131,25 +138,64 @@ void generateQuantity(DBHandler *handler) {
   }
 }
 
+//int main(int argc, char *argv[]) {
+//  std::signal(SIGINT, signal_handler);
+//  DBHandler handler(getProjectSourceDirectory());
+//
+//
+//
+//  CentralWidget centralWidget(&handler, &globalOrderBook);
+//  centralWidget.show();
+//  int result = app.exec();
+//  serverThread.join();
+//  startGenerate.join();
+//
+//  std::cout << "Application exiting..." << std::endl;
+//  return result;
+//}
+
+
 int main(int argc, char *argv[]) {
-  std::signal(SIGINT, signal_handler);
-  DBHandler handler(getProjectSourceDirectory());
+    std::signal(SIGINT, signal_handler);
+    QApplication app(argc, argv);
 
-  std::thread serverThread(startServerWrapper, std::ref(handler));
-  std::thread startGenerate(generateQuantity, &handler);
+    QPixmap pixmap("../../resources/UoLSE_Logo.png"); // Add your splash image path here
+    QSplashScreen splash(pixmap);
+    splash.show();
+    app.processEvents(); // Ensures that the splash screen is displayed immediately
 
-  httplib::Client cli("localhost:8080");
-  nlohmann::json body;
-  auto res = cli.Post("/submit", body.dump(), "application/json");
+    // Optional: Add a progress bar or label to display loading status
+    QLabel loadingLabel(&splash);
+    loadingLabel.setText("Initializing...");
+    loadingLabel.setStyleSheet("color: white;"); // Customize as needed
+    loadingLabel.setAlignment(Qt::AlignBottom);
+    loadingLabel.setGeometry(splash.geometry());
 
-  QApplication app(argc, argv);
+    // This is where you'd perform your loading tasks
+    // For demonstration, let's simulate a delay
+    for(int i = 0; i < 100; i += 20) {
+        // Update loading status here
+        loadingLabel.setText(QString("Loading... %1%").arg(i));
+        QThread::sleep(1); // Simulate time-consuming task
+        app.processEvents();
+    }
 
-  CentralWidget centralWidget(&handler, &globalOrderBook);
-  centralWidget.show();
-  int result = app.exec();
-  serverThread.join();
-  startGenerate.join();
+    DBHandler handler(getProjectSourceDirectory());
 
-  std::cout << "Application exiting..." << std::endl;
-  return result;
+    std::thread serverThread(startServerWrapper, std::ref(handler));
+    std::thread startGenerate(generateQuantity, &handler);
+
+    httplib::Client cli("localhost:8080");
+    nlohmann::json body;
+    auto res = cli.Post("/submit", body.dump(), "application/json");
+
+    CentralWidget centralWidget(&handler, &globalOrderBook);
+    splash.finish(&centralWidget); // Close the splash screen
+    centralWidget.show();
+
+    int result = app.exec();
+    // Your application cleanup follows
+
+    return result;
 }
+
