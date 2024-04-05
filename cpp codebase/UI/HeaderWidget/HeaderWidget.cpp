@@ -44,7 +44,7 @@ void HeaderWidget::setupLogoAndCompany() {
     titleLabel->setStyleSheet("QLabel { color : white; }");
     titleLabel->setAlignment(Qt::AlignCenter);
 
-    QPixmap imagePixmap("/Users/sina/COMP5530M-1/cpp codebase/resources/UoLSE_Logo.png");
+    QPixmap imagePixmap("../../resources/UoLSE_Logo.png");
     imageLabel = new QLabel;
     imageLabel->setPixmap(imagePixmap.scaled(150, 80, Qt::KeepAspectRatio));
 }
