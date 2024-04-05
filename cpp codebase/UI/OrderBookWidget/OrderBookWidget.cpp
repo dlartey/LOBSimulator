@@ -8,9 +8,53 @@
 #include <nlohmann/json.hpp>
 
 OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam) : orderBook(orderBookParam) {
-  QVBoxLayout *mainLayout = new QVBoxLayout;
-  QHBoxLayout *quantityLayout = new QHBoxLayout;
-  QHBoxLayout *priceLayout = new QHBoxLayout;
+  setupObjects();
+  initializeTable(asksTableWidget, {"ID", "Price", "Quantity"});
+  initializeTable(bidsTableWidget, {"ID", "Price", "Quantity"});
+  addToLayout();
+
+  this->setLayout(mainLayout);
+  setupSignalsSlots(handler);
+}
+
+
+void OrderBookWidget::addToLayout(){
+  mainLayout->addWidget(asksLabel);
+  mainLayout->addWidget(asksTableWidget);
+  mainLayout->addWidget(bidsLabel);
+  mainLayout->addWidget(bidsTableWidget);
+  mainLayout->addWidget(currentQuantity);
+  mainLayout->addWidget(currentBalance);
+  mainLayout->addWidget(pnl);
+
+  priceLayout->addWidget(price);
+  priceLayout->addWidget(selectPrice);
+
+  quantityLayout->addWidget(quantity);
+  quantityLayout->addWidget(selectAllQuantity);
+
+  mainLayout->addLayout(priceLayout);
+  mainLayout->addLayout(quantityLayout);
+
+  mainLayout->addWidget(orderType);
+  mainLayout->addWidget(bidAsk);
+  mainLayout->addWidget(apiButton);
+  mainLayout->addWidget(apiResponse);
+  mainLayout->addWidget(apiResponse);
+
+}
+
+void OrderBookWidget::setupObjects(){
+  mainLayout = new QVBoxLayout;
+  quantityLayout = new QHBoxLayout;
+  priceLayout = new QHBoxLayout;
+  bidsLabel = new QLabel;
+  asksLabel = new QLabel;
+  asksTableWidget = new QTableWidget;
+  bidsTableWidget = new QTableWidget;
+
+  asksLabel->setText("Ask Prices");
+  bidsLabel->setText("Bid Prices");
 
   apiButton = new QPushButton("Submit Order", this);
   apiButton->setGeometry(QRect(QPoint(100, 100), QSize(200, 50)));
@@ -44,7 +88,6 @@ OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam) 
   bidAsk = new QComboBox(this);
   bidAsk->addItem("Buy");
   bidAsk->addItem("Sell");
-
   bidAsk->setGeometry(QRect(QPoint(200, 50), QSize(200, 40)));
 
   price = new QLineEdit(this);
@@ -56,46 +99,16 @@ OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam) 
   quantity->setPlaceholderText("Quantity");
   quantity->setGeometry(QRect(QPoint(200, 50), QSize(200, 40)));
   quantity->setValidator(new QDoubleValidator(quantity));
+}
 
-  asksTableWidget = new QTableWidget;
-  bidsTableWidget = new QTableWidget;
-
-  initializeTable(asksTableWidget, {"ID", "Price", "Quantity"});
-  initializeTable(bidsTableWidget, {"ID", "Price", "Quantity"});
-
-  mainLayout->addWidget(asksTableWidget);
-  mainLayout->addWidget(bidsTableWidget);
-  mainLayout->addWidget(currentQuantity);
-  mainLayout->addWidget(currentBalance);
-  mainLayout->addWidget(pnl);
-
-  priceLayout->addWidget(price);
-  priceLayout->addWidget(selectPrice);
-
-  quantityLayout->addWidget(quantity);
-  quantityLayout->addWidget(selectAllQuantity);
-
-  mainLayout->addLayout(priceLayout);
-  mainLayout->addLayout(quantityLayout);
-
-  mainLayout->addWidget(orderType);
-  mainLayout->addWidget(bidAsk);
-  mainLayout->addWidget(apiButton);
-  mainLayout->addWidget(apiResponse);
-
-
-  this->setLayout(mainLayout);
-
-  // Connect to the orderBookUpdated signal
+void OrderBookWidget::setupSignalsSlots(DBHandler *handler){
   connect(apiButton, &QPushButton::clicked, this, &OrderBookWidget::invokeAPI);
   connect(handler, &DBHandler::orderBookUpdated, this, &OrderBookWidget::updateBothTables);
   connect(handler, &DBHandler::orderBookUpdated, this, &OrderBookWidget::updateBalance);
   connect(handler, &DBHandler::orderBookUpdated, this, &OrderBookWidget::updateQuantity);
   connect(handler, &DBHandler::orderBookUpdated, this, &OrderBookWidget::updatePnl);
-
   connect(selectAllQuantity, &QPushButton::clicked, this, &OrderBookWidget::setQuantity);
   connect(selectPrice, &QPushButton::clicked, this, &OrderBookWidget::setPrice);
-
 }
 
 void OrderBookWidget::initializeTable(QTableWidget *tableWidget, const QStringList &headers) {
@@ -133,8 +146,7 @@ void OrderBookWidget::invokeAPI() {
   }
 }
 
-OrderBookWidget::~OrderBookWidget() {
-}
+OrderBookWidget::~OrderBookWidget() {}
 
 void OrderBookWidget::updateTable(std::vector<Order> &newOrders, QTableWidget *tableWidget) {
   tableWidget->clearContents();
@@ -207,8 +219,7 @@ void OrderBookWidget::updateBalance() { currentBalance->setText("Current Balance
 
 void OrderBookWidget::updateQuantity() { currentQuantity->setText("Current Quantity = " + QString::number(API::getQuantity(), 'f') + " ETH"); }
 
-void OrderBookWidget::updatePnl() { pnl->setText("Position Total = £" + QString::number(APIWH::getPnl(), 'f', 2)); }
-
+void OrderBookWidget::updatePnl() { pnl->setText("Total Position = £" + QString::number(API::getPnl(), 'f', 2)); }
 
 void OrderBookWidget::setQuantity() { quantity->setText(QString::number(API::getBalance()/API::getPrice(), 'f')); }
 

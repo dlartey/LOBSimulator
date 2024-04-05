@@ -48,10 +48,16 @@ private:
     QPushButton *selectPrice;
     QLineEdit* price;
     QLineEdit* quantity;
+    QVBoxLayout *mainLayout;
+    QHBoxLayout *quantityLayout;
+    QHBoxLayout *priceLayout;
 
     void updateTable(std::vector<Order> &newOrders, QTableWidget *tableWidget);
     void initializeTable(QTableWidget *tableWidget, const QStringList &headers);
     void addColoursToTables();
+    void setupSignalsSlots(DBHandler *handler);
+    void setupObjects();
+    void addToLayout();
     std::vector<Order> getNewOrdersFromOrderbook(bool is_bid);
 
 public:
@@ -67,6 +73,7 @@ public slots:
     void updatePnl();
     void setQuantity();
     void setPrice();
+
 
 };
 
