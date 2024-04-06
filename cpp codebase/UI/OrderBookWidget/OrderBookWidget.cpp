@@ -19,7 +19,6 @@ OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam) 
     this->setStyleSheet("background-color: rgba(48, 58, 46, 30);"); // Adjust the RGBA values for desired transparency and shade
 }
 
-
 void OrderBookWidget::addToLayout(){
   mainLayout->addWidget(asksLabel);
   mainLayout->addWidget(asksTableWidget);
@@ -43,7 +42,6 @@ void OrderBookWidget::addToLayout(){
   mainLayout->addWidget(apiButton);
   mainLayout->addWidget(apiResponse);
   mainLayout->addWidget(apiResponse);
-
 }
 
 void OrderBookWidget::setupObjects(){
@@ -128,7 +126,6 @@ void OrderBookWidget::setupObjects(){
   // Applying white text style to Line Edits
   price->setStyleSheet("QLineEdit { color: white; }");
   quantity->setStyleSheet("QLineEdit { color: white; }");
-}
 }
 
 void OrderBookWidget::setupSignalsSlots(DBHandler *handler){

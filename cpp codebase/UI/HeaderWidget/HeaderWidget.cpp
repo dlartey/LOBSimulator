@@ -10,9 +10,6 @@ HeaderWidget::HeaderWidget(DBHandler *handler, OrderBook *ob) : handler(handler)
 
 HeaderWidget::~HeaderWidget() {}
 
-void HeaderWidget::setupButtons(){
-    startSimulation = new QPushButton("Start simulation");
-    cancelSimulation = new QPushButton("Cancel simulation");
 void HeaderWidget::setupButtons() {
     QFont buttonFont("Arial", 10);
     QString buttonStyle = "QPushButton { "
@@ -95,7 +92,7 @@ void HeaderWidget::connectButtons() {
 void HeaderWidget::startSim() {
     std::string option = modelType->currentText().toStdString();
 
-    if (option == "GAN model"){
+    if (option == "GAN Model"){
       cancelSim();
       Gan::startServer(handler, orderBook);
     }

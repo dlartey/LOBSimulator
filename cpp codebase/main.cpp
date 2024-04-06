@@ -60,11 +60,11 @@ int main(int argc, char *argv[]) {
 
     DBHandler handler(getProjectSourceDirectory());
 
-  std::thread serverThread(startServerWrapper, std::ref(handler));
+    std::thread serverThread(startServerWrapper, std::ref(handler));
 
-  httplib::Client cli("localhost:8080");
-  nlohmann::json body;
-  auto res = cli.Post("/submit", body.dump(), "application/json");
+    httplib::Client cli("localhost:8080");
+    nlohmann::json body;
+    auto res = cli.Post("/submit", body.dump(), "application/json");
 
     CentralWidget centralWidget(&handler, &globalOrderBook);
     splash.finish(&centralWidget); // Close the splash screen
