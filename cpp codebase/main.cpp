@@ -15,6 +15,10 @@
 #include <QtCharts>
 #include <nlohmann/json.hpp>
 #include <httplib.h>
+#include <QApplication>
+#include <QSplashScreen>
+#include <QProgressBar>
+#include <QTimer>
 
 OrderBook globalOrderBook;
 volatile std::sig_atomic_t gSignalStatus;
@@ -30,8 +34,31 @@ std::string getProjectSourceDirectory() {
 void startServerWrapper(DBHandler &handler) { API::startServer(globalOrderBook, handler); }
 
 int main(int argc, char *argv[]) {
-  std::signal(SIGINT, signal_handler);
-  DBHandler handler(getProjectSourceDirectory());
+    std::signal(SIGINT, signal_handler);
+    QApplication app(argc, argv);
+
+    QPixmap pixmap("../../resources/UoLSE_Logo.png"); // Add your splash image path here
+    QSplashScreen splash(pixmap);
+    splash.show();
+    app.processEvents(); // Ensures that the splash screen is displayed immediately
+
+    // Optional: Add a progress bar or label to display loading status
+    QLabel loadingLabel(&splash);
+    loadingLabel.setText("Initializing...");
+    loadingLabel.setStyleSheet("color: white;"); // Customize as needed
+    loadingLabel.setAlignment(Qt::AlignBottom);
+    loadingLabel.setGeometry(splash.geometry());
+
+    // This is where you'd perform your loading tasks
+    // For demonstration, let's simulate a delay
+    for(int i = 0; i < 100; i += 20) {
+        // Update loading status here
+        loadingLabel.setText(QString("Loading... %1%").arg(i));
+        QThread::sleep(1); // Simulate time-consuming task
+        app.processEvents();
+    }
+
+    DBHandler handler(getProjectSourceDirectory());
 
   std::thread serverThread(startServerWrapper, std::ref(handler));
 
@@ -39,13 +66,12 @@ int main(int argc, char *argv[]) {
   nlohmann::json body;
   auto res = cli.Post("/submit", body.dump(), "application/json");
 
-  QApplication app(argc, argv);
+    CentralWidget centralWidget(&handler, &globalOrderBook);
+    splash.finish(&centralWidget); // Close the splash screen
+    centralWidget.show();
 
-  CentralWidget centralWidget(&handler, &globalOrderBook);
-  centralWidget.show();
-  int result = app.exec();
-  serverThread.join();
+    int result = app.exec();
+    // Your application cleanup follows
 
-  std::cout << "Application exiting..." << std::endl;
-  return result;
+    return result;
 }

@@ -1,4 +1,7 @@
 #include "CandlestickWidget.hpp"
+#include <QGuiApplication>
+#include <QScreen>
+
 
 
 CandlestickWidget::CandlestickWidget(DBHandler *handler, OrderBook *orderBookParam) : orderBook(orderBookParam)
@@ -11,7 +14,11 @@ CandlestickWidget::CandlestickWidget(DBHandler *handler, OrderBook *orderBookPar
 
 void CandlestickWidget::setWidgetProperties()
 {
-    this->setFixedSize(1000,1000);
+//    this->setFixedSize(1000,1000);
+      this->setMinimumSize(900, 550);
+    
+
+
 }
 
 void CandlestickWidget::addLayoutToThisWidget()

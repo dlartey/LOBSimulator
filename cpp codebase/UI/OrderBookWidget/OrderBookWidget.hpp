@@ -75,6 +75,7 @@ public slots:
     void setQuantity();
     void setPrice();
 
+
 };
 
 #endif /* OrderBookWidget_hpp */

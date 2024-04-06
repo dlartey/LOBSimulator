@@ -24,10 +24,11 @@ private:
     DBHandler *handler;
 
     QLabel* titleLabel;
+    QLabel* imageLabel;
     QComboBox* modelType;
     QPushButton* startSimulation;
     QPushButton* cancelSimulation;
-
+    
     void initialiseLayoutAndAddButtons();
     void setupButtons();
     void setupLogoAndCompany();
