@@ -8,7 +8,7 @@
 #ifndef DBHandler_hpp
 #define DBHandler_hpp
 
-#include <stdio.h>
+#include <cstdio>
 #include <sqlite3.h>
 #include <string>
 #include "OrderBook.hpp"

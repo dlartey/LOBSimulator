@@ -1,35 +1,32 @@
 #include "HeaderWidget.hpp"
 
-
-HeaderWidget::HeaderWidget()
-{
-    initialiseLayoutAndAddButtons();
+HeaderWidget::HeaderWidget(DBHandler *handler, OrderBook *ob) : handler(handler), orderBook(ob){
+  initialiseLayoutAndAddButtons();
 }
 
-void HeaderWidget::setupButtons()
-{
+HeaderWidget::~HeaderWidget() {}
+
+void HeaderWidget::setupButtons(){
     startSimulation = new QPushButton("Start simulation");
     cancelSimulation = new QPushButton("Cancel simulation");
     connectButtons();
 }
 
-void HeaderWidget::setupLogoAndCompany()
-{
+void HeaderWidget::setupLogoAndCompany() {
     titleLabel = new QLabel("UNIVERSITY OF LEEDS STOCK EXCHANGE");
     titleLabel->setAlignment(Qt::AlignCenter);
     QFont font("Helvetica", 16);
     titleLabel->setFont(font);
 }
 
-void HeaderWidget::setupModelType(){
+void HeaderWidget::setupModelType() {
   modelType = new QComboBox(this);
   modelType->addItem("GAN model");
   modelType->addItem("Pan's Model");
   modelType->setGeometry(QRect(QPoint(200, 50), QSize(200, 40)));
 }
 
-void HeaderWidget::initialiseLayoutAndAddButtons()
-{
+void HeaderWidget::initialiseLayoutAndAddButtons() {
     QVBoxLayout* container = new QVBoxLayout;
     QHBoxLayout* buttonContainer = new QHBoxLayout;
     QHBoxLayout* logoAndCompanyContainer = new QHBoxLayout;
@@ -48,20 +45,21 @@ void HeaderWidget::initialiseLayoutAndAddButtons()
     this->setLayout(container);
 }
 
-void HeaderWidget::connectButtons()
-{
+void HeaderWidget::connectButtons(){
     connect(startSimulation, &QPushButton::clicked, this, &HeaderWidget::startSim);
     connect(cancelSimulation, &QPushButton::clicked, this, &HeaderWidget::cancelSim);
 }
 
-void HeaderWidget::startSim()
-{
-    std::cout << "Start clicked!\n";
-    emit startSimulationClicked();
+void HeaderWidget::startSim() {
+    std::string option = modelType->currentText().toStdString();
+
+    if (option == "GAN model"){
+      cancelSim();
+      Gan::startServer(handler, orderBook);
+    }
 }
 
-void HeaderWidget::cancelSim()
-{
-    std::cout << "Cancel clicked!\n";
-    emit cancelSimulationClicked();
+void HeaderWidget::cancelSim(){
+    Gan::cancelRequested = true;
+    if (Gan::startGenerate.joinable()) { Gan::startGenerate.join(); }
 }

@@ -13,30 +13,35 @@
 #include <list>
 #include <thread>
 #include <chrono>
+#include "OrderBook.hpp"
+#include "DBHandler.hpp"
+#include "GAN.hpp"
 
 class HeaderWidget : public QWidget
 {
     Q_OBJECT
 private:
+    DBHandler *handler;
+
     QLabel* titleLabel;
     QComboBox* modelType;
     QPushButton* startSimulation;
     QPushButton* cancelSimulation;
-    
+
     void initialiseLayoutAndAddButtons();
     void setupButtons();
     void setupLogoAndCompany();
     void connectButtons();
     void setupModelType();
 
+public:
+    OrderBook *orderBook;
+    HeaderWidget(DBHandler *handler, OrderBook *orderBook);
+    ~HeaderWidget();
+
+public slots:
     void startSim();
     void cancelSim();
-    
-public:
-    HeaderWidget();
-signals:
-    void startSimulationClicked();
-    void cancelSimulationClicked();
 };
 
 #endif

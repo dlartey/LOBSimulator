@@ -1,7 +1,7 @@
 #include "CentralWidget.hpp"
 
 CentralWidget::CentralWidget(DBHandler *handler, OrderBook *orderBook, QWidget *parent)
-    : QWidget(parent), orderBookWidget(handler, orderBook), candlestickWidget(handler, orderBook) {
+    : QWidget(parent), orderBookWidget(handler, orderBook), candlestickWidget(handler, orderBook), headerWidget(handler, orderBook) {
   QWidget *allContent = new QWidget;
 
   setWidgetProperties();
