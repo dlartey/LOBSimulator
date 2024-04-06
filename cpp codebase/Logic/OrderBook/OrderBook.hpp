@@ -14,6 +14,7 @@ extern std::mutex orderBookMutex;
 #include <iostream> // Correct header for std::ostream
 #include <map>
 #include <list>
+#include <csignal>
 
 struct Order
 {
@@ -27,12 +28,11 @@ struct Order
 using OrderList = std::list<Order>;
 
 class OrderBook {
-private: // Explicitly stating that bids and asks are private
+private:
     std::map<double, OrderList> bids, asks;
 
 public:
     std::mutex OB_mutex;
-
     bool is_empty() const;
     void add_order(int id, double price, double quantity, bool is_bid);
     bool remove_order(int id, double price, bool is_bid);
@@ -40,6 +40,8 @@ public:
     void print_order_book() const;
     void clear_order_book();
     bool empty();
+    OrderBook();
+    ~OrderBook();
 
     std::map<double, OrderList> getBids();
     std::map<double, OrderList> getAsks();

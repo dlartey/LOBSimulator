@@ -33,9 +33,9 @@ class OrderBookWidget : public QWidget
 private:
     OrderBook *orderBook;
 
-    QLabel *bidsLabel; // Label for Bids table
+    QLabel *bidsLabel;
     QTableWidget *bidsTableWidget;
-    QLabel *asksLabel; // Label for Asks table
+    QLabel *asksLabel;
     QLabel* currentQuantity;
     QLabel* currentBalance;
     QLabel* apiResponse;
@@ -63,6 +63,7 @@ private:
 public:
     OrderBookWidget(DBHandler *handler, OrderBook *orderBook);
     ~OrderBookWidget();
+
 
 public slots:
     // Slot to update the table when the order book is updated
