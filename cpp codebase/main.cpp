@@ -38,16 +38,9 @@ int main(int argc, char *argv[]) {
     std::signal(SIGINT, signal_handler);
     QApplication app(argc, argv);
     
-    qDebug() << "Current dir:" << QDir::currentPath();
-
-    QPixmap pixmap; // Declare the QPixmap variable outside the if-else structure to ensure its scope covers the entire function
-    
-    // If running on Xcode, the directory is usually the Debug folder
-    if (QDir::currentPath().contains("Debug")) {
-        pixmap = QPixmap("../../resources/UoLSE_Logo.png");
-    } else {
-        pixmap = QPixmap("COMP5530M/cpp codebase/resources/UoLSE_Logo.png");
-    }
+    std::string logo = getProjectSourceDirectory() + "/resources/UoLSE_Logo.png";
+    std::cout << logo <<std::endl;
+    QPixmap pixmap = QPixmap(logo.c_str());
 
     QSplashScreen splash(pixmap);
     splash.show();
@@ -56,7 +49,7 @@ int main(int argc, char *argv[]) {
     // Optional: Add a progress bar or label to display loading status
     QLabel loadingLabel(&splash);
     loadingLabel.setText("Initializing...");
-    loadingLabel.setStyleSheet("color: white;"); // Customize as needed
+    loadingLabel.setStyleSheet("color: white;");
     loadingLabel.setAlignment(Qt::AlignBottom);
     loadingLabel.setGeometry(splash.geometry());
 
@@ -79,11 +72,11 @@ int main(int argc, char *argv[]) {
 
     CentralWidget centralWidget(&handler, &globalOrderBook);
     splash.finish(&centralWidget); // Close the splash screen
-//    centralWidget.show();
+    
+    // Ensures the screen is filled
     centralWidget.showMaximized();
 
     int result = app.exec();
-    // Your application cleanup follows
 
     return result;
 }
