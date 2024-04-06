@@ -73,7 +73,8 @@ int main(int argc, char *argv[]) {
 
     CentralWidget centralWidget(&handler, &globalOrderBook);
     splash.finish(&centralWidget); // Close the splash screen
-    centralWidget.show();
+//    centralWidget.show();
+    centralWidget.showMaximized();
 
     int result = app.exec();
     // Your application cleanup follows
