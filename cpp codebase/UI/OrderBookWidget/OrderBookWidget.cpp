@@ -49,6 +49,8 @@ void OrderBookWidget::setupObjects(){
   quantityLayout = new QHBoxLayout;
   priceLayout = new QHBoxLayout;
   QString whiteTextStyle = "color: white;";
+  QString baseFontStyle = "color: white; font-family: 'Orbitron', sans-serif; font-size: 12pt;";
+
 
   bidsLabel = new QLabel;
   asksLabel = new QLabel;
@@ -58,11 +60,11 @@ void OrderBookWidget::setupObjects(){
   // Applying white text style to labels
   bidsLabel->setText("Bid Prices");
   asksLabel->setText("Ask Prices");
-  bidsLabel->setStyleSheet(whiteTextStyle);
-  asksLabel->setStyleSheet(whiteTextStyle);
+  bidsLabel->setStyleSheet(baseFontStyle);
+  asksLabel->setStyleSheet(baseFontStyle);
 
-  asksLabel->setText("Ask Prices");
   bidsLabel->setText("Bid Prices");
+  asksLabel->setText("Ask Prices");
 
   apiButton = new QPushButton("Submit Order", this);
   apiButton->setGeometry(QRect(QPoint(100, 100), QSize(200, 50)));
@@ -70,13 +72,16 @@ void OrderBookWidget::setupObjects(){
   selectPrice = new QPushButton("Current Price", this);
   selectPrice->setGeometry(QRect(QPoint(100, 100), QSize(200, 50)));
 
+  QString buttonStyle = "QPushButton { " + baseFontStyle + "background-color: #333; border: 1px solid #555; }"
+                          "QPushButton:hover { background-color: #555; }";
+
   selectAllQuantity = new QPushButton("Max Quantity", this);
   selectAllQuantity->setGeometry(QRect(QPoint(100, 100), QSize(200, 50)));
 
-  // Applying white text style to buttons
-  apiButton->setStyleSheet(whiteTextStyle);
-  selectPrice->setStyleSheet(whiteTextStyle);
-  selectAllQuantity->setStyleSheet(whiteTextStyle);
+  // Applying style to buttons
+  apiButton->setStyleSheet(buttonStyle);
+  selectPrice->setStyleSheet(buttonStyle);
+  selectAllQuantity->setStyleSheet(buttonStyle);
 
   currentBalance = new QLabel(this);
   currentBalance->setText("Current Balance = 100000");
@@ -93,11 +98,16 @@ void OrderBookWidget::setupObjects(){
   pnl->setText("Overall Position = 0");
   pnl->setGeometry(QRect(100, 100, 200, 20));
 
-  // Applying white text style to labels
-  currentBalance->setStyleSheet(whiteTextStyle);
-  currentQuantity->setStyleSheet(whiteTextStyle);
-  pnl->setStyleSheet(whiteTextStyle);
-  apiResponse->setStyleSheet(whiteTextStyle);
+  // Applying text style to labels
+  currentBalance->setStyleSheet(baseFontStyle);
+  currentQuantity->setStyleSheet(baseFontStyle);
+  pnl->setStyleSheet(baseFontStyle);
+  apiResponse->setStyleSheet(baseFontStyle);
+
+  QString comboBoxStyle = "QComboBox { " + baseFontStyle + "background-color: #333; border: 1px solid #555; }"
+                          "QComboBox::drop-down { border-left: 1px solid #555; }";
+
+//    QString comboBoxStyle = "QComboBox { " + baseFontStyle + "background-color: #333; border: 1px solid #555; }";
 
   orderType = new QComboBox(this);
   orderType->addItem("Immediate or Cancel (IOC)");
@@ -109,9 +119,9 @@ void OrderBookWidget::setupObjects(){
   bidAsk->addItem("Sell");
   bidAsk->setGeometry(QRect(QPoint(200, 50), QSize(200, 40)));
 
-  // Applying white text style to Combo Boxes
-  orderType->setStyleSheet("QComboBox { color: white; }");
-  bidAsk->setStyleSheet("QComboBox { color: white; }");
+  // Applying style to Combo Boxes
+  orderType->setStyleSheet(comboBoxStyle);
+  bidAsk->setStyleSheet(comboBoxStyle);
 
   price = new QLineEdit(this);
   price->setPlaceholderText("Price");
@@ -127,6 +137,7 @@ void OrderBookWidget::setupObjects(){
   price->setStyleSheet("QLineEdit { color: white; }");
   quantity->setStyleSheet("QLineEdit { color: white; }");
 }
+
 
 void OrderBookWidget::setupSignalsSlots(DBHandler *handler){
   connect(apiButton, &QPushButton::clicked, this, &OrderBookWidget::invokeAPI);
@@ -144,10 +155,20 @@ void OrderBookWidget::initializeTable(QTableWidget *tableWidget, const QStringLi
   tableWidget->setColumnCount(headers.size());
   tableWidget->setHorizontalHeaderLabels(headers);
   tableWidget->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-  tableWidget->setFixedWidth(300);
+//  tableWidget->setFixedWidth(300);
+  tableWidget->setFixedHeight(118);
 
-  // Applying white text style
-  tableWidget->setStyleSheet("QHeaderView::section { color: white; } QTableWidget { color: white; }");
+    
+  tableWidget->horizontalHeader()->setStretchLastSection(true);
+  tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+
+    // Updated font style
+    QString futuristicFontStyle = "QTableWidget { font-family: 'Orbitron', sans-serif; font-size: 12pt; color: white; }"
+                                  "QHeaderView::section { font-family: 'Orbitron', sans-serif; font-size: 12pt; color: white; background-color: #1e1e1e; }";
+    tableWidget->setStyleSheet(futuristicFontStyle);
+
+//  // Applying white text style
+//  tableWidget->setStyleSheet("QHeaderView::section { color: black; } QTableWidget { color: black; }");
 }
 
 void OrderBookWidget::invokeAPI() {

@@ -37,11 +37,17 @@ void startServerWrapper(DBHandler &handler) { API::startServer(globalOrderBook, 
 int main(int argc, char *argv[]) {
     std::signal(SIGINT, signal_handler);
     QApplication app(argc, argv);
-
-//    QPixmap pixmap("../../resources/UoLSE_Logo.png"); // Add splash image path here
-    // Check current directory, as I'm having issues linking relative path to image
+    
     qDebug() << "Current dir:" << QDir::currentPath();
-    QPixmap pixmap("COMP5530M/cpp codebase/resources/UoLSE_Logo.png");
+
+    QPixmap pixmap; // Declare the QPixmap variable outside the if-else structure to ensure its scope covers the entire function
+    
+    // If running on Xcode, the directory is usually the Debug folder
+    if (QDir::currentPath().contains("Debug")) {
+        pixmap = QPixmap("../../resources/UoLSE_Logo.png");
+    } else {
+        pixmap = QPixmap("COMP5530M/cpp codebase/resources/UoLSE_Logo.png");
+    }
 
     QSplashScreen splash(pixmap);
     splash.show();
