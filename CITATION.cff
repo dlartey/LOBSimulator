@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
-  - family-names: Honnalli
-    given-names: Shreyas
+  - family-names: Lartey
+    given-names: Daniel
   - family-names: Saheli
     given-names: Sina Ghanbari
   - family-names: Benimoussa
@@ -11,8 +11,8 @@ authors:
     given-names: Shruti Rajesh
   - family-names: Magfakas
     given-names: Panagiotis
-  - family-names: Lartey
-    given-names: Daniel
+  - family-names: Honnalli
+    given-names: Shreyas
   
 title: "The University of Leeds Stock Exchange"
 version: 2.0.4
