@@ -46,7 +46,6 @@ void Abm::readCsv(const std::string& filename) {
   }
 
   file.close();
-  return;
 }
 
 std::string Abm::getProjectSourceDirectory() {
@@ -55,23 +54,23 @@ std::string Abm::getProjectSourceDirectory() {
   return fullPath.parent_path().string();
 }
 
-void Abm::startServer(DBHandler *handler, OrderBook *globalOrderBook) {
+void Abm::startServer(OrderBook *o) {
   cancelRequested = false;
   if (csvData.empty()){ readCsv(getProjectSourceDirectory()+"/abm_lob.csv"); }
-  startGenerate = std::thread(generateQuantity, handler, globalOrderBook);
+  startGenerate = std::thread(generateQuantity, o);
   std::cout << "Starting thread!\n";
 }
 
-void Abm::generateQuantity(DBHandler *handler, OrderBook *globalOrderBook) {
+void Abm::generateQuantity(OrderBook *o) {
   while (!cancelRequested){
-    globalOrderBook->OB_mutex.lock();
-    globalOrderBook->clear_order_book();
+    o->OB_mutex.lock();
+    o->clear_order_book();
 
     if (flag){
       for (int i = 0; i < 10; i++){
         std::vector<double> current = csvData.at(counter+i);
-        globalOrderBook->add_order(i+1, current.at(0), current.at(1), true);
-        globalOrderBook->add_order(i+11, current.at(2), current.at(3), false);
+        o->add_order(i+1, current.at(0), current.at(1), true);
+        o->add_order(i+11, current.at(2), current.at(3), false);
       }
 
       counter +=10;
@@ -79,8 +78,8 @@ void Abm::generateQuantity(DBHandler *handler, OrderBook *globalOrderBook) {
     }else{
       for (int i = 0; i < 10; i++){
         std::vector<double> current = csvData.at(counter-i-1);
-        globalOrderBook->add_order(i+1, current.at(0), current.at(1), true);
-        globalOrderBook->add_order(i+11, current.at(2), current.at(3), false);
+        o->add_order(i+1, current.at(0), current.at(1), true);
+        o->add_order(i+11, current.at(2), current.at(3), false);
       }
       counter -=10;
 
@@ -89,8 +88,8 @@ void Abm::generateQuantity(DBHandler *handler, OrderBook *globalOrderBook) {
 
     API::setPrice(csvData.at(counter).at(0));
     API::updatePnL();
-    handler->emitSuccessfulUpdate();
-    globalOrderBook->OB_mutex.unlock();
+    o->emitSuccessfulUpdate();
+    o->OB_mutex.unlock();
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
   }
 }

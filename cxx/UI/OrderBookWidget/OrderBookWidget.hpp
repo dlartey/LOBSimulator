@@ -1,9 +1,3 @@
-//
-//  OrderBookWidget.hpp
-//
-//  Created by Shreyas Honnalli on 11/12/2023.
-//
-
 #ifndef OrderBookWidget_hpp
 #define OrderBookWidget_hpp
 
@@ -17,7 +11,6 @@
 #include <QLineEdit>
 #include <QLabel>
 #include "OrderBook.hpp"
-#include "DBHandler.hpp"
 #include <mutex>
 #include <list>
 #include <thread>
@@ -55,13 +48,13 @@ private:
     void updateTable(std::vector<Order> &newOrders, QTableWidget *tableWidget);
     void initializeTable(QTableWidget *tableWidget, const QStringList &headers);
     void addColoursToTables();
-    void setupSignalsSlots(DBHandler *handler);
+    void setupSignalsSlots(OrderBook *o);
     void setupObjects();
     void addToLayout();
     std::vector<Order> getNewOrdersFromOrderbook(bool is_bid);
 
 public:
-    OrderBookWidget(DBHandler *handler, OrderBook *orderBook);
+    OrderBookWidget(OrderBook *orderBook);
     ~OrderBookWidget();
 
 public slots:

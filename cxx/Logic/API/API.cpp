@@ -146,7 +146,7 @@ void API::FOK_ask(float targetPrice, float targetQuantity, OrderBook &o) {
 }
 
 // Gets the orders that the user has submitted
-void API::getOrders(OrderBook &o, DBHandler &handler) {
+void API::getOrders(OrderBook &o) {
   s.Get("/orders", [&o](const httplib::Request &req, httplib::Response &res) {
     try {
       nlohmann::json response_json = nlohmann::json::array();
@@ -170,7 +170,7 @@ void API::getOrders(OrderBook &o, DBHandler &handler) {
   });
 }
 
-void API::getPnL(OrderBook &o, DBHandler &handler) {
+void API::getPnL(OrderBook &o) {
   s.Get("/pnl", [&o](const httplib::Request &req, httplib::Response &res) {
     try {
       API::updatePnL();
@@ -194,7 +194,7 @@ void API::getPnL(OrderBook &o, DBHandler &handler) {
 
 // the thread to read from the db updates the map each time. Account for this when removing from the DB
 // if it's no longer in the order book, then assume it's been fulfilled
-void API::deleteOrder(OrderBook &o, DBHandler &handler) {
+void API::deleteOrder(OrderBook &o) {
   s.Delete("/delete", [&o](const httplib::Request &req, httplib::Response &res) {
 
     if (!req.has_header("Content-Type") || req.get_header_value("Content-Type") != "application/json") {
@@ -247,9 +247,9 @@ void API::deleteOrder(OrderBook &o, DBHandler &handler) {
 }
 
 // Check for exisitng quantity first before adding
-void API::submitOrder(OrderBook &o, DBHandler &handler) {
+void API::submitOrder(OrderBook &o) {
 
-  s.Post("/submit", [&o, &handler](const httplib::Request &req, httplib::Response &res) {
+  s.Post("/submit", [&o](const httplib::Request &req, httplib::Response &res) {
     if (!req.has_header("Content-Type") || req.get_header_value("Content-Type") != "application/json") {
       res.status = 400;
       res.set_content("Invalid request structure", "text/plain");
@@ -287,7 +287,7 @@ void API::submitOrder(OrderBook &o, DBHandler &handler) {
       new_entry["quantity"] = quantity;
       new_entry["bidAsk"] = bidAsk;
       orderHistory[random] = new_entry;
-      handler.emitSuccessfulUpdate();
+      o.emitSuccessfulUpdate();
       res.set_content("Order Submitted", "text/plain");
     } catch (const std::exception &e) {
       res.status = 400;
@@ -296,11 +296,11 @@ void API::submitOrder(OrderBook &o, DBHandler &handler) {
   });
 }
 
-void API::startServer(OrderBook &o, DBHandler &handler) {
-  submitOrder(o, handler);
-  //deleteOrder(o, handler);
-  getOrders(o, handler);
-  getPnL(o, handler);
+void API::startServer(OrderBook &o) {
+  submitOrder(o);
+  //deleteOrder(o);
+  getOrders(o);
+  getPnL(o);
   s.listen("localhost", 8080);
 }
 

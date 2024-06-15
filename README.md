@@ -1,5 +1,5 @@
 # COMP5530M - Simulation of the Dynamic Evolution of Limit Order Books using Generative Models
-[![Video](/cpp%20codebase/resources/thumbnail.jpeg)](https://www.dropbox.com/scl/fo/1dc8t7hktxg9h6v6jl3lu/ANMTkkjoqj_jAZXRig1AHFI?dl=0&e=2&preview=VIDEO_GROUP_4.mp4&rlkey=go1hqbycycbn66nmrk3owvm3y&st=8k0egpba)
+[![Video](/cxx/resources/images/thumbnail.jpeg)](https://www.dropbox.com/scl/fo/1dc8t7hktxg9h6v6jl3lu/ANMTkkjoqj_jAZXRig1AHFI?dl=0&e=2&preview=VIDEO_GROUP_4.mp4&rlkey=go1hqbycycbn66nmrk3owvm3y&st=8k0egpba)
 
 This project was a collaborative effort in which
 we created models to create synthetic Limit Order Books (LOB),
@@ -42,7 +42,7 @@ after a suitable number of epochs elapsed, we created .pt files and exported thi
 and [ABM](/cpp%20codebase/Logic/ABM) directories. 
 
 ### Application Workflow
-![img.png](/cpp%20codebase/resources/application.png)
+![Application](/cxx/resources/images/application.png)
 There are various workflows in the application:
 * [A Server thread](/cpp%20codebase/Logic/API/API.cpp) which listens for API requests, processing them and updating the 
 stored orderbook

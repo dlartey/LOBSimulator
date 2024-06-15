@@ -10,5 +10,5 @@ set(HEADER_FILES ABM.hpp)
 set(SOURCE_FILES ABM.cpp)
 
 add_library(ABM STATIC ${SOURCE_FILES} ${HEADER_FILES})
-target_link_libraries(ABM PRIVATE "${TORCH_LIBRARIES}" OrderBook API DBHandler)
+target_link_libraries(ABM PRIVATE "${TORCH_LIBRARIES}" OrderBook API)
 set_property(TARGET ABM PROPERTY CXX_STANDARD 17)

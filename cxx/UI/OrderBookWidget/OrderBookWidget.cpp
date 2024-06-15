@@ -1,20 +1,14 @@
-//
-//  OrderBookWidget.cpp
-//
-//  Created by Shreyas Honnalli on 11/12/2023.
-//
-
 #include "OrderBookWidget.hpp"
 #include <nlohmann/json.hpp>
 
-OrderBookWidget::OrderBookWidget(DBHandler *handler, OrderBook *orderBookParam) : orderBook(orderBookParam) {
+OrderBookWidget::OrderBookWidget(OrderBook *o) : orderBook(o) {
   setupObjects();
   initializeTable(asksTableWidget, {"ID", "Price", "Quantity"});
   initializeTable(bidsTableWidget, {"ID", "Price", "Quantity"});
   addToLayout();
 
   this->setLayout(mainLayout);
-  setupSignalsSlots(handler);
+  setupSignalsSlots(o);
   // Apply a metallic silver background to the entire widget
   this->setStyleSheet("background-color: rgba(48, 58, 46, 30);");
   // Adjust the RGBA values for desired transparency and shade
@@ -136,12 +130,12 @@ void OrderBookWidget::setupObjects() {
   quantity->setStyleSheet("QLineEdit { color: white; }");
 }
 
-void OrderBookWidget::setupSignalsSlots(DBHandler *handler) {
+void OrderBookWidget::setupSignalsSlots(OrderBook *o) {
   connect(apiButton, &QPushButton::clicked, this, &OrderBookWidget::invokeAPI);
-  connect(handler, &DBHandler::orderBookUpdated, this, &OrderBookWidget::updateBothTables);
-  connect(handler, &DBHandler::orderBookUpdated, this, &OrderBookWidget::updateBalance);
-  connect(handler, &DBHandler::orderBookUpdated, this, &OrderBookWidget::updateQuantity);
-  connect(handler, &DBHandler::orderBookUpdated, this, &OrderBookWidget::updatePnl);
+  connect(o, &OrderBook::orderBookUpdated, this, &OrderBookWidget::updateBothTables);
+  connect(o, &OrderBook::orderBookUpdated, this, &OrderBookWidget::updateBalance);
+  connect(o, &OrderBook::orderBookUpdated, this, &OrderBookWidget::updateQuantity);
+  connect(o, &OrderBook::orderBookUpdated, this, &OrderBookWidget::updatePnl);
   connect(selectAllQuantity, &QPushButton::clicked, this, &OrderBookWidget::setQuantity);
   connect(selectPrice, &QPushButton::clicked, this, &OrderBookWidget::setPrice);
 }

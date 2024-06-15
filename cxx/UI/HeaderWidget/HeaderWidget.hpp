@@ -9,7 +9,6 @@
 #include <QComboBox>
 #include <QStringList>
 #include <QTimer>
-#include "DBHandler.hpp"
 #include "OrderBook.hpp"
 
 #include <stdio.h>
@@ -27,7 +26,6 @@ class HeaderWidget : public QWidget {
     Q_OBJECT
 
 private:
-    DBHandler *handler;
     OrderBook *orderBook;
 
     QLabel *titleLabel, *imageLabel, *newsTicker;
@@ -46,7 +44,7 @@ private:
     void connectButtons();
 
 public:
-    HeaderWidget(DBHandler *handler, OrderBook *orderBook, QWidget *parent = nullptr);
+    HeaderWidget(OrderBook *o, QWidget *parent = nullptr);
     virtual ~HeaderWidget();
     static std::string getProjectSourceDirectory();
 

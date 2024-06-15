@@ -34,7 +34,7 @@ private:
     void addScrollAreaToThisWidget();
 
 public:
-    explicit CentralWidget(DBHandler *handler, OrderBook *orderBook, QWidget *parent = nullptr);
+    explicit CentralWidget(OrderBook *o, QWidget *parent = nullptr);
 };
 
 #endif /* OrderBookWidget_hpp */
