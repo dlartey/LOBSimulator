@@ -139,3 +139,8 @@ int OrderBook::getOrderCount() { return asks.size() + bids.size(); }
 OrderBook::OrderBook() {}
 
 OrderBook::~OrderBook() {}
+
+void OrderBook::emitSuccessfulUpdate() {
+  emit orderBookUpdated();
+}
+

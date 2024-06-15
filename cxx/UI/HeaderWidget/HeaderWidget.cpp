@@ -4,8 +4,8 @@
 #include <QDir>
 #include <QFontDatabase>
 
-HeaderWidget::HeaderWidget(DBHandler *handler, OrderBook *orderBook, QWidget *parent) :
-QWidget(parent), handler(handler), orderBook(orderBook) {
+HeaderWidget::HeaderWidget(OrderBook *o, QWidget *parent) :
+QWidget(parent), orderBook(o) {
     initialiseLayoutAndAddButtons();
     this->setStyleSheet("background-color: rgba(12, 83, 45, 90); border-radius: 20px;");
 }
@@ -45,7 +45,7 @@ std::string HeaderWidget::getProjectSourceDirectory() {
 }
 
 void HeaderWidget::setupLogoAndCompany() {
-  std::string fontPath = getProjectSourceDirectory() +"/resources/Nexa-Heavy.ttf";
+  std::string fontPath = getProjectSourceDirectory() +"/resources/fonts/Nexa-Heavy.ttf";
   int id = QFontDatabase::addApplicationFont(fontPath.c_str());
 
   QString family = QFontDatabase::applicationFontFamilies(id).at(0);
@@ -56,14 +56,14 @@ void HeaderWidget::setupLogoAndCompany() {
   titleLabel->setAlignment(Qt::AlignCenter);
   titleLabel->setStyleSheet("QLabel { color : white; }");
 
-  std::string logoPath = getProjectSourceDirectory() +"/resources/UoLSE_Logo.png";
+  std::string logoPath = getProjectSourceDirectory() +"/resources/images/UoLSE_Logo.png";
   QPixmap imagePixmap = QPixmap(logoPath.c_str());
   imageLabel = new QLabel;
   imageLabel->setPixmap(imagePixmap.scaled(200, 200, Qt::KeepAspectRatio));
 }
 
 void HeaderWidget::setupButtons() {
-  std::string fontPath = getProjectSourceDirectory() +"/resources/TangoSans.ttf";
+  std::string fontPath = getProjectSourceDirectory() +"/resources/fonts/TangoSans.ttf";
   int id = QFontDatabase::addApplicationFont(fontPath.c_str());
 
     QString family = QFontDatabase::applicationFontFamilies(id).at(0);
@@ -86,7 +86,7 @@ void HeaderWidget::setupButtons() {
 }
 
 void HeaderWidget::setupModelType() {
-  std::string fontPath = getProjectSourceDirectory() +"/resources/TangoSans.ttf";
+  std::string fontPath = getProjectSourceDirectory() +"/resources/fonts/TangoSans.ttf";
   int id = QFontDatabase::addApplicationFont(fontPath.c_str());
 
     QString family = QFontDatabase::applicationFontFamilies(id).at(0);
@@ -149,9 +149,9 @@ void HeaderWidget::startSim() {
   cancelSim();
 
   if (option == "GAN Model") {
-    Gan::startServer(handler, orderBook);
+    Gan::startServer(orderBook);
   } else {
-    Abm::startServer(handler, orderBook);
+    Abm::startServer(orderBook);
   }
 }
 

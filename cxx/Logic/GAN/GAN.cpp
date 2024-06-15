@@ -70,12 +70,12 @@ void getNextCentre(float *values, torch::Tensor &output, OrderBook *globalOrderB
 
 }
 
-void Gan::startServer(DBHandler *handler, OrderBook *globalOrderBook) {
+void Gan::startServer(OrderBook *globalOrderBook) {
   cancelRequested = false;
-  startGenerate = std::thread(generateQuantity, handler, globalOrderBook);
+  startGenerate = std::thread(generateQuantity, globalOrderBook);
 }
 
-void Gan::generateQuantity(DBHandler *handler, OrderBook *globalOrderBook) {
+void Gan::generateQuantity(OrderBook *globalOrderBook) {
   try {
     std::string model_path = getProjectSourceDirectory() + "/RecreatingBestModelCPU.pt";
     torch::jit::script::Module model = torch::jit::load(model_path);
@@ -99,7 +99,7 @@ void Gan::generateQuantity(DBHandler *handler, OrderBook *globalOrderBook) {
       globalOrderBook->clear_order_book();
       updateOrderBook(values, globalOrderBook);
       API::updatePnL();
-      handler->emitSuccessfulUpdate();
+      globalOrderBook->emitSuccessfulUpdate();
       std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     }
   }

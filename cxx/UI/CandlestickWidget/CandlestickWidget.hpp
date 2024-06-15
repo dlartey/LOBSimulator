@@ -8,7 +8,6 @@
 #include <QVBoxLayout>
 #include <QLabel>
 #include "OrderBook.hpp"
-#include "DBHandler.hpp"
 #include <mutex>
 #include <list>
 #include <thread>
@@ -74,7 +73,7 @@ private:
     double getBestBid();
     
 public:
-    CandlestickWidget(DBHandler *handler, OrderBook *orderBook);
+    CandlestickWidget(OrderBook *o);
     
 public slots:
     void updateInformation();

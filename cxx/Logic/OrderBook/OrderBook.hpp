@@ -8,6 +8,7 @@
 #ifndef OrderBook_hpp
 #define OrderBook_hpp
 #include <mutex>
+#include <QObject>
 
 extern std::mutex orderBookMutex;
 
@@ -27,8 +28,9 @@ struct Order
 
 using OrderList = std::list<Order>;
 
-class OrderBook {
-private:
+class OrderBook : public QObject {
+ Q_OBJECT
+ private:
     std::map<double, OrderList> bids, asks;
 
 public:
@@ -39,6 +41,7 @@ public:
     void modify_order(int id, double old_price, double new_price, double new_quantity, bool is_bid);
     void print_order_book() const;
     void clear_order_book();
+    void emitSuccessfulUpdate();
     bool empty();
     OrderBook();
     ~OrderBook();
@@ -48,6 +51,10 @@ public:
     int getOrderCount();
 
     friend std::ostream &operator<<(std::ostream &os, const OrderBook &book);
+
+signals:
+  void orderBookUpdated();
+
 };
 
 #endif /* OrderBook_hpp */

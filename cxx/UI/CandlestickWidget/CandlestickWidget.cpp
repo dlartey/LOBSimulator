@@ -2,12 +2,11 @@
 #include <QGuiApplication>
 #include <QScreen>
 
-CandlestickWidget::CandlestickWidget(DBHandler *handler, OrderBook *orderBookParam) : orderBook(orderBookParam)
+CandlestickWidget::CandlestickWidget(OrderBook *o) : orderBook(o)
 {
     setWidgetProperties();
     addLayoutToThisWidget();
-    
-    connect(handler, &DBHandler::orderBookUpdated, this, &CandlestickWidget::updateInformation);
+    connect(o, &OrderBook::orderBookUpdated, this, &CandlestickWidget::updateInformation);
 }
 
 void CandlestickWidget::setWidgetProperties(){ this->setMinimumSize(900, 550); }

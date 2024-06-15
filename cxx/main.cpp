@@ -3,13 +3,10 @@
 #include <csignal>
 #include <string>
 #include "OrderBook.hpp"
-#include "DBHandler.hpp"
 #include "API.hpp"
 #include "CentralWidget.hpp"
 #include <QApplication>
 #include <QtCharts>
-#include <nlohmann/json.hpp>
-#include <httplib.h>
 #include <QSplashScreen>
 #include <QTimer>
 
@@ -23,13 +20,13 @@ std::string getProjectSourceDirectory() {
   return fullPath.parent_path().string();
 }
 
-void startServerWrapper(DBHandler &handler) { API::startServer(globalOrderBook, handler); }
+void startServerWrapper() { API::startServer(globalOrderBook); }
 
 int main(int argc, char *argv[]) {
     std::signal(SIGINT, signal_handler);
     QApplication app(argc, argv);
 
-    std::string logo = getProjectSourceDirectory() +"/resources/UoLSE_Logo.png";
+    std::string logo = getProjectSourceDirectory() +"/resources/images/UoLSE_Logo.png";
     QPixmap pixmap = QPixmap(logo.c_str());
     // Declare the QPixmap variable outside the if-else structure to ensure its scope covers the entire function
 
@@ -53,15 +50,8 @@ int main(int argc, char *argv[]) {
         app.processEvents();
     }
 
-    DBHandler handler(getProjectSourceDirectory());
-
-    std::thread serverThread(startServerWrapper, std::ref(handler));
-
-    httplib::Client cli("localhost:8080");
-    nlohmann::json body;
-    auto res = cli.Post("/submit", body.dump(), "application/json");
-
-    CentralWidget centralWidget(&handler, &globalOrderBook);
+    std::thread serverThread(startServerWrapper);
+    CentralWidget centralWidget(&globalOrderBook);
     splash.finish(&centralWidget); // Close the splash screen
 
     centralWidget.showMaximized();

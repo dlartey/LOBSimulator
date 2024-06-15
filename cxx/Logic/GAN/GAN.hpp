@@ -6,7 +6,6 @@
 #define GAN_HPP
 
 #include "OrderBook.hpp"
-#include "DBHandler.hpp"
 #include "API.hpp"
 #include <filesystem>
 #include <cstdio>
@@ -21,8 +20,8 @@ class Gan {
   static std::thread startGenerate;
   static std::atomic<bool> cancelRequested;
   static void updateOrderBook(float *values, OrderBook *globalOrderBook);
-  static void generateQuantity(DBHandler *handler, OrderBook *globalOrderBook);
-  static void startServer(DBHandler *handler, OrderBook *globalOrderBook);
+  static void generateQuantity(OrderBook *globalOrderBook);
+  static void startServer(OrderBook *globalOrderBook);
   static std::string getProjectSourceDirectory();
 };
 

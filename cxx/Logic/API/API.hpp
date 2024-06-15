@@ -7,7 +7,6 @@
 #include <iostream>
 #include <httplib.h>
 #include "OrderBook.hpp"
-#include "DBHandler.hpp"
 
 class API {
 private:
@@ -19,11 +18,11 @@ private:
     static float quantity;
 
 public:
-    static void getOrders(OrderBook &o, DBHandler &handler);
-    static void deleteOrder(OrderBook &o, DBHandler &handler);
-    static void submitOrder(OrderBook &o, DBHandler &handler);
-    static void startServer(OrderBook &o, DBHandler &handler);
-    static void getPnL(OrderBook &o, DBHandler &handler);
+    static void getOrders(OrderBook &o);
+    static void deleteOrder(OrderBook &o);
+    static void submitOrder(OrderBook &o);
+    static void startServer(OrderBook &o);
+    static void getPnL(OrderBook &o);
     static void updatePnL();
     static void setPrice(float p);
     static float getPrice();

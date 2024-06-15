@@ -4,8 +4,8 @@
 #include <QApplication>
 #include <QScreen>
 
-CentralWidget::CentralWidget(DBHandler *handler, OrderBook *orderBook, QWidget *parent)
-    : QWidget(parent), orderBookWidget(handler, orderBook), candlestickWidget(handler, orderBook), headerWidget(handler, orderBook)  {
+CentralWidget::CentralWidget(OrderBook *o, QWidget *parent)
+    : QWidget(parent), orderBookWidget(o), candlestickWidget(o), headerWidget(o)  {
 
     setWidgetProperties();
     QVBoxLayout *mainLayout = new QVBoxLayout(this); // Use QVBoxLayout to arrange header and content vertically

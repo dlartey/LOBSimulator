@@ -10,5 +10,5 @@ set(HEADER_FILES GAN.hpp)
 set(SOURCE_FILES GAN.cpp)
 
 add_library(GAN STATIC ${SOURCE_FILES} ${HEADER_FILES})
-target_link_libraries(GAN PRIVATE "${TORCH_LIBRARIES}" OrderBook API DBHandler)
+target_link_libraries(GAN PRIVATE "${TORCH_LIBRARIES}" OrderBook API)
 set_property(TARGET GAN PROPERTY CXX_STANDARD 17)
